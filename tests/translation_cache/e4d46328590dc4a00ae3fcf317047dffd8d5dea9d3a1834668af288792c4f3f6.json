@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\section{Математические уравнения}\nВозможно, вы захотите отображать математические уравнения в трёх различных стилях:\nвстроенном, нумерованном или ненумерованном дисплейном. О каждом из этих трёх\nстилей говорится в следующих разделах.\n\n\\subsection{Inline (In-text) Equations}\nФормула, которая появляется в бегущем тексте, называется встроенной или\nвнутритекстовой формулой. Она задаётся окружением \\textbf{math},\nкоторое можно вызвать с помощью обычной\n\\texttt{{\\char'134}begin\\,\\ldots{\\char'134}end} конструкции или в\nкраткой форме \\texttt{\\$\\,\\ldots\\$}. Вы можете использовать любые символы\nи конструкции, от <<MATH_INLINE_194>> до <<MATH_INLINE_195>>, доступные в\n\\LaTeX~<<CMD_196>>; в этом разделе приведено лишь несколько\nпримеров внутритекстовых уравнений в контексте. Обратите внимание, как это уравнение:\n\\begin{math}\n  \\lim_{n\\rightarrow \\infty}x=0\n\\end{math},\nзаданное здесь в встроенном (in-line) стиле, выглядит слегка иначе, когда\nоно оформлено в дисплейном стиле. (См. следующий раздел).\n\n\\subsection{Display Equations}\nНумерованное дисплейное уравнение — отделённое от текста вертикальным интервалом и центрированное по горизонтали — создаётся окружением \\textbf{equation}.\nНенумерованное дисплейное уравнение создаётся окружением\n\\textbf{displaymath}.\n\nОпять же, в любом из этих окружений вы можете использовать любые символы и конструкции, доступные в \\LaTeX\\@; в этом разделе приведено лишь несколько примеров дисплейных уравнений в контексте. Сначала рассмотрим уравнение, показанное выше как встроенное уравнение:\n<<MATH_DISP_191>>\nОбратите внимание, как оно оформлено несколько иначе в окружении \\textbf{displaymath}. Теперь введём ненумерованное уравнение:\n\\begin{displaymath}\n  \\sum_{i=0}^{\\infty} x + 1\n\\end{displaymath}\nи далее приведём ещё одно нумерованное уравнение:\n<<MATH_DISP_190>>\nпросто чтобы продемонстрировать способность \\LaTeX\\ эффективно управлять нумерацией.",
+  "input_tokens": 677,
+  "output_tokens": 2739,
+  "cost_usd": 0.0017449499999999997,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 454,
+      "total_input_tokens_est": 671,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 677,
+      "actual_output_tokens": 2739,
+      "actual_cost_usd": 0.0017449499999999997
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\section{Math Equations}\nYou may want to display math equations in three distinct styles:\ninline, numbered or non-numbered display.  Each of the three are\ndiscussed in the next sections.\n\n\\subsection{Inline (In-text) Equations}\nA formula that appears in the running text is called an inline or\nin-text formula.  It is produced by the \\textbf{math} environment,\nwhich can be invoked with the usual\n\\texttt{{\\char'134}begin\\,\\ldots{\\char'134}end} construction or with\nthe short form \\texttt{\\$\\,\\ldots\\$}. You can use any of the symbols\nand structures, from <<MATH_INLINE_194>> to <<MATH_INLINE_195>>, available in\n\\LaTeX~<<CMD_196>>; this section will simply show a few\nexamples of in-text equations in context. Notice how this equation:\n\\begin{math}\n  \\lim_{n\\rightarrow \\infty}x=0\n\\end{math},\nset here in in-line math style, looks slightly different when\nset in display style.  (See next section).\n\n\\subsection{Display Equations}\nA numbered display equation---one set off by vertical space from the\ntext and centered horizontally---is produced by the \\textbf{equation}\nenvironment. An unnumbered display equation is produced by the\n\\textbf{displaymath} environment.\n\nAgain, in either environment, you can use any of the symbols and\nstructures available in \\LaTeX\\@; this section will just give a couple\nof examples of display equations in context.  First, consider the\nequation, shown as an inline equation above:\n<<MATH_DISP_191>>\nNotice how it is formatted somewhat differently in\nthe \\textbf{displaymath}\nenvironment.  Now, we'll enter an unnumbered equation:\n\\begin{displaymath}\n  \\sum_{i=0}^{\\infty} x + 1\n\\end{displaymath}\nand follow it with another numbered equation:\n<<MATH_DISP_190>>\njust to demonstrate \\LaTeX's able handling of numbering.\n\n"
+  },
+  "saved_at": "2025-12-26 14:53:11"
+}

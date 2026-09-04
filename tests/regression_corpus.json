@@ -1,0 +1,119 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "arxiv_id": "2112.07236",
+      "label": "real-paper-bibliography-references",
+      "tier": "smoke",
+      "notes": "Known tricky case: orphaned thebibliography + unresolved refs + untranslated headings"
+    },
+    {
+      "arxiv_id": "2405.11794",
+      "label": "neurips-template",
+      "tier": "smoke",
+      "notes": "NeurIPS formatting instructions"
+    },
+    {
+      "arxiv_id": "2312.17663",
+      "label": "ieeetran-template",
+      "tier": "extended",
+      "notes": "IEEEtran how-to / template"
+    },
+    {
+      "arxiv_id": "2507.11067",
+      "label": "ieeetran-sample-article",
+      "tier": "extended",
+      "notes": "IEEEtran sample journal article"
+    },
+    {
+      "arxiv_id": "2405.18554",
+      "label": "aaai-template",
+      "tier": "extended",
+      "notes": "AAAI LaTeX formatting instructions"
+    },
+    {
+      "arxiv_id": "2404.02579",
+      "label": "elsarticle-template",
+      "tier": "extended",
+      "notes": "Elsevier elsarticle template"
+    },
+    {
+      "arxiv_id": "2505.23676",
+      "label": "llncs-template",
+      "tier": "extended",
+      "notes": "Springer LLNCS instructions"
+    },
+    {
+      "arxiv_id": "2407.15511",
+      "label": "revtex4-2-paper",
+      "tier": "extended",
+      "notes": "revtex4-2 class usage + TeXLive differences"
+    },
+    {
+      "arxiv_id": "2503.11231",
+      "label": "acmart-template",
+      "tier": "extended",
+      "notes": "ACM acmart sample article"
+    },
+    {
+      "arxiv_id": "1601.05437",
+      "label": "tikz-feynman-doc",
+      "tier": "extended",
+      "notes": "TikZ-heavy package documentation"
+    },
+    {
+      "arxiv_id": "1809.03842",
+      "label": "quantikz-doc",
+      "tier": "extended",
+      "notes": "TikZ-based circuit diagrams documentation"
+    },
+    {
+      "arxiv_id": "2503.15286",
+      "label": "pgfplots-tikz-heavy",
+      "tier": "extended",
+      "notes": "Contains pgfplots/tikz usage"
+    },
+    {
+      "arxiv_id": "2409.19400",
+      "label": "biblatex-example",
+      "tier": "extended",
+      "notes": "biblatex example with addbibresource"
+    },
+    {
+      "arxiv_id": "2510.05096",
+      "label": "beamer-paper",
+      "tier": "extended",
+      "notes": "Paper mentions beamer; good stress test for beamer-like projects"
+    },
+    {
+      "arxiv_id": "2501.09947",
+      "label": "ieeetran-sample-article-2",
+      "tier": "extended",
+      "notes": "IEEEtran sample article (additional source variant)"
+    },
+    {
+      "arxiv_id": "2404.03595",
+      "label": "ieeetran-howto",
+      "tier": "extended",
+      "notes": "How to use IEEEtran templates; exercises IEEEtran tooling"
+    },
+    {
+      "arxiv_id": "2401.00088",
+      "label": "elsarticle-template-2",
+      "tier": "extended",
+      "notes": "Elsevier LaTeX template; elsarticle class coverage"
+    },
+    {
+      "arxiv_id": "2406.12605",
+      "label": "elsarticle-cls-doc",
+      "tier": "extended",
+      "notes": "elsarticle.cls documentation; stresses class/package interactions"
+    },
+    {
+      "arxiv_id": "2402.14880",
+      "label": "acmart-article",
+      "tier": "extended",
+      "notes": "ACM acmart-based article (not just minimal template)"
+    }
+  ]
+}

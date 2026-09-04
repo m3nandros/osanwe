@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\begin{figure}[!t]\n\t\\centering\n\t\\tikzsetnextfilename{taxi_system_single_cell_propogate}\n\t<<IMG_3144>>\n\t<<COMMENT_897>>\n\\definecolor{cornflowerblue}{RGB}{100,149,237}\n\\definecolor{darkgray176}{RGB}{176,176,176}\n\\definecolor{lightgray}{RGB}{211,211,211}\n\\definecolor{lightpink}{RGB}{255,182,193}\n<<TIKZ_3134>>\n\n\t\\caption{Достижимые множества \n\t\tвычисленные с помощью базового метода (первый ряд), <<MATH_INLINE_3383>>-шагового (второй ряд) и <<MATH_INLINE_3384>>-шагового (третий ряд) методов в системе руления. Начальное множество содержит только одну ячейку.}\n\t<<CMD_3785>>\n\\end{figure}\n\n\\begin{figure*}[!ht]\n\t\\centering\n\t\\tikzsetnextfilename{taxi_system_reachable_sets_original_0s}\n\t<<COMMENT_1171>>",
+  "input_tokens": 446,
+  "output_tokens": 896,
+  "cost_usd": 0.0006045,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 183,
+      "total_input_tokens_est": 400,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 446,
+      "actual_output_tokens": 896,
+      "actual_cost_usd": 0.0006045
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\begin{figure}[!t]\n\t\\centering\n\t\\tikzsetnextfilename{taxi_system_single_cell_propogate}\n\t<<IMG_3144>>\n\t<<COMMENT_897>>\n\\definecolor{cornflowerblue}{RGB}{100,149,237}\n\\definecolor{darkgray176}{RGB}{176,176,176}\n\\definecolor{lightgray}{RGB}{211,211,211}\n\\definecolor{lightpink}{RGB}{255,182,193}\n<<TIKZ_3134>>\n\n\t\\caption{Reachable sets \n\t\tcomputed using baseline (first row), <<MATH_INLINE_3383>>-step (second row), and <<MATH_INLINE_3384>>-step (third row) methods in the taxiing system. The initial set only contains one cell.}\n\t<<CMD_3785>>\n\\end{figure}\n\n\\begin{figure*}[!ht]\n\t\\centering\n\t\\tikzsetnextfilename{taxi_system_reachable_sets_original_0s}\n\t<<COMMENT_1171>>\n\n"
+  },
+  "saved_at": "2025-12-26 12:53:28"
+}

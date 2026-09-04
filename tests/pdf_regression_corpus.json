@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "input": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0269836&type=printable",
+      "label": "plosone_pone0269836_tables_search_strategy",
+      "tier": "smoke",
+      "notes": "Known tricky: caption-box table + search strategy list, wide multi-page tables"
+    },
+    {
+      "input": "https://sites.ifi.unicamp.br/aguiar/files/2014/10/May-Nature-1976.pdf",
+      "label": "nature_1976_may",
+      "tier": "extended",
+      "notes": "Old scanned-style PDF; dense layout; potential OCR/extraction brittleness"
+    },
+    {
+      "input": "https://www.academia.edu/34552945/Sample_manuscript_showing_style_and_formatting_specifications_for_SPIE_e_journal_papers",
+      "label": "academia_spie_sample_manuscript",
+      "tier": "extended",
+      "notes": "Publisher-style sample manuscript; site may require headless resolution",
+      "headless": true
+    },
+    {
+      "input": "https://arxiv.org/pdf/2407.19890",
+      "label": "arxiv_2407_19890_pdf",
+      "tier": "smoke",
+      "notes": "arXiv PDF; scientific math/figures; baseline for PDF pipeline"
+    },
+    {
+      "input": "https://www.frontiersin.org/journals/chemical-biology/articles/10.3389/fchbi.2025.1731631/full",
+      "label": "frontiers_fchbi_2025_1731631",
+      "tier": "extended",
+      "notes": "Frontiers full article page; requires URL resolution to PDF",
+      "headless": true
+    },
+    {
+      "input": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8665561/",
+      "label": "pmc_8665561",
+      "tier": "extended",
+      "notes": "PMC HTML article; complex tables/figures; needs PDF resolution"
+    },
+    {
+      "input": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1149499/",
+      "label": "pmc_1149499",
+      "tier": "extended",
+      "notes": "PMC HTML article (older); challenging structure and references"
+    },
+    {
+      "input": "https://journals.plos.org/ploscompbiol/article?id=10.1371%2Fjournal.pcbi.1003833",
+      "label": "ploscompbiol_pcbi1003833",
+      "tier": "extended",
+      "notes": "PLOS article page; multi-column layout and complex figure/table captions"
+    },
+    {
+      "input": "https://www.complex-systems.com/wp-content/themes/complexsystems/samples/samplepaper.pdf",
+      "label": "complex_systems_samplepaper",
+      "tier": "smoke",
+      "notes": "Publisher sample paper PDF; typical academic structure; good renderer baseline"
+    },
+    {
+      "input": "https://hoffman.physics.harvard.edu/example-paper/Hoffman-Example-Paper.pdf",
+      "label": "hoffman_example_paper",
+      "tier": "smoke",
+      "notes": "Well-formatted example paper; good for catching typographic regressions"
+    }
+  ]
+}

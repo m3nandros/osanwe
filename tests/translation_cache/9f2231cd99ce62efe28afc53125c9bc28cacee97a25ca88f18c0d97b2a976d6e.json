@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\section{Обсуждение}\n\nВ численном моделировании и лабораторных экспериментальных исследованиях мы показали, что широкий спектр булевых схем реализуется в одной грибной колонии и в субстрате, заселенном мицелием. В моделях, где логические функции реализованы с помощью спайков (путешествующих волн возбуждения), {\\sc xor} вентиль встречается реже всего, {\\sc or} и {\\sc and} встречаются чаще, а {\\sc and-not} встречается наиболее часто ({\\sc select} — довольно тривиальный вентиль). Распределение частот вентилей в целом согласуется с распределениями вентилей, обнаруженных в других живых средах. В резистивно-ёмкостной (RC) модели одной грибной колонии мы обнаружили {\\sc and-not} вентиль в последовательных сетях и {\\sc or} и {\\sc and} в параллельных сетях. Такое относительно скудное представление логических функций может объясняться отсутствием ёмкостных элементов. В отличие от RC-модели, наборы логических схем, обнаруженные в лабораторных экспериментах с живым мицелием, впечатляюще велики~<<CMD_207>>. Это связано с тем, что сети живого мицелия являются активными, то есть они генерируют спайки электрического потенциала~<<CMD_208>> и спайки сопротивления~<<CMD_209>>, ёмкостные~<<CMD_210>> и мемфрактивные свойства~<<CMD_211>>. \n\n\n\\subsection*{Благодарность}\n\nЭто исследование получило финансирование в рамках исследовательской и инновационной программы «Горизонт 2020» Европейского союза FET OPEN ``Challenging current thinking'' по грантовому соглашению № 858132 / проект \\textit{Fungal Architectures}.\\\\\n(www.fungar.eu). \n\n\n<<COMMENT_56>>\n<<COMMENT_57>>",
+  "input_tokens": 561,
+  "output_tokens": 1729,
+  "cost_usd": 0.00112155,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 405,
+      "total_input_tokens_est": 622,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 561,
+      "actual_output_tokens": 1729,
+      "actual_cost_usd": 0.00112155
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\section{Discussion}\n\nIn numerical modelling and experimental laboratory studies we demonstrated that a wide range of Boolean circuits are implemented in a single fungal colony and a substrate colonised by mycelium. In the models where logical functions are implemented with spikes (travelling excitation waves), the {\\sc xor} gate is the rarest, {\\sc or} and {\\sc and} are more common and {\\sc and-not} are most common ({\\sc select} is a rather trivial gate). The frequency distribution of the gate is generally in line with the distributions of gates discovered in other living substrates. In the resistive and capacitive (RC) network model of a single fungal colony, we discovered {\\sc and-not} gate in serial networks, and {\\sc or} and {\\sc and} in parallel networks. This relatively poor representation of logical functions might be due to the absence of capacitive elements. In contrast to the RC model, sets of logical circuits discovered in laboratory experiments with living mycelium are impressively large~<<CMD_207>>. This is because living mycelium networks are active, i.e. they generate spikes of electrical potential~<<CMD_208>> and spikes of resistance~<<CMD_209>>, capacitive~<<CMD_210>> and memfractive properties~<<CMD_211>>. \n\n\n\\subsection*{Acknowledgement}\n\nThis research has received funding from the European Union's Horizon 2020 research and innovation programme FET OPEN ``Challenging current thinking'' under grant agreement No 858132 / project \\textit{Fungal Architectures}.\\\\\n(www.fungar.eu). \n\n\n<<COMMENT_56>>\n<<COMMENT_57>>\n\n\n"
+  },
+  "saved_at": "2025-12-25 22:10:31"
+}

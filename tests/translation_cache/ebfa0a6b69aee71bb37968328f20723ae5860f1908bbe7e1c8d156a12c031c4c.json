@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\section{\\LaTeX \\ Дистрибутивы: Где их получить}\n\\noindent IEEE рекомендует использовать дистрибутив от \\TeX User Group по адресу <<CMD_114>>. Вы можете вступить в TUG и получить дистрибутив на DVD или бесплатно загрузить его по ссылкам на их веб-сайте: <<CMD_115>>. DVD включает дистрибутивы для операционных систем Windows, Mac OS X и Linux.",
+  "input_tokens": 301,
+  "output_tokens": 1005,
+  "cost_usd": 0.0006481499999999999,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 103,
+      "total_input_tokens_est": 320,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 301,
+      "actual_output_tokens": 1005,
+      "actual_cost_usd": 0.0006481499999999999
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\section{\\LaTeX \\ Distributions: Where to Get Them}\n\\noindent IEEE recommends using the distribution from the \\TeX User Group at <<CMD_114>>. You can join TUG and obtain a DVD distribution or download for free  from the links provided on their website: <<CMD_115>>. The DVD includes distributions for Windows, Mac OS X and Linux operating systems.\n \n"
+  },
+  "saved_at": "2025-12-26 12:16:04"
+}

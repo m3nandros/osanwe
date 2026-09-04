@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\section{Команды секционирования}\n\nВ вашей работе должны использоваться стандартные команды секционирования \\LaTeX: <<CODE_217>>, <<CODE_218>>, <<CODE_219>>, и\n<<CODE_220>>. Они должны быть пронумерованы; не удаляйте нумерацию\nиз команд.\n\nИмитировать команду секционирования, выделяя первые слово или слова абзаца жирным или курсивом, {\\bfseries не допускается.}",
+  "input_tokens": 310,
+  "output_tokens": 1072,
+  "cost_usd": 0.0006897,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 107,
+      "total_input_tokens_est": 324,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 310,
+      "actual_output_tokens": 1072,
+      "actual_cost_usd": 0.0006897
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\section{Sectioning Commands}\n\nYour work should use standard \\LaTeX\\ sectioning commands:\n<<CODE_217>>, <<CODE_218>>, <<CODE_219>>, and\n<<CODE_220>>. They should be numbered; do not remove the numbering\nfrom the commands.\n\nSimulating a sectioning command by setting the first word or words of\na paragraph in boldface or italicized text is {\\bfseries not allowed.}\n\n"
+  },
+  "saved_at": "2025-12-27 00:14:40"
+}

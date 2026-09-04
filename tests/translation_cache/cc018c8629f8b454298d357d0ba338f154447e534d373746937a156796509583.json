@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\section{Эксперимент}\n\\subsection{Результаты видео}\nРезультаты видео см. в дополнительных материалах.\n\n\\subsection{Результаты визуального выбора методом поиска по дереву}\nFigure~<<CMD_567>> иллюстрирует слайды до и после применения уточнения визуального выбора методом поиска по дереву. Уточнение \\textbf{устраняет проблемы переполнения} и существенно улучшает качество слайдов, что указывает на то, что этот модуль \\textbf{играет ключевую роль в настройке макета}.\n\\begin{figure}[t]\n    \\centering\n    <<IMG_422>>\n    \\caption{\\textbf{Визуализация слайдов для визуального выбора методом поиска по дереву.} В первой строке показаны результаты слайдов до уточнения макета, а во второй строке — соответствующие им слайды после уточнения.}\n    <<CMD_581>>\n\\end{figure}",
+  "input_tokens": 373,
+  "output_tokens": 1051,
+  "cost_usd": 0.00068655,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 197,
+      "total_input_tokens_est": 414,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 373,
+      "actual_output_tokens": 1051,
+      "actual_cost_usd": 0.00068655
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\section{Experiment}\n\\subsection{Video Results}\nVideo results please refer to the supplementary materials.\n\n\\subsection{Results of Tree Search Visual Choice}\nFigure~<<CMD_567>> illustrates the slides before and after applying tree search visual choice refinement. The refinement \\textbf{resolves the overfull issues} and substantially improves slide quality, indicating that this module \\textbf{plays a crucial role in layout adjustment}.\n\\begin{figure}[t]\n    \\centering\n    <<IMG_422>>\n    \\caption{\\textbf{Slide Visualization of Tree Search Visual Choice.} The first row shows slide results before layout refinement, while the second row shows their corresponding slides after refinement.}\n    <<CMD_581>>\n\\end{figure}\n\n"
+  },
+  "saved_at": "2025-12-26 16:22:11"
+}

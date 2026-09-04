@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\section{Время верификации}\n<<CMD_3805>>\nМы также приводим времена верификации для систем руления и торможения в таблице~<<CMD_3772>>. \nНапример, верификация системы торможения с <<MATH_INLINE_3678>> контроллером с использованием <<MATH_INLINE_3679>>-шагового метода требует примерно <<MATH_INLINE_3680>> GPU-часов (около 5 дней). \n<<COMMENT_3062>>\nЭто время увеличивается до <<MATH_INLINE_3681>> GPU-часов (около 15 дней) для <<MATH_INLINE_3682>>-шагового метода.\n\nКроме того, по мере того как размерность системы превосходит две, время верификации может расти экспоненциально. \nХотя повышение эффективности инструментов верификации нейронных сетей способствует повышению эффективности верификации в замкнутом контуре, крайне важно разработать более эффективную стратегию верификации.\n\n\\begin{table}[!h]\n\t\\centering\n\t\\normalsize\n\t\\caption{Времена верификации для всех ячеек в графе состояний. Обратите внимание, что эти времена нормированы относительно времени, требуемого одной машиной. Эти времена приведены для справки, так как эксперименты проводятся параллельно на нескольких машинах с различными конфигурациями CPU и GPU. Отчетные времена являются суммарными результатами по всем машинам.}\n\t<<COMMENT_3063>>\n\t\\begin{tabular}{c|c|cc}\n\t\t\\hline\n\t\t\\multirow{2}{*}{} & \\multirow{2}{*}{\\parbox{1cm}{\\centering Система \\\\ руления}} & \\multicolumn{2}{c}{Система торможения} \\\\\n\t\t\\cline{3-4}\n\t\t& &Сверточная & Трансформер \\\\\n\t\t\\hline\n\t\t<<MATH_INLINE_3683>>-шаговый метод & <<MATH_INLINE_3684>> & <<MATH_INLINE_3685>> & <<MATH_INLINE_3686>>\\\\\n\t\t\n\t\t<<MATH_INLINE_3687>>-шаговый метод & <<MATH_INLINE_3688>> & <<MATH_INLINE_3689>> & <<MATH_INLINE_3690>>\\\\\n\t\t\n\t\t<<MATH_INLINE_3691>>-шаговый метод & Н/Д & <<MATH_INLINE_3692>> & <<MATH_INLINE_3693>>\\\\\n\t\t\\hline\n\t\\end{tabular}\n\t<<CMD_3806>>\n\\end{table}\n\n\n\n<<COMMENT_3064>>\n<<COMMENT_3065>>\n<<COMMENT_3066>>\n<<COMMENT_3067>>\n<<COMMENT_3068>>\n<<COMMENT_3069>>\n<<COMMENT_3070>>\n<<COMMENT_3071>>\n<<COMMENT_3072>>\n\n\n\\end{document}",
+  "input_tokens": 787,
+  "output_tokens": 2319,
+  "cost_usd": 0.0015094499999999999,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 499,
+      "total_input_tokens_est": 716,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 787,
+      "actual_output_tokens": 2319,
+      "actual_cost_usd": 0.0015094499999999999
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\section{Verification Times}\n<<CMD_3805>>\nWe also provide the verification times for both the taxiing and braking systems in Table~<<CMD_3772>>. \nFor example, verifying the braking system with a <<MATH_INLINE_3678>> controller using <<MATH_INLINE_3679>>-step method requires approximately <<MATH_INLINE_3680>> GPU-hours (around 5 days). \n<<COMMENT_3062>>\nThis time \nincreases to <<MATH_INLINE_3681>> GPU-hours (around 15 days) for the <<MATH_INLINE_3682>>-step method.\n\nAdditionally, as the system dimension exceeds two dimensions, the verification time could grow exponentially. \nWhile improving the efficiency of neural network verification tools is beneficial for the efficiency of closed-loop verification, it is crucial to design a more effective verification strategy.\n\n\\begin{table}[!h]\n\t\\centering\n\t\\normalsize\n\t\\caption{Verification times for all cells in the state graph. Note that these times are normalized to the times required by a single machine. These times are provided for reference, as experiments are conducted in parallel on multiple machines with different CPU and GPU configurations. The reported times are cumulative results across all machines.}\n\t<<COMMENT_3063>>\n\t\\begin{tabular}{c|c|cc}\n\t\t\\hline\n\t\t\\multirow{2}{*}{} & \\multirow{2}{*}{\\parbox{1cm}{\\centering Taxiing \\\\ system}} & \\multicolumn{2}{c}{Braking system} \\\\\n\t\t\\cline{3-4}\n\t\t& &Convolutional & Transformer \\\\\n\t\t\\hline\n\t\t<<MATH_INLINE_3683>>-step method & <<MATH_INLINE_3684>> & <<MATH_INLINE_3685>> & <<MATH_INLINE_3686>>\\\\\n\t\t\n\t\t<<MATH_INLINE_3687>>-step method & <<MATH_INLINE_3688>> & <<MATH_INLINE_3689>> & <<MATH_INLINE_3690>>\\\\\n\t\t\n\t\t<<MATH_INLINE_3691>>-step method & N/A & <<MATH_INLINE_3692>> & <<MATH_INLINE_3693>>\\\\\n\t\t\\hline\n\t\\end{tabular}\n\t<<CMD_3806>>\n\\end{table}\n\n\n\n<<COMMENT_3064>>\n<<COMMENT_3065>>\n<<COMMENT_3066>>\n<<COMMENT_3067>>\n<<COMMENT_3068>>\n<<COMMENT_3069>>\n<<COMMENT_3070>>\n<<COMMENT_3071>>\n<<COMMENT_3072>>\n\n\n\\end{document}\n"
+  },
+  "saved_at": "2025-12-26 13:27:12"
+}

@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\section{Предыстория}\n\n\\paragraph{\\texlive} \n\n\\texlive — это дистрибутив программного обеспечения, который предоставляет полноценную систему \\tex, включающую различные пакеты, макросы и движки~<<CMD_114>>.\n\\texlive выпускается ежегодно, и хотя возможно обновлять дистрибутив \\tex между официальными релизами, это \\emph{«не обязательно или особенно рекомендуется»}, особенно поскольку набор пакетов и программ в официальном релизе является \\emph{«единственным, который тестируется как согласованный релиз»}~<<CMD_115>>.\n\n\\paragraph{Движки \\tex}\n\nС момента выхода \\tex в 1978 году были разработаны другие движки, расширяющие функциональность оригинальной программы \\tex. \nВ этой работе рассматриваются три из этих движков, все они происходят от \\tex:\n\n\\begin{enumerate}\n  \\item \\sloppy \\pdftex, и его \\latex вариант \\pdflatex, является обратно-совместимым расширением \\tex, которое может напрямую выводить файлы PDF (``Portable Document Format'') из \\tex-файлов~<<CMD_116>>.\n  \\item \\xetex — это Unicode-движок \\tex, который обеспечивает удобное использование шрифтов OpenType и многоязычную вёрстку. Он не обратно-совместим с \\tex~<<CMD_117>>.\n  \\item \\luatex вводит интерпретатор Lua, позволяя авторам интегрировать код на Lua в свои макросы. Он не обратно-совместим с \\tex~<<CMD_118>>.\n\\end{enumerate}\n\n\\paragraph{PDF outputs}\n\nПри заданном входном файле \\tex стремится быть независимо от системы при генерации вывода: входные файлы должны \\emph{``генерировать одинаковый вывод на любой системе, на которой они были обработаны---одинаковые переносы, одинаковые разрывы строк, одинаковые разрывы страниц, всё одинаково''}~<<CMD_119>>.\nХотя от разных движков \\tex не требуется выдавать одинаковый вывод при одном и том же входном файле,\nэти три движка совместимы с форматом \\latex и поэтому должны выдавать относительно схожий вывод в соответствии с этим форматом.\nДвижки, такие как \\luatex, \\emph{``могут использоваться как прямой заменитель''} в большинстве случаев; как для \\luatex, так и для \\xetex, благодаря интерфейсам, предоставляемым форматом \\latex, \\emph{``для большинства конечных пользователей LaTeX эти тонкости прозрачны''}~<<CMD_120>>.\n\n<<COMMENT_20>>\n\n<<COMMENT_21>>\n<<COMMENT_22>>\n<<COMMENT_23>>",
+  "input_tokens": 729,
+  "output_tokens": 3567,
+  "cost_usd": 0.00224955,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 546,
+      "total_input_tokens_est": 763,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 729,
+      "actual_output_tokens": 3567,
+      "actual_cost_usd": 0.00224955
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\section{Background}\n\n\\paragraph{\\texlive} \n\n\\texlive is a software distribution that provides a comprehensive \\tex system including various packages, macros, and engines~<<CMD_114>>.\n\\texlive is released yearly, and while it is possible to update a \\tex distribution between official releases, it is \\emph{``not necessary or particularly recommended''} especially since the set of packages and programs in the official release is \\emph{``the only one which gets tested as a coherent release''}~<<CMD_115>>.\n\n\\paragraph{\\tex engines}\n\nSince \\tex's release in 1978, other engines have been developed to extend the functionality of the original \\tex program. \nThis paper discusses three of these engines, all derived from \\tex:\n\n\\begin{enumerate}\n  \\item \\sloppy \\pdftex, and its \\latex variant \\pdflatex, is a backward-compatible extension of \\tex that can directly output PDF (``Portable Document Format'') files from \\tex files~<<CMD_116>>.\n  \\item \\xetex is a Unicode \\tex engine that enables convenient use of OpenType fonts and multilingual typesetting. It is not backward-compatible with \\tex~<<CMD_117>>.\n  \\item \\luatex introduces a Lua interpreter, allowing authors to integrate Lua code into their macros. It is not backward-compatible with \\tex~<<CMD_118>>.\n\\end{enumerate}\n\n\\paragraph{PDF outputs}\n\nGiven an input file, \\tex aims to be system-agnostic in generating output: input files should \\emph{``generate the same output on any system on which they were processed---same hyphenation, same line breaks, same page breaks, same everything''}~<<CMD_119>>.\nWhile different \\tex engines are not required to produce the same output given the same input file,\nthese three engines are compatible with the \\latex format, and thus should produce relatively similar output according to this format.\nEngines like \\luatex \\emph{``may be used as a drop-in replacement''} most of the time; for both \\luatex and \\xetex, due to the interfaces provided by the \\latex format, \\emph{``for most LaTeX end users, these subtleties are transparent''}~<<CMD_120>>.\n\n<<COMMENT_20>>\n\n<<COMMENT_21>>\n<<COMMENT_22>>\n<<COMMENT_23>>\n\n\n"
+  },
+  "saved_at": "2025-12-26 13:59:19"
+}

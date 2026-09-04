@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\section{Заключение}\nМы представляем \\tool{}, инструмент, который использует LLMs и эмбеддинги для создания интерактивного интерфейса автоматически сгенерированных гистограмм, предназначенного для анализа неструктурированных наборов данных специалистами по работе с данными. Через наблюдательное исследование с 10 специалистами по работе с данными мы подтверждаем, что инструмент может решать целевые потребности пользователей, такие как подведение итогов по наборам данных, выявление выбросов и интересных срезов данных, а также быстрое и интерактивное тестирование гипотез. Участники быстро определили правильную тематику набора данных, обратили внимание на потенциально тревожное асимметричное распределение данных и обнаружили нарушения безопасности в наборе данных. Наконец, мы суммируем потенциальные сценарии использования и ограничения \\tool{}, описанные этими участниками. В совокупности эти результаты указывают на то, что достижения в области LLMs могут позволить разработку инструментов для осмысления данных, которые лучше обслуживают специалистов по работе с данными.",
+  "input_tokens": 370,
+  "output_tokens": 1727,
+  "cost_usd": 0.0010917,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 233,
+      "total_input_tokens_est": 450,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 370,
+      "actual_output_tokens": 1727,
+      "actual_cost_usd": 0.0010917
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\section{Conclusion}\nWe present \\tool{}, a tool that leverages LLMs and embeddings to create an interactive interface of automatically-generated histograms for data practitioners to analyze unstructured datasets. Through an observational study with 10 data workers, we validate that the tool can address targeted user needs such as summarizing datasets, identifying outliers and interesting slices of data, and testing hypotheses rapidly and interactively. Participants quickly identified the correct dataset topic, noticed a potentially-concerning asymmetrical data distribution, and found safety violations within the dataset. Finally, we summarize potential use cases and limitations of \\tool{} described by these participants. Together, these findings suggest that advancements in LLMs can enable the development of sensemaking tools to better serve data workers.\n\n"
+  },
+  "saved_at": "2025-12-26 17:31:10"
+}

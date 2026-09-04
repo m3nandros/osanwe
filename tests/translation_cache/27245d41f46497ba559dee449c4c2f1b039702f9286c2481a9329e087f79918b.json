@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\section{Использование}\n\nПакет quantikz доступен на CTAN и, следовательно, будет доступен через большинство (актуальных) TeX-дистрибутивов. После установки просто добавьте <<CODE_335>> в преамбулу вашего документа.\nТеперь каждый раз, когда вы хотите включить квантовую схему, вы просто заключаете её в окружение \\verb!tikzcd! или \\verb!quantikz!. (Теоретически \\verb!quantikz! имеет преимущество перед \\verb!tikzcd!, но \\verb!tikzcd! сохранён ради обратной совместимости. В качестве предпочтения используйте \\verb!quantikz!.)\n\nТекущая версия TeX на arXiv недостаточно обновлена, чтобы предоставить пакет quantikz. При загрузке исходников на arXiv вам необходимо получить файл tikzlibraryquantikz2.code.tex (вы всегда сможете найти его на своём компьютере в основном каталоге tex, если установили пакет, но он также должен сопровождать исходный код этого файла, а самая свежая версия доступна \\href{https://ctan.org/tex-archive/graphics/pgf/contrib/quantikz}{here}). Просто включите файл в корневой каталог вашего исходного кода.",
+  "input_tokens": 488,
+  "output_tokens": 1376,
+  "cost_usd": 0.0008988,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 283,
+      "total_input_tokens_est": 500,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 488,
+      "actual_output_tokens": 1376,
+      "actual_cost_usd": 0.0008988
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\section{Usage}\n\nThe quantikz package is available on CTAN, and will therefore be available through most (current) TeX distributions. Once installed, simply write\n<<CODE_335>>\nin the preamble of your document\nNow, each time that you want to include a quantum circuit, you just enclose it in a \\verb!tikzcd! or \\verb!quantikz! environment. (Theoretically, there is an advantange of \\verb!quantikz! over \\verb!tikzcd!, but \\verb!tikzcd! is retained for backwards compatibility. Use \\verb!quantikz! for preference.)\n\nThe current version of TeX on the arXiv is not up to date enough to provide the quantikz package. When uploading your source to the arXiv, you need to obtain the file tikzlibraryquantikz2.code.tex (you will always be able to locate it on your computer in the main tex directory if you have installed the package, but it should also accompany the source code of this file, and the most recent version is available \\href{https://ctan.org/tex-archive/graphics/pgf/contrib/quantikz}{here}). Just include the file in the main directory of your source code.\n\n"
+  },
+  "saved_at": "2025-12-26 14:59:46"
+}

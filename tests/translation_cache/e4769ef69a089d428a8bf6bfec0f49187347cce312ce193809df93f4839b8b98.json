@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\begin{document}\n\n\\title{Гибридный метод субградиента и метода имитации отжига для гемивариационных неравенств}\n\n\\author{Piotr~Bartman-Szwarc\\inst{1,2}\\orcidID{0000-0003-0265-6428} \\and\nAdil~M.~Bagirov\\inst{3}\\orcidID{0000-0003-2075-1699} \\and Anna~Ochal\\inst{1}\\orcidID{0000-0003-4385-2302}}\n<<COMMENT_49>>\n\\authorrunning{P. Bartman-Szwarc и др.}\n<<COMMENT_50>>\n<<COMMENT_51>>\n<<COMMENT_52>>\n\\titlerunning{Гибридный метод субградиента и имитации отжига для гемивариационных неравенств}\n\\institute{Кафедра оптимизации и управления, Ягеллонский университет, Краков, Польша\n\\and\nДокторская школа точных и естественных наук, Ягеллонский университет, Краков, Польша\n\\and\nЦентр интеллектуальной аналитики, Институт инноваций, науки и устойчивого развития, Federation University Australia, Балларат, Виктория, Австралия}\n<<COMMENT_53>>\n\n\\maketitle\n\n\\begin{abstract}\nВ данной работе мы используем глобальный агрегатный метод субградиента для численного решения задач гемивариационных неравенств, возникающих в контактной механике. Метод интегрирует процедуру глобального поиска для определения начальных точек для алгоритма локальной минимизации. Алгоритм состоит из двух типов шагов: нулевых (null) шагов и серьёзных (serious) шагов. На каждом нулевом шаге используются только два субградиента: агрегатный субградиент и субградиент, вычисленный в текущей итерационной точке; вместе они определяют направление поиска. Кроме того, мы сравниваем производительность предложенного метода с выбранными решателями, используя в качестве примера типовую задачу контактной механики.\n\\keywords{Гемивариационные неравенства \\and Негладкая оптимизация \\and Метод субградиента}\n\\end{abstract}\n\n<<COMMENT_54>>",
+  "input_tokens": 631,
+  "output_tokens": 2825,
+  "cost_usd": 0.0017896499999999998,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 430,
+      "total_input_tokens_est": 647,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 631,
+      "actual_output_tokens": 2825,
+      "actual_cost_usd": 0.0017896499999999998
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\begin{document}\n\n\\title{Hybrid subgradient and simulated annealing method for hemivariational inequalities}\n\n\\author{Piotr~Bartman-Szwarc\\inst{1,2}\\orcidID{0000-0003-0265-6428} \\and\nAdil~M.~Bagirov\\inst{3}\\orcidID{0000-0003-2075-1699} \\and Anna~Ochal\\inst{1}\\orcidID{0000-0003-4385-2302}}\n<<COMMENT_49>>\n\\authorrunning{P. Bartman-Szwarc et al.}\n<<COMMENT_50>>\n<<COMMENT_51>>\n<<COMMENT_52>>\n\\titlerunning{Hybrid subgradient and simulated annealing method for HVIs}\n\\institute{Chair of Optimization and Control, Jagiellonian University, Krakow, Poland\n\\and\nDoctoral School of Exact and Natural Sciences, Jagiellonian University, Krakow, Poland\n\\and\nCentre for Smart Analytics, Institute of Innovation, Science and Sustainability, Federation University Australia, Ballarat, Victoria, Australia}\n<<COMMENT_53>>\n\n\\maketitle\n\n\\begin{abstract}\nIn this paper, we employ a global aggregate subgradient method for the numerical solution of hemivariational inequality problems arising in contact mechanics. The method integrates a global search procedure to identify starting points for a local minimization algorithm. The algorithm consists of two types of steps: null steps and serious steps. In each null step, only two subgradients are utilized: the aggregate subgradient and the subgradient computed at the current iteration point, which together determine the search direction. Furthermore, we compare the performance of the proposed method with selected solvers using a~representative contact mechanics problem as a case study.\n\n\\keywords{Hemivariational Inequalities \\and Nonsmooth Optimization \\and Sub\\-gra\\-dient Method}\n\\end{abstract}\n\n<<COMMENT_54>>\n\n\n\n"
+  },
+  "saved_at": "2025-12-26 13:44:24"
+}

@@ -1,0 +1,30 @@
+{
+  "translated_content": "{\\bf Кодировщик одежды.} Чтобы продемонстрировать эффективность кодировщика одежды в извлечении представлений одежды, мы проводим следующие два эксперимента: 1) заменить его на ControlNet~<<CMD_606>>, 2) полностью удалить его.\n<<COMMENT_216>>\nКак показано в~\\cref{fig:ablation} (b) и (c), как замена кодировщика одежды на ControlNet, так и его полное удаление не приводят к результатам с тонкими деталями.\n<<COMMENT_217>>\nЭто указывает на то, что наш кодировщик одежды и механизм слияния признаков посредством внимания способны сохранять тонкую семантическую информацию об одежде.\n\n{\\bf Совместное обучение изображений и видео.} Мы используем преимущества как наборов данных изображений, так и видео посредством нашей стратегии совместного обучения на изображениях и видео.\n<<COMMENT_218>>\nКак показано в~\\cref{fig:ablation} (d), вместо использования \n<<COMMENT_219>>\n<<COMMENT_220>>\n<<COMMENT_221>>\n<<COMMENT_222>>\n<<COMMENT_223>>\n<<COMMENT_224>>\n<<COMMENT_225>>\n<<COMMENT_226>>\nсовместной стратегии обучения, применение двухступенчатой стратегии обучения (где первый этап обучается на наборах данных изображений, а второй — на наборе данных видео) приводит к потере деталей одежды. \n<<COMMENT_227>>\nЭто связано с тем, что при переходе от первого к второму этапу изменение формата данных и контекста мешает модели эффективно сохранять и применять сложные текстурные и стилевые особенности одежды, изученные в ходе обучения, ориентированного на изображения, что приводит к ухудшению сохранности деталей в видеовыходе.\n\n\\begin{figure}[!h]\n  \\centering\n <<COMMENT_228>>\n  <<IMG_461>>\n  \\caption{\\small{Абляции для кодировщика одежды и стратегии совместного обучения.}}\n  <<CMD_627>>\n  \\vspace{-0.5cm}\n\\end{figure}",
+  "input_tokens": 602,
+  "output_tokens": 1730,
+  "cost_usd": 0.0011282999999999998,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 436,
+      "total_input_tokens_est": 653,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 602,
+      "actual_output_tokens": 1730,
+      "actual_cost_usd": 0.0011282999999999998
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n{\\bf Garment Encoder.} To illustrate the Garment Encoder's efficiency in extracting clothing representations, we conduct the following two experiments: 1) replace it with ControlNet~<<CMD_606>>, 2) remove it completely.\n<<COMMENT_216>>\nAs illustrated in~\\cref{fig:ablation} (b) and (c), both replacing the Garment Encoder with ControlNet and completely removing it fail to yield outcomes with fine details.\n<<COMMENT_217>>\nThis indicates that our Garment Encoder and attention feature fusion mechanism are capable of preserving fine-grained semantic information of clothing.\n\n{\\bf Image-video joint training.} We exploit the benefits of both image and video datasets through our image-video joint training strategy.\n<<COMMENT_218>>\nAs shown in~\\cref{fig:ablation} (d), instead of using \n<<COMMENT_219>>\n<<COMMENT_220>>\n<<COMMENT_221>>\n<<COMMENT_222>>\n<<COMMENT_223>>\n<<COMMENT_224>>\n<<COMMENT_225>>\n<<COMMENT_226>>\na joint training strategy, employing a two-stage training strategy (where the first stage is trained on image datasets and the second stage is trained on the video dataset) results in the loss of clothing details. \n<<COMMENT_227>>\nThis is because, during the transition from the first to the second stage, the shift in data format and context prevents the model from effectively retaining and applying the intricate texture and style features of the clothing learned during the image-focused training, leading to a degradation in detail preservation in video output.\n\n\\begin{figure}[!h]\n  \\centering\n <<COMMENT_228>>\n  <<IMG_461>>\n  \\caption{\\small{Ablations for the Garment Encoder and the joint training strategy.}}\n  <<CMD_627>>\n  \\vspace{-0.5cm}\n\\end{figure}\n\n\n\n"
+  },
+  "saved_at": "2025-12-25 22:25:03"
+}

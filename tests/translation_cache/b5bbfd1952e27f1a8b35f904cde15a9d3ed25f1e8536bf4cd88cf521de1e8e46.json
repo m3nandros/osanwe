@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\begin{document}\n\n\\maketitle\n\\let\\thefootnote\\relax\n\\footnotetext{<<MATH_INLINE_423>> Равный вклад, <<MATH_INLINE_424>> Автор для корреспонденции.}\n<<COMMENT_41>>\n<<COMMENT_42>>\n\\vspace{-2\\baselineskip} \n\\begin{abstract}\n\\vspace{-1\\baselineskip} \nАкадемические презентационные видео стали важным средством научной коммуникации, однако их создание по-прежнему требует больших трудозатрат, часто занимая часы на разработку слайдов, запись и монтаж для короткого 2-10-минутного видео. \nВ отличие от обычного видео, генерация презентационных видео связана с особыми задачами: входные данные с длинным контекстом из научных статей, плотная мультимодальная информация (текст, рисунки, таблицы) и необходимость координации нескольких согласованных каналов, таких как слайды, субтитры, речь и ведущий. \nЧтобы решить эти задачи, мы представляем \\textbf{\\bench}, первый бенчмарк из 101 научной работы, снабжённой авторскими презентационными видео, слайдами и метаданными докладчика. Мы также разработали четыре специализированных метрики оценки — Meta Similarity, PresentArena, \\textit{PresentQuiz} и \\textit{IP Memory} — для оценки того, насколько видео передают информацию статьи аудитории и как это влияет на воздействие работы. На этой основе мы предлагаем \\textbf{\\agent}, первую мультиагентную систему для генерации академических презентационных видео. Она интегрирует генерацию слайдов с эффективным уточнением макета с помощью нового эффективного \\textit{Tree Search Visual Choice}, позиционирование курсора, создание субтитров, синтез речи и рендеринг говорящего, одновременно параллелизуя покадровую (по слайдам) генерацию для повышения эффективности. Эксперименты на \\bench~показывают, что презентационные видео, созданные нашим подходом, более достоверны и информативны по сравнению с существующими базовыми методами, что представляет собой практический шаг к автоматизированной и готовой к использованию генерации академических видео. Наш набор данных, агент и код доступны по адресу <<CMD_582>>.\n\n\\end{abstract}\n\n<<COMMENT_43>>\n<<COMMENT_44>>\n<<COMMENT_45>>\n<<COMMENT_46>>\n<<COMMENT_47>>\n<<COMMENT_48>>\n<<COMMENT_49>>\n<<COMMENT_50>>\n<<COMMENT_51>>\n\n<<COMMENT_52>>\n<<COMMENT_53>>\n<<COMMENT_54>>\n\\vspace{-1\\baselineskip}",
+  "input_tokens": 680,
+  "output_tokens": 2460,
+  "cost_usd": 0.001578,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 538,
+      "total_input_tokens_est": 755,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 680,
+      "actual_output_tokens": 2460,
+      "actual_cost_usd": 0.001578
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\begin{document}\n\n\\maketitle\n\\let\\thefootnote\\relax\n\\footnotetext{<<MATH_INLINE_423>> Equal contribution, <<MATH_INLINE_424>> Corresponding author.}\n<<COMMENT_41>>\n<<COMMENT_42>>\n\\vspace{-2\\baselineskip} \n\\begin{abstract}\n\\vspace{-1\\baselineskip} \nAcademic presentation videos have become an essential medium for research communication, yet producing them remains highly labor-intensive, often requiring hours of slide design, recording, and editing for a short 2 to 10 minutes video. \nUnlike natural video, presentation video generation involves distinctive challenges: long-context inputs from research papers, dense multi-modal information (text, figures, tables), and the need to coordinate multiple aligned channels such as slides, subtitles, speech, and human talker. \nTo address these challenges, we introduce \\textbf{\\bench}, the first benchmark of 101 research papers paired with author-created presentation videos, slides, and speaker metadata. We further design four tailored evaluation metrics—Meta Similarity, PresentArena, \\textit{PresentQuiz}, and \\textit{IP Memory}—to measure how videos convey the paper's information to the audience and affect the work impact. Building on this foundation, we propose \\textbf{\\agent}, the first multi-agent framework for academic presentation video generation. It integrates slide generation with effective layout refinement by a novel effective \\textit{Tree Search Visual Choice}, cursor grounding, subtitling, speech synthesis, and talking-head rendering, while parallelizing slide-wise generation for efficiency. Experiments on \\bench~demonstrate that the presentation videos produced by our approach are more faithful and informative than existing baselines, establishing a practical step toward automated and ready-to-use academic video generation. Our dataset, agent, and code are available at <<CMD_582>>.\n\n\\end{abstract}\n\n<<COMMENT_43>>\n<<COMMENT_44>>\n<<COMMENT_45>>\n<<COMMENT_46>>\n<<COMMENT_47>>\n<<COMMENT_48>>\n<<COMMENT_49>>\n<<COMMENT_50>>\n<<COMMENT_51>>\n\n<<COMMENT_52>>\n<<COMMENT_53>>\n<<COMMENT_54>>\n\\vspace{-1\\baselineskip} \n\n\n"
+  },
+  "saved_at": "2025-12-26 15:50:08"
+}

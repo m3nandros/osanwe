@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\documentclass[lettersize,journal]{IEEEtran}\n\\usepackage{amsmath,amsfonts}\n\\usepackage{algorithmic}\n\\usepackage{algorithm}\n\\usepackage{array}\n\\usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}\n\\usepackage{textcomp}\n\\usepackage{stfloats}\n\\usepackage{url}\n\\usepackage{verbatim}\n\\usepackage{graphicx}\n\\usepackage{cite}\n\\usepackage{multirow}\n\\usepackage{booktabs}\n<<COMMENT_0>>\n\\hyphenation{op-tical net-works semi-conduc-tor IEEE-Xplore}\n\\usepackage[pagebackref=false,breaklinks=true,colorlinks,bookmarks=false]{hyperref}\n<<COMMENT_1>>\n\n\\usepackage{url}\n\\usepackage[dvipsnames]{xcolor}\n\\hypersetup{\n\tfinal,\n\tbreaklinks,\n\tcolorlinks,\n\tlinkcolor={Mahogany},\n\tcitecolor={YellowGreen},\n\turlcolor={CadetBlue}\n}\n\n\\usepackage[dvipsnames]{xcolor}\n\\newcommand{\\JJ}[1]{\\textcolor{orange}{#1}}\n\\newcommand{\\JC}[1]{\\textcolor{red}{[комментарий: #1]}}\n\\newcommand{\\ZC}[1]{\\textcolor{blue}{[исправить: #1]}}",
+  "input_tokens": 514,
+  "output_tokens": 1331,
+  "cost_usd": 0.0008756999999999999,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 243,
+      "total_input_tokens_est": 460,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 514,
+      "actual_output_tokens": 1331,
+      "actual_cost_usd": 0.0008756999999999999
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\documentclass[lettersize,journal]{IEEEtran}\n\\usepackage{amsmath,amsfonts}\n\\usepackage{algorithmic}\n\\usepackage{algorithm}\n\\usepackage{array}\n\\usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}\n\\usepackage{textcomp}\n\\usepackage{stfloats}\n\\usepackage{url}\n\\usepackage{verbatim}\n\\usepackage{graphicx}\n\\usepackage{cite}\n\\usepackage{multirow}\n\\usepackage{booktabs}\n<<COMMENT_0>>\n\\hyphenation{op-tical net-works semi-conduc-tor IEEE-Xplore}\n\\usepackage[pagebackref=false,breaklinks=true,colorlinks,bookmarks=false]{hyperref}\n<<COMMENT_1>>\n\n\\usepackage{url}\n\\usepackage[dvipsnames]{xcolor}\n\\hypersetup{\n\tfinal,\n\tbreaklinks,\n\tcolorlinks,\n\tlinkcolor={Mahogany},\n\tcitecolor={YellowGreen},\n\turlcolor={CadetBlue}\n}\n\n\\usepackage[dvipsnames]{xcolor}\n\\newcommand{\\JJ}[1]{\\textcolor{orange}{#1}}\n\\newcommand{\\JC}[1]{\\textcolor{red}{[comment: #1]}}\n\\newcommand{\\ZC}[1]{\\textcolor{blue}{[revise: #1]}}\n\n"
+  },
+  "saved_at": "2025-12-26 16:27:30"
+}

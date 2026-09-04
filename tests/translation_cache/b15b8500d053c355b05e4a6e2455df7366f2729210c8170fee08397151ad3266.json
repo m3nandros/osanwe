@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\section{}\nнастройки параметров обучения и другие детали обучения.\n\n\n\\begin{table}\n    \\centering\n    \\caption{детали обучения}\n    \\begin{tabular}{c|c}\n    \\hline\n        параметры&значение\\\\\n        \\hline\n         размер батча & 64  \\\\\n       \\hline\n         оптимизатор& adam  \\\\\n       \\hline\n         \\multicolumn{1}{c|}{\\multirow{2}*{эпохи}}& 10-30 для CNN,RNN \\\\\n         & 50-70 для BERT\\\\\n         \\hline\n         \\multicolumn{1}{c|}{\\multirow{2}*{скорость обучения}}& 0.01 для CNN,RNN\\\\\n         &0.001 для BERT\\\\\n         \\hline\n         длина входа& 256\\\\\n         \\hline\n         размер скрытого слоя&60\\\\\n         \\hline\n            размер словаря& 2000  \\\\\n            \\hline\n         эффективность взвешивания потерь &  0.5 \\\\\n         \\hline\n        область тонкой настройки&   внутри/снаружи  \\\\\n         \\hline\n    \\end{tabular}\n  \n    <<CMD_236>>\n\\end{table}",
+  "input_tokens": 491,
+  "output_tokens": 2094,
+  "cost_usd": 0.0013300499999999997,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 227,
+      "total_input_tokens_est": 444,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 491,
+      "actual_output_tokens": 2094,
+      "actual_cost_usd": 0.0013300499999999997
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\section{}\ntraining parameter settings, and other training details.\n\n\n\\begin{table}\n    \\centering\n    \\caption{training deteails}\n    \\begin{tabular}{c|c}\n    \\hline\n        parameters&setting\\\\\n        \\hline\n         batch size & 64  \\\\\n       \\hline\n         optimizer& adam  \\\\\n       \\hline\n         \\multicolumn{1}{c|}{\\multirow{2}*{epoch}}& 10-30 when CNN,RNN \\\\\n         & 50-70 when BERT\\\\\n         \\hline\n         \\multicolumn{1}{c|}{\\multirow{2}*{learning rate}}& 0.01 when CNN,RNN\\\\\n         &0.001 when BERT\\\\\n         \\hline\n         input length& 256\\\\\n         \\hline\n         hidden size&60\\\\\n         \\hline\n            vocab size& 2000  \\\\\n            \\hline\n         loss weighted efficient &  0.5 \\\\\n         \\hline\n        fine-tuning area&   in/out  \\\\\n         \\hline\n    \\end{tabular}\n  \n    <<CMD_236>>\n\\end{table}\n\n\n"
+  },
+  "saved_at": "2025-12-26 17:21:55"
+}

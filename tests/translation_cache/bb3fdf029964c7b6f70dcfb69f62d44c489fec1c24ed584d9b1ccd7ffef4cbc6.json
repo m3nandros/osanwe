@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\section*{Вспомогательная информация}\n<<COMMENT_96>>\nДополнительные данные к этой статье можно найти онлайн по адресу ... . Они включают вычислительные детали, электронные зонные структуры и плотности состояний, анализ термодинамической и тепловой (молекулярно-динамической) стабильности, заряды Бадера, структурные параметры, спектральные функции Элиашберга, дисперсионные кривые фононов, расчёты EPC (электрон–фононного взаимодействия) и подробности расчётов химического давления.",
+  "input_tokens": 299,
+  "output_tokens": 1292,
+  "cost_usd": 0.00082005,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 125,
+      "total_input_tokens_est": 342,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 299,
+      "actual_output_tokens": 1292,
+      "actual_cost_usd": 0.00082005
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\section*{Supporting Information}\n<<COMMENT_96>>\nSupplementary data to this article can be found online at ... . It includes the computational details, electronic band structures and densities of states, thermodynamic and thermal (molecular dynamics) stability analysis, Bader charges, structural parameters, Eliashberg spectral functions, phonon dispersion curves, EPC calculations, and details of the chemical pressure calculations.\n\n"
+  },
+  "saved_at": "2025-12-26 16:58:37"
+}

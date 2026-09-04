@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\begin{quote}\n   \\textit{``[Нас интересуют] термины идентичности и формальность языка. Какие темы возникают [для разных подгрупп аннотаторов]? Что представлено, а что нет?''}\\hspace{1em plus 1fill}---P6, о социокультурном контексте согласованности аннотаторов\n\\end{quote}\n\\begin{quote}\n    \\textit{``То, как говорение гендерно окрашено, очень тонко.. так что [я бы хотел классифицировать по] по типу слова, глаголам.''}\\hspace{1em plus 1fill}---P9, о репрезентации в наборах данных разговорной речи\n\\end{quote}\n\nУчастники также назвали интеграцию, скорость и надёжность ключевыми факторами, которые помогли бы им начать использовать \\tool{}.",
+  "input_tokens": 381,
+  "output_tokens": 1875,
+  "cost_usd": 0.0011821499999999999,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 173,
+      "total_input_tokens_est": 390,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 381,
+      "actual_output_tokens": 1875,
+      "actual_cost_usd": 0.0011821499999999999
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\begin{quote}\n   \\textit{``[We’re interested in] identity terms and formality of language. What kinds of topics come up [for different subgroups of annotators]? What is or is not being represented?''}\\hspace{1em plus 1fill}---P6, on social-cultural context for annotator agreement\n\\end{quote}\n\\begin{quote}\n    \\textit{``The way that speaking is gendered is very subtle.. so [I’d want to categorize by] by word type, verbs.''}\\hspace{1em plus 1fill}---P9, on representation in conversational datasets\n\\end{quote}\n\nParticipants also listed integration, speed, and reliability as key factors that would help them adopt \\tool{}.\n\n\n\n"
+  },
+  "saved_at": "2025-12-26 17:30:37"
+}

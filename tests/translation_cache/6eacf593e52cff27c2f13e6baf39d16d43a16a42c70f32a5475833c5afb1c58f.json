@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\section{Более подробные детали реализации} \n\n\\textbf{Детали обучения и вывода.} В качестве оптимизатора по умолчанию выбран AdamW~<<CMD_607>>, с нормой скорости обучения, установленной на <<MATH_INLINE_545>>.\nВ процессе обучения все данные масштабируются до разрешения <<MATH_INLINE_546>> пикселей. При выборе видеодатасета мы выбираем видеоклип из 24 кадров с шагом выборки, установленным на 4. Мы обучаем нашу модель на 4 GPU Nvidia A100 (80GB), общее количество шагов обучения составляет 60,000, с смешанной точностью fp16.\n\nМы обучаем Временной модуль на видеоклипах из 24 кадров из‑за ограничений объёма VRAM, что приводит к трудностям при генерации более длинных результатов примерки. Для решения этой проблемы мы применяем метод скользящего окна, в духе MagicAnimate~<<CMD_608>>, чтобы обеспечить согласованность видео на длинных промежутках. Конкретно, мы делим длинное входное видео на несколько сегментов с перекрытием, затем подавляем шум в каждом отдельном сегменте, выполняем интерполяцию шума в перекрывающихся частях и, наконец, объединяем сегменты для получения пространственно‑временно согласованного длинного видео примерки. \n\n\n\n\\textbf{Аугментация данных.} Мы применяем аугментации данных к наборам изображений и видео. Мы используем горизонтальное отражение (с вероятностью 0.5), случайное аффинное смещение и масштабирование (ограничение 0.2, с вероятностью 0.5) к данным об одежде ({\\ie} изображение одежды и соответствующая маска) и видеоданным ({\\ie} исходное видео, видео поз, видео без учёта одежды и соответствующее видео масок). Обратите внимание, что мы применяем только пространственные аугментации, поскольку считаем, что различные условия освещения в видео могут вызывать цветовые отклонения одежды.",
+  "input_tokens": 574,
+  "output_tokens": 2064,
+  "cost_usd": 0.0013245,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 415,
+      "total_input_tokens_est": 632,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 574,
+      "actual_output_tokens": 2064,
+      "actual_cost_usd": 0.0013245
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\section{More implementation details} \n\n\\textbf{Training and Inference details.} AdamW~<<CMD_607>> is chosen as the default optimizer, with a learning rate set to <<MATH_INLINE_545>>.\nDuring the training process, all the data undergoes resizing to a resolution of <<MATH_INLINE_546>> pixels. When the video dataset is selected, we sample a 24-frame video clip with the sample rate set to 4. We train our model in 4 Nvidia A100 GPUs (80GB), the total training steps is 60,000, with fp16 mixed precision.\n\nWe train the Temporal Module using 24-frame video clips due to the VRAM capacity, which leads to difficulties in generating longer try-on results. To tackle this challenge, we employ a sliding window method, following MagicAnimate~<<CMD_608>>, to ensure long-range video consistency. Specifically, we divide a long input video into several segments with overlap, then we denoise every single segment, conduct noise interpolation in the overlapped parts, and finally combine each segment to generate a spatial-temporal consistent long try-on video. \n\n\n\n\\textbf{Data Augmentation.} We apply data augmentations for the image and video datasets. We use horizontal flip (with probability 0.5), random\naffine shifting and scaling (limit of 0.2, with probability 0.5) to the clothing data ({\\ie}clothing image and the corresponding mask) and video data ({\\ie}source video, pose video, clothing-agnostic video and the corresponding mask video). Note that we only apply spatial augmentations, as we argue that different illumination conditions in videos can cause the color deviation of the garments.\n\n"
+  },
+  "saved_at": "2025-12-25 22:26:07"
+}

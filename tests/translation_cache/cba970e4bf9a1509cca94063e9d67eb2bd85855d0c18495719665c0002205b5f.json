@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\begin{document}\n\n\\maketitle\n\n\\begin{abstract}\n\nВиртуальная примерка одежды в видео (Video virtual try-on) направлена на перенос предмета одежды на видео цели — человека. Прямое применение методов примерки на основе изображений к области видео покадрово приводит к временной несогласованности результатов, тогда как предыдущие решения для видео-примерки могли генерировать только результаты низкого визуального качества и с размытием. В этой работе мы представляем ViViD, новую архитектуру, использующую мощные диффузионные модели для решения задачи виртуальной примерки одежды в видео. В частности, мы разработали энкодер одежды (Garment Encoder) для извлечения тонко-детализированных семантических признаков одежды, что направляет модель на захват деталей предметов гардероба и внедрение их в целевое видео через предложенный механизм слияния признаков с вниманием. Чтобы обеспечить пространственно-временную согласованность, мы вводим лёгкий энкодер позы (Pose Encoder) для кодирования сигналов позы, что позволяет модели изучать взаимодействия между одеждой и позой человека и вставлять иерархические временные модули (Temporal Modules) в модель Stable Diffusion для преобразования текста в изображение с целью получения более связного и реалистичного синтеза видео. Кроме того, мы собрали новый датасет, который является на сегодняшний день крупнейшим по объёму, с наибольшим разнообразием типов одежды и самым высоким разрешением для задачи виртуальной примерки одежды в видео. Широкие эксперименты демонстрируют, что наш подход способен давать удовлетворительные результаты видеопримерки. Датасет, код и веса будут доступны публично. \nСтраница проекта: <<CMD_634>>.\n\n\\end{abstract}",
+  "input_tokens": 491,
+  "output_tokens": 1685,
+  "cost_usd": 0.00108465,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 378,
+      "total_input_tokens_est": 595,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 491,
+      "actual_output_tokens": 1685,
+      "actual_cost_usd": 0.00108465
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\begin{document}\n\n\\maketitle\n\n\\begin{abstract}\n\nVideo virtual try-on aims to transfer a clothing item onto the video of a target person. Directly applying the technique of image-based try-on to the video domain in a frame-wise manner will cause temporal-inconsistent outcomes while previous video-based try-on solutions can only generate low visual quality and blurring results. In this work, we present ViViD, a novel framework employing powerful diffusion models to tackle the task of video virtual try-on. Specifically, we design the Garment Encoder to extract fine-grained clothing semantic features, guiding the model to capture garment details and inject them into the target video through the proposed attention feature fusion mechanism. To ensure spatial-temporal consistency, we introduce a lightweight Pose Encoder to encode pose signals, enabling the model to learn the interactions between clothing and human posture and insert hierarchical Temporal Modules into the text-to-image stable diffusion model for more coherent and lifelike video synthesis. Furthermore, we collect a new dataset, which is the largest, with the most diverse types of garments and the highest resolution for the task of video virtual try-on to date. Extensive experiments demonstrate that our approach is able to yield satisfactory video try-on results. The dataset, codes, and weights will be publicly available. \nProject page: <<CMD_634>>.\n\n\\end{abstract}\n\n\n\n"
+  },
+  "saved_at": "2025-12-25 22:14:22"
+}

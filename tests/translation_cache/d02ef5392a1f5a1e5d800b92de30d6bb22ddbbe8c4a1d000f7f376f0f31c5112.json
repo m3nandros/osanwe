@@ -1,0 +1,30 @@
+{
+  "translated_content": "Наш подход выявил различные ошибки в экосистеме \\tex посредством сравнений между версиями, а также существенные несоответствия при кросс-движковых сравнениях.\nЭтот пайплайн таким образом может служить в качестве автоматизированного пайплайна дифференциального тестирования при разработке программного обеспечения, связанного с \\tex, предоставляя разнообразный тестовый корпус,\nпозволяя разработчикам проверять, как их программное обеспечение может взаимодействовать с другим программным обеспечением в экосистеме \\tex.\nИз-за сложности экосистемы \\tex, где авторы, как правило, используют большое разнообразие пакетов и классов документов, которые могут обновляться независимо друг от друга, \nподобный подход был бы крайне полезен для выявления граничных случаев, поскольку он обнаруживает проблемы, которые могут не проявиться в изолированных тестах.\nЭто помогает разработчикам проверять, каким образом их программное обеспечение может быть затронуто изменениями в экосистеме \\tex или приводить к таким изменениям в широком спектре разнообразных сценариев использования.\nПомимо кампаний по дифференциальному тестированию, связанных с \\tex, наш анализ эффективности различных методов сравнения PDF может послужить основой для разработки других подходов к тестированию, которые аналогично фокусируются на человеко-читаемых документах.",
+  "input_tokens": 412,
+  "output_tokens": 946,
+  "cost_usd": 0.0006293999999999999,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 290,
+      "total_input_tokens_est": 507,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 412,
+      "actual_output_tokens": 946,
+      "actual_cost_usd": 0.0006293999999999999
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\nOur approach identified various bugs in the \\tex ecosystem through inter-version comparisons, as well as significant inconsistencies in cross-engine comparisons.\nThis pipeline may thus function as an automated differential testing pipeline for developing \\tex-related software by providing a varied test corpus,\nallowing developers to test how their software may interact with other software in the \\tex ecosystem.\nDue to the complexity of the \\tex ecosystem, where authors tend to use a large variety of packages and document classes which may be updated independently of each other, \nsuch an approach would be highly beneficial in uncovering edge cases as it uncovers issues that might not be found in isolated tests.\nThis helps developers test how their software might be affected by, or result in, changes in the \\tex ecosystem over a large number of diverse use cases.\nBesides \\tex-related differential testing campaigns, our analysis of the efficacy of various PDF comparison methods could inform the design of other testing approaches that similarly focus on human-readable documents.\n\n\n\n"
+  },
+  "saved_at": "2025-12-26 14:44:57"
+}

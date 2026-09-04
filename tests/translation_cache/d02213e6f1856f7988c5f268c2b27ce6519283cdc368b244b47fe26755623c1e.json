@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\section{Ключевые слова}\nМодель латентного пространства, анализ социальных сетей, высокоразмерный анализ",
+  "input_tokens": 237,
+  "output_tokens": 355,
+  "cost_usd": 0.00024854999999999994,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 39,
+      "total_input_tokens_est": 256,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 237,
+      "actual_output_tokens": 355,
+      "actual_cost_usd": 0.00024854999999999994
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\section{Keywords}\nLatent Space Model, Social Network Analysis, High-dimensional Analysis\n\n"
+  },
+  "saved_at": "2025-12-26 16:20:11"
+}

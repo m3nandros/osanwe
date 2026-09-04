@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\begin{figure}\n    \\centering\n    <<IMG_421>>\n    \\captionsetup{skip=0pt}  \n    \\caption{\\textbf{Визуализация сгенерированных результатов.} {\\agent} создаёт презентационные видео с богатым, детализированным содержанием слайдов, точным позиционированием курсора и вовлекающим докладчиком; в отличие от него, Veo3~<<CMD_547>> даёт размытый текст и неполное покрытие информации, а PresentAgent~<<CMD_548>> создаёт слайды, перегруженные текстом, и страдает от проблем с переполненной версткой и неточной информацией (\\textit{например,} название и учреждения).}\n    <<CMD_579>>\n    \\vspace{-0.2\\baselineskip} \n\\end{figure}\n<<COMMENT_327>>\n\\vspace{-0.5\\baselineskip}",
+  "input_tokens": 384,
+  "output_tokens": 1621,
+  "cost_usd": 0.0010302,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 172,
+      "total_input_tokens_est": 389,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 384,
+      "actual_output_tokens": 1621,
+      "actual_cost_usd": 0.0010302
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\begin{figure}\n    \\centering\n    <<IMG_421>>\n    \\captionsetup{skip=0pt}  \n    \\caption{\\textbf{Visualization of generated results.} {\\agent} produces presentation videos with rich, fine-grained slide content, accurate cursor grounding, and an engaging talker; in contrast, Veo3~<<CMD_547>> yields blurred text and incomplete information coverage, while PresentAgent~<<CMD_548>> produces text-heavy slides and suffers from overfull layout issues and inaccurate information (\\textit{e.g.}, title and institutions).}\n    <<CMD_579>>\n    \\vspace{-0.2\\baselineskip} \n\\end{figure}\n<<COMMENT_327>>\n\\vspace{-0.5\\baselineskip} \n\n\n"
+  },
+  "saved_at": "2025-12-26 16:03:37"
+}

@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\section{Заключение}\n\nМы разработали автоматизированный конвейер для выявления несоответствий между движками \\tex и дистрибуциями \\texlive.\nС помощью этого подхода мы обнаружили значительный объём несоответствий по всей экосистеме \\tex, варьирующихся от изменений стандартных флагов компиляции и форматирования в классах документов до поведения пакетов \\latex и самого основного пакета \\latex.\nМы обнаружили два новых бага в пакетах \\latex, а также пять уже известных багов и другие скрытые различия.\nМы охарактеризовали обнаруженные несоответствия, чтобы показать типичные способы, которыми движки \\tex могут отличаться помимо явно перечисленных различий, а также то, чего авторы могут ожидать от разных версий \\texlive.\nСосредоточившись на экосистеме \\tex в целом, мы предлагаем прикладные и практические рекомендации для авторов \\tex-документов по управлению постоянно развивающимся программным обеспечением и избеганию нежелательных результатов. \nМы полагаем, что это исследование также будет полезно разработчикам, поскольку эмпирически демонстрирует взаимосвязь между различными частями экосистемы, как проявляются несоответствия и как это может повлиять на их пользователей.\nНаконец, наш автоматизированный конвейер может дополнительно использоваться в качестве подхода дифференциального тестирования для сбора разнообразного корпуса тестов и выявления дополнительных багов и краевых случаев в экосистеме \\tex.\n\n<<КОММЕНТАРИЙ_84>>",
+  "input_tokens": 459,
+  "output_tokens": 1257,
+  "cost_usd": 0.0008230499999999999,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 350,
+      "total_input_tokens_est": 567,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 459,
+      "actual_output_tokens": 1257,
+      "actual_cost_usd": 0.0008230499999999999
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\section{Conclusion}\n\nWe have developed an automated pipeline for identifying inconsistencies between \\tex engines and \\texlive distributions.\nUsing this approach, we found a significant extent of inconsistencies throughout the \\tex ecosystem, ranging from changes in default compilation flags and formatting in document classes to behaviours of \\latex packages and the core \\latex package itself.\nWe found two new bugs in \\latex packages, along with five existing bugs and other obscured differences.\nWe characterised the inconsistencies found to demonstrate the typical ways in which \\tex engines may differ beyond their explicitly listed differences, as well as what authors can expect from different versions of \\texlive.\nBy focusing on the \\tex ecosystem as a whole, we offer actionable and practical insights for authors of \\tex documents to manage the constantly-evolving software and avoid undesirable outcomes. \nWe believe this study will also be beneficial for developers by empirically demonstrating the relationship between different parts of the ecosystem, how inconsistencies manifest, and how it may affect their users.\nFinally, our automated pipeline can be additionally used as a differential testing approach to gather a diverse test corpus and uncover more bugs and edge cases in the \\tex ecosystem.\n\n<<COMMENT_84>>\n\n\n"
+  },
+  "saved_at": "2025-12-26 14:46:14"
+}

@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\section{Где получить шаблоны IEEEtran}\n\\noindent {\\bf{Выбор шаблона IEEE}} всегда содержит самые актуальные версии шаблонов для \\LaTeX\\ и MSWord. Пожалуйста, смотрите: <<CMD_125>> и выполните шаги, чтобы найти правильный шаблон для выбранной вами публикации. Многие публикации используют шаблоны IEEETran для \\LaTeX\\, однако некоторые публикации имеют собственные специальные шаблоны. Многие из них  основаны на IEEEtran, но могут содержать специальные инструкции, которые немного отличаются от приведённых в этом документе.",
+  "input_tokens": 329,
+  "output_tokens": 1868,
+  "cost_usd": 0.00117015,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 144,
+      "total_input_tokens_est": 361,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 329,
+      "actual_output_tokens": 1868,
+      "actual_cost_usd": 0.00117015
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\section{Where to get the IEEEtran Templates}\n\\noindent The {\\bf{IEEE Template Selector}} will always have the most up-to-date versions of the \\LaTeX\\ and MSWord templates. Please see: <<CMD_125>> and follow the steps to find the correct template for your intended publication. Many publications use the IEEETran LaTeX templates, however, some publications have their own special templates. Many of these are  based on IEEEtran, but may have special instructions that vary slightly from those in this document.\n\n"
+  },
+  "saved_at": "2025-12-26 22:47:14"
+}

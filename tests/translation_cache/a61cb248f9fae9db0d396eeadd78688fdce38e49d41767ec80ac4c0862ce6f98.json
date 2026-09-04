@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\subsection{Устаревшее кодирование}\n\\noindent Избегайте использования устаревших окружений, таких как {\\tt{eqnarray}} и \\$\\$-делимитеры для отображаемых уравнений. Делимитеры отображаемой математики \\$\\$ — пережиток PlainTeX и никогда не должны использоваться в \\LaTeX. Это приведёт к плохому вертикальному интервалу.\n\\subsection{Используйте подходящие разделители для отображаемых уравнений}\n\\noindent Некоторые неверные советы по математическому кодированию были даны в различных видео на YouTube\\textsuperscript{TM} о том, как писать научные статьи, поэтому, пожалуйста, следуйте этим хорошим примерам:\\\\\n\nДля {\\bf{однострочных не пронумерованных отображаемых уравнений}}, пожалуйста, используйте следующие разделители: \n<<CODE_7>> \n<<CODE_6>>\nОбратите внимание, что символ * в имени окружения отключает нумерацию уравнений.\\\\\n\nДля {\\bf{многострочных не пронумерованных отображаемых уравнений}}, которым требуется выравнивание, пожалуйста, используйте следующие разделители: \n<<CODE_5>>\n\nДля {\\bf{однострочных пронумерованных отображаемых уравнений}}, пожалуйста, используйте следующие разделители: \n<<CODE_4>>\n\nДля {\\bf{многострочных пронумерованных отображаемых уравнений}}, пожалуйста, используйте следующие разделители: \n<<CODE_3>>",
+  "input_tokens": 466,
+  "output_tokens": 1949,
+  "cost_usd": 0.0012392999999999998,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 281,
+      "total_input_tokens_est": 498,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 466,
+      "actual_output_tokens": 1949,
+      "actual_cost_usd": 0.0012392999999999998
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\subsection{Obsolete Coding}\n\\noindent Avoid the use of outdated environments, such as {\\tt{eqnarray}} and \\$\\$ math delimiters, for display equations. The \\$\\$ display math delimiters are left over from PlainTeX and should not be used in \\LaTeX, ever. Poor vertical spacing will result.\n\\subsection{Use Appropriate Delimiters for Display Equations}\n\\noindent Some improper mathematical coding advice has been given in various YouTube\\textsuperscript{TM} videos on how to write scholarly articles, so please follow these good examples:\\\\\n\nFor {\\bf{single-line unnumbered display equations}}, please use the following delimiters: \n<<CODE_7>> \n<<CODE_6>>\nNote that the * in the environment name turns off equation numbering.\\\\\n\nFor {\\bf{multiline unnumbered display equations}} that have alignment requirements, please use the following delimiters: \n<<CODE_5>>\n\nFor {\\bf{single-line numbered display equations}}, please use the following delimiters: \n<<CODE_4>>\n\nFor {\\bf{multiline numbered display equations}}, please use the following delimiters: \n<<CODE_3>>\n\n\n\n"
+  },
+  "saved_at": "2025-12-26 12:22:56"
+}

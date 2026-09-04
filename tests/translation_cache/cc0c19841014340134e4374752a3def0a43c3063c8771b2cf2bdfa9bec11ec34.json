@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\section{Метрики оценки}\n\\subsection{IP-память}\n<<CMD_580>>\nМы предлагаем новую метрику для оценки того, насколько хорошо аудитория запоминает работу после просмотра её презентационного видео. Вдохновлённая \\textbf{реальными взаимодействиями на конференциях}, эта метрика определяет, может ли участник аудитории после просмотра нескольких презентационных видео вспомнить работу и задать соответствующий вопрос при встрече с автором.\n\nЧтобы формализовать это, мы формируем пары видео–вопрос, отбирая пятисекундный отрывок из каждого презентационного видео и выбирая соответствующий вопрос уровня понимания из PresentQuiz. VideoLLM выступает в роли представителя аудитории: ему показывают четыре случайно отобранные пары видео–вопрос, в которых видео и вопросы перетасованы, а также изображение одного докладчика в качестве запроса. Затем у модели просят определить соответствующий вопрос, который следует задать, и точность этой идентификации количественно характеризует показатель IP-памяти. Более высокая точность воспоминания указывает на то, что сгенерированные результаты более впечатляющи и имеют больший потенциал для длительного воздействия.",
+  "input_tokens": 412,
+  "output_tokens": 971,
+  "cost_usd": 0.0006443999999999999,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 277,
+      "total_input_tokens_est": 494,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 412,
+      "actual_output_tokens": 971,
+      "actual_cost_usd": 0.0006443999999999999
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\section{Evaluation Metrics}\n\\subsection{IP Memory}\n<<CMD_580>>\nWe propose a novel metric to evaluate how well an audience retains a work after watching its presentation video. Motivated by \\textbf{real-world conference interactions}, this metric assesses whether an audience member, after viewing several presentation videos, can recall the work and pose a relevant question when meeting the author.\n\nTo operationalize this, we construct video–question pairs by sampling a five-second clip from each presentation video and selecting a corresponding understanding-level question from PresentQuiz. A VideoLLM serves as the audience proxy: it is presented with four randomly sampled video–question pairs, where the videos and questions are shuffled, together with an image of one speaker as the query. The model is then asked to identify the relevant question to pose, and the accuracy quantifies the IP Memory score. Higher recall accuracy indicates that the generated results are more impressive and hold greater potential for lasting impact.\n\n\n\n"
+  },
+  "saved_at": "2025-12-26 16:21:51"
+}

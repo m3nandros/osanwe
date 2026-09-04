@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\section{Как создать общие элементы передней части}\n\\noindent Следующие разделы описывают общее кодирование для этих общих элементов. Публикации Computer Society и конференции могут иметь свои собственные особые варианты, которые будут указаны ниже.\n\\subsection{Название статьи}\n\\noindent Название вашей статьи кодируется следующим образом:\n\n<<CODE_51>>\n\n\\noindent По возможности постарайтесь избегать использования математических или химических формул в заголовке.\n\n\\subsection{Имена авторов и их аффилиации}\n\\noindent Секция авторов должна быть закодирована следующим образом:\n<<CODE_50>>\nОбязательно используйте команду <<MATH_INLINE_87>>IEEEmembership для указания статуса членства в IEEE.\nПожалуйста, см. ``IEEEtran\\_HOWTO.pdf'' для получения конкретной информации о кодировании авторов для конференций и публикаций Computer Society. Обратите внимание, что закрывающая фигурная скобка для группы авторов ставится в конце группы благодарностей. Это предотвратит создание пустой первой страницы.\n\n\\subsection{Колонтитулы}\n\\noindent Колонтитулы задаются с помощью команды <<MATH_INLINE_88>>{\\tt{markboth}}. У этой команды два аргумента: первый содержит информацию о названии журнала, а второй содержит имена авторов и название статьи.\n<<CODE_49>>\n\n\\subsection{Строка авторских прав}\n\\noindent Для статей Transactions и Journals использование этого не обязательно на этапе подачи вашей статьи. Процесс производства IEEE добавит соответствующую строку авторских прав. Если вы готовите материалы для конференции, пожалуйста, см. ``IEEEtran\\_HOWTO.pdf'' для получения конкретной информации о том, как кодировать \"Publication ID Marks\".\n\n\\subsection{Аннотации}\n\\noindent Аннотация является первым элементом статьи после вызова макроса <<MATH_INLINE_89>>{\\tt{maketitle}}. Кодирование выглядит просто:\n<<CODE_48>>\nПожалуйста, постарайтесь избегать математических и химических формул в аннотации.\n\n\\subsection{Индексные термины}\n\\noindent Индексные термины используются, чтобы помочь другим исследователям найти вашу статью. У каждой организации может быть свой собственный набор ключевых слов. Свяжитесь с EIC целевого издания, чтобы получить этот список.\n<<CODE_47>>",
+  "input_tokens": 658,
+  "output_tokens": 1943,
+  "cost_usd": 0.0012645,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 521,
+      "total_input_tokens_est": 738,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 658,
+      "actual_output_tokens": 1943,
+      "actual_cost_usd": 0.0012645
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\section{How to Create Common Front Matter}\n\\noindent The following sections describe general coding for these common elements. Computer Society publications and Conferences may have their own special variations and will be noted below.\n\\subsection{Paper Title}\n\\noindent The title of your paper is coded as:\n\n<<CODE_51>>\n\n\\noindent Please try to avoid the use of math or chemical formulas in your title if possible.\n\n\\subsection{Author Names and Affiliations}\n\\noindent The author section should be coded as follows:\n<<CODE_50>>\nBe sure to use the <<MATH_INLINE_87>>IEEEmembership command to identify IEEE membership status.\nPlease see the ``IEEEtran\\_HOWTO.pdf'' for specific information on coding authors for Conferences and Computer Society publications. Note that the closing curly brace for the author group comes at the end of the thanks group. This will prevent you from creating a blank first page.\n\n\\subsection{Running Heads}\n\\noindent The running heads are declared by using the <<MATH_INLINE_88>>{\\tt{markboth}} command. There are two arguments to this command: the first contains the journal name information and the second contains the author names and paper title.\n<<CODE_49>>\n\n\\subsection{Copyright Line}\n\\noindent For Transactions and Journals papers, this is not necessary to use at the submission stage of your paper. The IEEE production process will add the appropriate copyright line. If you are writing a conference paper, please see the ``IEEEtran\\_HOWTO.pdf'' for specific information on how to code \"Publication ID Marks\".\n\n\\subsection{Abstracts}\n\\noindent The abstract is the first element of a paper after the <<MATH_INLINE_89>>{\\tt{maketitle}} macro is invoked.  The coding is simply:\n<<CODE_48>>\nPlease try to avoid mathematical and chemical formulas in the abstract.\n\n\\subsection{Index Terms}\n\\noindent The index terms are used to help other researchers discover your paper. Each society may have it's own keyword set. Contact the EIC of your intended publication for this list.\n<<CODE_47>>\n"
+  },
+  "saved_at": "2025-12-26 22:48:50"
+}

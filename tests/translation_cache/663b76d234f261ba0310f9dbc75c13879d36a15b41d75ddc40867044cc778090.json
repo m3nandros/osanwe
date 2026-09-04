@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\documentclass[lettersize,journal]{IEEEtran}\n\\usepackage{amsmath,amsfonts}\n\\usepackage{algorithmic}\n\\usepackage{algorithm}\n\\usepackage{array}\n\\usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}\n\\usepackage{textcomp}\n\\usepackage{stfloats}\n\\usepackage{bbding}\n\\usepackage{url}\n\\usepackage{verbatim}\n\\usepackage{graphicx}\n\\usepackage{epsfig}<<COMMENT_0>>\n<<COMMENT_1>>\n\\usepackage{float}\n\\usepackage{cite}\n<<COMMENT_2>>\n\\usepackage{color}\n\\usepackage{xcolor}\n\\usepackage{multirow}\n\\usepackage{makecell}\n\\usepackage{booktabs}\n<<COMMENT_3>>\n\\usepackage{subfloat}\n\\usepackage{hyperref}\n\\usepackage[top=0.8in,bottom=0.6in,left=0.4in,textwidth=7.7in]{geometry}\n<<COMMENT_4>>\n\\usepackage{diagbox}\n\\usepackage{enumitem}\n\\usepackage{colortbl}  <<COMMENT_5>>\n<<COMMENT_6>>\n<<COMMENT_7>>\n<<COMMENT_8>>\n<<COMMENT_9>>\n<<COMMENT_10>>\n<<COMMENT_11>>\n\\definecolor{LightCyan}{rgb}{0.88,1,1}\n\\hypersetup{colorlinks=true, linkcolor=red, anchorcolor=blue, citecolor=green} \n\n\n\n\\hyphenation{op-tical net-works semi-conduc-tor IEEE-Xplore}\n\n\\def\\BibTeX{{\\rm B\\kern-.05em{\\sc i\\kern-.025em b}\\kern-.08em\n    T\\kern-.1667em\\lower.7ex\\hbox{E}\\kern-.125emX}}\n<<COMMENT_12>>",
+  "input_tokens": 629,
+  "output_tokens": 1571,
+  "cost_usd": 0.00103695,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 309,
+      "total_input_tokens_est": 526,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 629,
+      "actual_output_tokens": 1571,
+      "actual_cost_usd": 0.00103695
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\documentclass[lettersize,journal]{IEEEtran}\n\\usepackage{amsmath,amsfonts}\n\\usepackage{algorithmic}\n\\usepackage{algorithm}\n\\usepackage{array}\n\\usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}\n\\usepackage{textcomp}\n\\usepackage{stfloats}\n\\usepackage{bbding}\n\\usepackage{url}\n\\usepackage{verbatim}\n\\usepackage{graphicx}\n\\usepackage{epsfig}<<COMMENT_0>>\n<<COMMENT_1>>\n\\usepackage{float}\n\\usepackage{cite}\n<<COMMENT_2>>\n\\usepackage{color}\n\\usepackage{xcolor}\n\\usepackage{multirow}\n\\usepackage{makecell}\n\\usepackage{booktabs}\n<<COMMENT_3>>\n\\usepackage{subfloat}\n\\usepackage{hyperref}\n\\usepackage[top=0.8in,bottom=0.6in,left=0.4in,textwidth=7.7in]{geometry}\n<<COMMENT_4>>\n\\usepackage{diagbox}\n\\usepackage{enumitem}\n\\usepackage{colortbl}  <<COMMENT_5>>\n<<COMMENT_6>>\n<<COMMENT_7>>\n<<COMMENT_8>>\n<<COMMENT_9>>\n<<COMMENT_10>>\n<<COMMENT_11>>\n\\definecolor{LightCyan}{rgb}{0.88,1,1}\n\\hypersetup{colorlinks=true, linkcolor=red, anchorcolor=blue, citecolor=green} \n\n\n\n\\hyphenation{op-tical net-works semi-conduc-tor IEEE-Xplore}\n\n\\def\\BibTeX{{\\rm B\\kern-.05em{\\sc i\\kern-.025em b}\\kern-.08em\n    T\\kern-.1667em\\lower.7ex\\hbox{E}\\kern-.125emX}}\n<<COMMENT_12>>\n\n"
+  },
+  "saved_at": "2025-12-26 16:42:21"
+}

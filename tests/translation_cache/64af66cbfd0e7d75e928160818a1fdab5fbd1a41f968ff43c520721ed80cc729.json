@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\section*{Благодарности}\n<<КОММЕНТАРИЙ_1358>>\nЭта работа была частично поддержана ЕС (FEDER) и испанским MINECO в рамках грантов TIN2014-61716-EXP (SUPERVASION) и RTI2018-094403-B-C32, а также Generalitat Valenciana в рамках гранта PROMETEO/2019/098. Давид Ньевес также поддерживается испанским MINECO по гранту FPI (BES-2016-078863).\n\n<<КОММЕНТАРИЙ_1359>>\n<<КОММЕНТАРИЙ_1360>>\n<<КОММЕНТАРИЙ_1361>>\n\n<<КОММЕНТАРИЙ_1362>>\n<<КОММЕНТАРИЙ_1363>>\n\n<<КОММЕНТАРИЙ_1364>>\n<<КОММЕНТАРИЙ_1365>>\n\n<<КОММЕНТАРИЙ_1366>>\n<<КОММЕНТАРИЙ_1367>>\n<<КОММЕНТАРИЙ_1368>>\n\n<<КОММЕНТАРИЙ_1369>>\n\n<<КОММЕНТАРИЙ_1370>>\n\n<<КОММЕНТАРИЙ_1371>>\n\n<<КОММЕНТАРИЙ_1372>>\n<<КОММЕНТАРИЙ_1373>>",
+  "input_tokens": 411,
+  "output_tokens": 1651,
+  "cost_usd": 0.0010522499999999998,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 168,
+      "total_input_tokens_est": 385,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 411,
+      "actual_output_tokens": 1651,
+      "actual_cost_usd": 0.0010522499999999998
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\section*{Acknowledgements}\n<<COMMENT_1358>>\nThis work has been partially supported by the EU (FEDER) and the Spanish MINECO under grants TIN2014-61716-EXP (SUPERVASION) and RTI2018-094403-B-C32, and by Generalitat Valenciana under grant PROMETEO/2019/098. David Nieves is also supported by the Spanish MINECO under FPI grant (BES-2016-078863).\n\n<<COMMENT_1359>>\n<<COMMENT_1360>>\n<<COMMENT_1361>>\n\n<<COMMENT_1362>>\n<<COMMENT_1363>>\n\n<<COMMENT_1364>>\n<<COMMENT_1365>>\n\n<<COMMENT_1366>>\n<<COMMENT_1367>>\n<<COMMENT_1368>>\n\n<<COMMENT_1369>>\n\n<<COMMENT_1370>>\n\n<<COMMENT_1371>>\n\n<<COMMENT_1372>>\n<<COMMENT_1373>>\n\n"
+  },
+  "saved_at": "2025-12-26 14:36:39"
+}

@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\section{Итоговый контрольный список}\n\\begin{enumerate}{}{}\n\\item{Убедитесь, что ваши уравнения пронумерованы последовательно и что нет пропущенных или дублирующихся номеров уравнений. Избегайте дефисов и точек в нумерации уравнений. Следуйте стилю IEEE, т.е. (1), (2), (3) или для подуравнений (1a), (1b). Для уравнений в приложении (A1), (A2) и т.д.}. \n\\item{Правильно ли отформатированы ваши уравнения? Текст, функции, точки выравнивания в конструкциях cases и arrays и т.д. }\n\\item{Убедитесь, что все графические файлы включены.}\n\\item{Убедитесь, что ваши ссылки/библиография включены либо в основной LaTeX-файл, либо в отдельный .bib-файл, если подключается внешний файл.}\n\\end{enumerate}",
+  "input_tokens": 384,
+  "output_tokens": 1388,
+  "cost_usd": 0.0008903999999999999,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 178,
+      "total_input_tokens_est": 395,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 384,
+      "actual_output_tokens": 1388,
+      "actual_cost_usd": 0.0008903999999999999
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\section{A Final Checklist}\n\\begin{enumerate}{}{}\n\\item{Make sure that your equations are numbered sequentially and there are no equation numbers missing or duplicated. Avoid hyphens and periods in your equation numbering. Stay with IEEE style, i.e., (1), (2), (3) or for sub-equations (1a), (1b). For equations in the appendix (A1), (A2), etc.}. \n\\item{Are your equations properly formatted? Text, functions, alignment points in cases and arrays, etc. }\n\\item{Make sure all graphics are included.}\n\\item{Make sure your references are included either in your main LaTeX file or a separate .bib file if calling the external file.}\n\\end{enumerate}\n\n"
+  },
+  "saved_at": "2025-12-26 12:39:05"
+}

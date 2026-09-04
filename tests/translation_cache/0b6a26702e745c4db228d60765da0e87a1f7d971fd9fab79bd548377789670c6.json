@@ -1,0 +1,30 @@
+{
+  "translated_content": "Напомним, что априорное распределение для <<MATH_INLINE_430>> является многомерным нормальным распределением, <<MATH_INLINE_431>>; тогда полная условная для <<MATH_INLINE_432>> также имеет многомерное нормальное распределение со средним <<MATH_INLINE_433>> и дисперсией <<MATH_INLINE_434>>:\n<<MATH_INLINE_435>>,\n<<MATH_INLINE_436>>.\n\nАприор для <<MATH_INLINE_437>> является гамма(1/2, 1/2). Следовательно, апостериорное распределение для <<MATH_INLINE_438>> также является гамма <<MATH_INLINE_439>>.\n\nДля бинарных данных <<MATH_INLINE_440>> и <<MATH_INLINE_441>> являются функциями скрытых откликов, <<MATH_INLINE_442>> и <<MATH_INLINE_443>>. Данные можно рассматривать как бинарные индикаторы скрытых откликов, такие что <<MATH_INLINE_444>> если <<MATH_INLINE_445>> и <<MATH_INLINE_446>> если <<MATH_INLINE_447>>. Дисперсии ошибок скрытых откликов, <<MATH_INLINE_448>> и <<MATH_INLINE_449>>, предполагаются равными <<MATH_INLINE_450>>.",
+  "input_tokens": 475,
+  "output_tokens": 1379,
+  "cost_usd": 0.00089865,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 241,
+      "total_input_tokens_est": 458,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 475,
+      "actual_output_tokens": 1379,
+      "actual_cost_usd": 0.00089865
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\nRecall that the prior for <<MATH_INLINE_430>> is a multivariate normal distribution, <<MATH_INLINE_431>>,  then the full conditional of <<MATH_INLINE_432>> also follows a multivariate normal distribution with mean <<MATH_INLINE_433>> and variance <<MATH_INLINE_434>>: \n<<MATH_INLINE_435>>, \n<<MATH_INLINE_436>>. \n\n The prior for <<MATH_INLINE_437>> is gamma (1/2, 1/2). Therefore, the posterior for  <<MATH_INLINE_438>> is also gamma <<MATH_INLINE_439>>. \n\nFor binary data, <<MATH_INLINE_440>> and <<MATH_INLINE_441>> are functions of the latent responses, <<MATH_INLINE_442>> and <<MATH_INLINE_443>>. The data can be seen as binary indicators of the latent responses such that <<MATH_INLINE_444>> if <<MATH_INLINE_445>> and  <<MATH_INLINE_446>> if <<MATH_INLINE_447>>.  The error variances of the latent responses, <<MATH_INLINE_448>> and <<MATH_INLINE_449>> are assumed to be <<MATH_INLINE_450>>.\n\n\n\n"
+  },
+  "saved_at": "2025-12-26 16:10:57"
+}

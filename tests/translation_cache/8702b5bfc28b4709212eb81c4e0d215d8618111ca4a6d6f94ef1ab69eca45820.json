@@ -1,0 +1,30 @@
+{
+  "translated_content": "Алгоритм обратного анализа достижимости\n<<COMMENT_2821>>\nначинается с инициализации множества потенциально небезопасных ячеек <<MATH_INLINE_3536>>. Это делается путем рассмотрения самих ячеек как небезопасных (строка 2) или путем идентификации ячеек, которые могут достигнуть небезопасного состояния посредством распространения, с использованием любого из методов, варьирующихся от <<MATH_INLINE_3537>>-шагового до (<<MATH_INLINE_3538>>)-шагового подходов (строки 3-10). \nДля каждой ячейки <<MATH_INLINE_3539>>, которая вновь добавлена в <<MATH_INLINE_3540>>, алгоритм вычисляет все ячейки, которые могли бы достичь <<MATH_INLINE_3541>> с помощью <<MATH_INLINE_3542>>-шагового обратного анализа достижимости. Эти вновь выявленные ячейки считаются потенциально небезопасными и добавляются в множество <<MATH_INLINE_3543>>. Итерация продолжается до тех пор, пока в <<MATH_INLINE_3544>> не перестанут добавляться новые ячейки, после чего алгоритм возвращает множество возможных небезопасных ячеек <<MATH_INLINE_3545>> в пространстве состояний.\n\\newline\n\\textbf{Обоснование полноты:} Если ячейка небезопасна, она должна достигнуть небезопасного региона на некотором шаге <<MATH_INLINE_3546>> в будущем.\nРассмотрим <<MATH_INLINE_3547>> и <<MATH_INLINE_3548>>.\nЭта ячейка должна быть включена в множество, вычисленное с использованием следующей процедуры, определенной в алгоритме. \nЭто множество получается путем сначала нахождения множества ячеек, которые могут достигнуть небезопасного состояния с использованием <<MATH_INLINE_3549>>-шагового метода (процедура инициализации в алгоритме), а затем обратного распространения этого множества <<MATH_INLINE_3550>> раз с использованием <<MATH_INLINE_3551>>-шагового метода (процедура итерации в алгоритме).\n\\newline \n\\textbf{Обоснование сходимости:} \nПоскольку пространство состояний квантовано на конечное число ячеек, невозможно добавлять новые ячейки в множество <<MATH_INLINE_3552>> бесконечно.",
+  "input_tokens": 643,
+  "output_tokens": 2409,
+  "cost_usd": 0.0015418499999999998,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 452,
+      "total_input_tokens_est": 669,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 643,
+      "actual_output_tokens": 2409,
+      "actual_cost_usd": 0.0015418499999999998
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\nThe algorithm for backward reachability analysis\n<<COMMENT_2821>>\nbegins by initializing the set of potentially unsafe cells <<MATH_INLINE_3536>>. This is done by considering the cells themselves as unsafe (line 2) or identifying cells that can reach an unsafe state through propagation using any one of the methods ranging from  <<MATH_INLINE_3537>>-step to (<<MATH_INLINE_3538>>)-step approaches (lines 3-10). \nFor each cell <<MATH_INLINE_3539>> that is newly added to <<MATH_INLINE_3540>>, the algorithm computes all cells that could reach <<MATH_INLINE_3541>> using an <<MATH_INLINE_3542>>-step backward reachability analysis. These newly identified cells are considered potentially unsafe and are added to the set <<MATH_INLINE_3543>>. This iteration continues until no new cells are added to <<MATH_INLINE_3544>>, and the algorithm returns the set of possible unsafe cells <<MATH_INLINE_3545>> within the state space.\n\\newline\n\\textbf{Completeness Justification:} If a cell is unsafe, \nit must reach an unsafe region at some step <<MATH_INLINE_3546>> in the future.\nConsider <<MATH_INLINE_3547>> and <<MATH_INLINE_3548>>.\nThis cell must be included in the set computed using the following procedure defined within the algorithm. \nThis set is obtained by first finding the set of cells that can reach an unsafe state using a <<MATH_INLINE_3549>>-step method (initialization procedure in the algorithm) and then back-propagating this set <<MATH_INLINE_3550>> times using an <<MATH_INLINE_3551>>-step method (iteration procedure in the algorithm).\n\\newline \n\\textbf{Convergent Justification:} \nSince the state space is quantized into a finite number of cells, it is impossible \nto add new cells to the set <<MATH_INLINE_3552>> infinitely.\n\n\n\n"
+  },
+  "saved_at": "2025-12-26 13:23:09"
+}

@@ -1,0 +1,30 @@
+{
+  "translated_content": "Три первопричины несоответствий, охватывающие 16 документов, считались ожидаемым поведением.\nТри документа не смогли скомпилироваться во все годы из-за синтаксических ошибок, допущенных авторами.\nДва документа не удалось скомпилировать в 2020 году, так как они импортировали пакет \\texttt{tabularray}, который был введён только в 2021 году.\n\nВ оставшихся 11 документах использование символа выравнивания тильды (``<<MATH_INLINE_110>>'') приводило к различиям в промежутках и выравнивании уравнений при переходе от \\texlive 2022 к 2023 году.\nРазработчики сочли это намеренным поведением, отметив \\emph{``текущее поведение ... более корректно''}, и указали, что изменение было вызвано исправлением определения символа тильды~<<CMD_143>>.\nХотя изменение было указано в заметках к выпуску как \\emph{``Выравнивание статуса тильды с другими активными символами''}~<<CMD_144>>, его влияние на авторов не было прямо задокументировано.\n\n<<COMMENT_83>>",
+  "input_tokens": 426,
+  "output_tokens": 2137,
+  "cost_usd": 0.0013460999999999998,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 242,
+      "total_input_tokens_est": 459,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 426,
+      "actual_output_tokens": 2137,
+      "actual_cost_usd": 0.0013460999999999998
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\nThree root causes of inconsistencies, accounting for 16 documents, were expected behaviour.\nThree documents failed to compile in all years due to syntax errors made by authors.\nTwo documents failed to compile in 2020 as they imported the \\texttt{tabularray} package, which was introduced only in 2021.\n\nIn the remaining 11 documents, the use of the tilde (``<<MATH_INLINE_110>>'') alignment character resulted in differences in the spacing and alignment of equations from \\texlive 2022 to 2023.\nThe developers deemed this intended behaviour as the \\emph{``current behavior ... is more correct''}, and indicated that the change was due to a correction in how the tilde character was defined~<<CMD_143>>.\nWhile the change was listed in the release notes as \\emph{``Aligning status of tilde with other active characters''}~<<CMD_144>>, the impact on authors was not directly documented.\n\n<<COMMENT_83>>\n\n\n\n"
+  },
+  "saved_at": "2025-12-26 14:43:30"
+}

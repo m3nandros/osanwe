@@ -1,0 +1,30 @@
+{
+  "translated_content": "<<КОММЕНТАРИЙ_0>>\n<<КОММЕНТАРИЙ_1>>\n<<КОММЕНТАРИЙ_2>>\n<<КОММЕНТАРИЙ_3>>\n<<КОММЕНТАРИЙ_4>>\n<<КОММЕНТАРИЙ_5>>\n<<КОММЕНТАРИЙ_6>>\n<<КОММЕНТАРИЙ_7>>\n<<КОММЕНТАРИЙ_8>>\n<<КОММЕНТАРИЙ_9>>\n<<КОММЕНТАРИЙ_10>>\n<<КОММЕНТАРИЙ_11>>\n<<КОММЕНТАРИЙ_12>>\n<<КОММЕНТАРИЙ_13>>\n<<КОММЕНТАРИЙ_14>>\n<<КОММЕНТАРИЙ_15>>\n\n<<КОММЕНТАРИЙ_16>>\n<<КОММЕНТАРИЙ_17>>\n<<КОММЕНТАРИЙ_18>>\n<<КОММЕНТАРИЙ_19>>\n<<КОММЕНТАРИЙ_20>>\n<<КОММЕНТАРИЙ_21>>\n<<КОММЕНТАРИЙ_22>>\n<<КОММЕНТАРИЙ_23>>\n<<КОММЕНТАРИЙ_24>>\n\\documentclass[preprint,review,12pt]{elsarticle}\n\n<<КОММЕНТАРИЙ_25>>\n<<КОММЕНТАРИЙ_26>>\n\n<<КОММЕНТАРИЙ_27>>\n<<КОММЕНТАРИЙ_28>>\n<<КОММЕНТАРИЙ_29>>\n<<КОММЕНТАРИЙ_30>>\n<<КОММЕНТАРИЙ_31>>\n<<КОММЕНТАРИЙ_32>>\n<<КОММЕНТАРИЙ_33>>\n<<КОММЕНТАРИЙ_34>>\n\n<<КОММЕНТАРИЙ_35>>\n<<КОММЕНТАРИЙ_36>>\n<<КОММЕНТАРИЙ_37>>\n\n<<КОММЕНТАРИЙ_38>>\n\\usepackage{amssymb}\n\\usepackage{tabularx}\n\\usepackage{appendix}\n\\usepackage{rotating} \n<<КОММЕНТАРИЙ_39>>\n<<КОММЕНТАРИЙ_40>>\n\n<<КОММЕНТАРИЙ_41>>\n<<КОММЕНТАРИЙ_42>>\n<<КОММЕНТАРИЙ_43>>\n<<КОММЕНТАРИЙ_44>>\n\\usepackage{hyperref}\n\\usepackage[utf8]{inputenc}\n\\usepackage{multirow}\n\\journal{Ядерная физика B}",
+  "input_tokens": 523,
+  "output_tokens": 1353,
+  "cost_usd": 0.0008902499999999999,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 243,
+      "total_input_tokens_est": 460,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 523,
+      "actual_output_tokens": 1353,
+      "actual_cost_usd": 0.0008902499999999999
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n<<COMMENT_0>>\n<<COMMENT_1>>\n<<COMMENT_2>>\n<<COMMENT_3>>\n<<COMMENT_4>>\n<<COMMENT_5>>\n<<COMMENT_6>>\n<<COMMENT_7>>\n<<COMMENT_8>>\n<<COMMENT_9>>\n<<COMMENT_10>>\n<<COMMENT_11>>\n<<COMMENT_12>>\n<<COMMENT_13>>\n<<COMMENT_14>>\n<<COMMENT_15>>\n\n<<COMMENT_16>>\n<<COMMENT_17>>\n<<COMMENT_18>>\n<<COMMENT_19>>\n<<COMMENT_20>>\n<<COMMENT_21>>\n<<COMMENT_22>>\n<<COMMENT_23>>\n<<COMMENT_24>>\n\\documentclass[preprint,review,12pt]{elsarticle}\n\n<<COMMENT_25>>\n<<COMMENT_26>>\n\n<<COMMENT_27>>\n<<COMMENT_28>>\n<<COMMENT_29>>\n<<COMMENT_30>>\n<<COMMENT_31>>\n<<COMMENT_32>>\n<<COMMENT_33>>\n<<COMMENT_34>>\n\n<<COMMENT_35>>\n<<COMMENT_36>>\n<<COMMENT_37>>\n\n<<COMMENT_38>>\n\\usepackage{amssymb}\n\\usepackage{tabularx}\n\\usepackage{appendix}\n\\usepackage{rotating} \n<<COMMENT_39>>\n<<COMMENT_40>>\n\n<<COMMENT_41>>\n<<COMMENT_42>>\n<<COMMENT_43>>\n<<COMMENT_44>>\n\\usepackage{hyperref}\n\\usepackage[utf8]{inputenc}\n\\usepackage{multirow}\n\\journal{Nuclear Physics B}\n\n"
+  },
+  "saved_at": "2025-12-26 17:15:18"
+}

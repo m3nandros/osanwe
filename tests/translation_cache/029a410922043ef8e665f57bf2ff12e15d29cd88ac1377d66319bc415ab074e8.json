@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\section{Заключение}\nАнализ систем NNCS, основанных на изображениях, обычно включает проведение большого количества тестов.\n<<COMMENT_2716>>\nИспользуя генеративные модели для аппроксимации системы восприятия, подход суррогатной верификации предлагает альтернативу, которая может использовать вычислительные методы анализа множеств.\n<<COMMENT_2717>>\n<<COMMENT_2718>>\nМасштабируемость является основным узким местом в этом направлении работы и главной проблемой, рассматриваемой в этой статье.\n<<COMMENT_2719>>\nМы выявили основные причины ошибки переоценки (overapproximation) в существующем базовом методе и\nпредложили две стратегии--composition and unrolling--для преодоления этих проблем.\n<<COMMENT_2720>>\nНаша оценка демонстрирует преимущества нашего подхода по сравнению с базовым методом.\n<<COMMENT_2721>>\nЧто касается точности, \nнаш метод уменьшает сходимое достижимое множество на <<MATH_INLINE_3503>> в системе руления самолёта по сравнению с базовым методом.\n<<COMMENT_2722>>\n<<COMMENT_2723>>\nС точки зрения масштабируемости, трансформерный вариант cGAN в исследовании по экстренному торможению имеет на 24<<MATH_INLINE_3504>> больше выходных пикселей, чем исследование предыдущей работы. \n\n<<COMMENT_2724>>\n<<COMMENT_2725>>\n<<COMMENT_2726>>\nНесмотря на улучшения, проблема масштабируемости ещё не решена, поскольку современные генеративные модели сложны и продолжают увеличиваться в размере.\n<<COMMENT_2727>>\nУвеличение диапазонов и числа латентных переменных, генерация изображений более высокого разрешения, рассмотрение систем с большим числом переменных состояния и внедрение последних техник видео-GAN~<<CMD_3730>> — всё это потребует дальнейших улучшений в масштабируемости.\n\n\n<<COMMENT_2728>>\n<<COMMENT_2729>>\n<<COMMENT_2730>>\n<<COMMENT_2731>>\n<<COMMENT_2732>>\n<<COMMENT_2733>>\n<<COMMENT_2734>>\n<<COMMENT_2735>>\n<<COMMENT_2736>>\n<<COMMENT_2737>>\n\n\n\n\n\\clearpage",
+  "input_tokens": 609,
+  "output_tokens": 1835,
+  "cost_usd": 0.00119235,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 450,
+      "total_input_tokens_est": 667,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 609,
+      "actual_output_tokens": 1835,
+      "actual_cost_usd": 0.00119235
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\section{Conclusions}\nAnalysis of image-based NNCS typically involves running lots of tests.\n<<COMMENT_2716>>\nBy leveraging generative models to approximate the perception system, \nthe surrogate verification approach offers an alternative that can utilize computational set-based analysis methods.\n<<COMMENT_2717>>\n<<COMMENT_2718>>\nScalability is the primary bottleneck in this line of work and the main problem addressed in this paper.\n<<COMMENT_2719>>\nWe identified underlying causes of overapproximation error with the existing baseline method and\nproposed two strategies--composition and unrolling--to overcome these problems.\n<<COMMENT_2720>>\nOur evaluation demonstrates the advantages of our approach over the baseline.\n<<COMMENT_2721>>\nIn terms of accuracy, \nour method reduces the converged reachable set by <<MATH_INLINE_3503>> on the aircraft taxiing system compared to the baseline.\n<<COMMENT_2722>>\n<<COMMENT_2723>>\nIn terms of scalability, the transformer variant of the cGAN in emergency braking case study has 24<<MATH_INLINE_3504>> more output pixels than the prior work's case study. \n\n<<COMMENT_2724>>\n<<COMMENT_2725>>\n<<COMMENT_2726>>\nDespite improvements, scalability is not yet solved, as \nstate-of-the-art generative models complex and continue to grow in size.\n<<COMMENT_2727>>\nIncreasing the ranges and number of latent variables, generating higher-resolution images, considering systems with more state variables and incorporating recent video GAN techniques~<<CMD_3730>> will all require further improvements to scalability.\n\n\n<<COMMENT_2728>>\n<<COMMENT_2729>>\n<<COMMENT_2730>>\n<<COMMENT_2731>>\n<<COMMENT_2732>>\n<<COMMENT_2733>>\n<<COMMENT_2734>>\n<<COMMENT_2735>>\n<<COMMENT_2736>>\n<<COMMENT_2737>>\n\n\n\n\n\\clearpage\n"
+  },
+  "saved_at": "2025-12-26 13:20:12"
+}

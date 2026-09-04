@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\section{Где получить помощь по \\LaTeX\\ - группы пользователей}\n\\noindent Следующие онлайн-группы очень полезны как для начинающих, так и для опытных \\LaTeX\\ пользователей. Поиск по их архивам может дать множество ответов на распространённые вопросы.\n\\begin{list}{}{}\n\\item{<<CMD_117>>} \n\\item{<<CMD_118>> }\n\\end{list}",
+  "input_tokens": 301,
+  "output_tokens": 2151,
+  "cost_usd": 0.00133575,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 90,
+      "total_input_tokens_est": 307,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 301,
+      "actual_output_tokens": 2151,
+      "actual_cost_usd": 0.00133575
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\section{Where to get \\LaTeX \\ help - user groups}\n\\noindent The following on-line groups are very helpful to beginning and experienced \\LaTeX\\ users. A search through their archives can provide many answers to common questions.\n\\begin{list}{}{}\n\\item{<<CMD_117>>} \n\\item{<<CMD_118>> }\n\\end{list}\n\n"
+  },
+  "saved_at": "2025-12-26 12:17:03"
+}

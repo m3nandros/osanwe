@@ -1,0 +1,30 @@
+{
+  "translated_content": "<<КОММЕНТАРИЙ_0>>\n<<КОММЕНТАРИЙ_1>>\n<<КОММЕНТАРИЙ_2>>\n<<КОММЕНТАРИЙ_3>>\n\n\\documentclass{birkjour}\n<<КОММЕНТАРИЙ_4>>\n<<КОММЕНТАРИЙ_5>>\n<<КОММЕНТАРИЙ_6>>\n<<КОММЕНТАРИЙ_7>>\n \\newtheorem{thm}{Теорема}[section]\n \\newtheorem{cor}[thm]{Следствие}\n \\newtheorem{lem}[thm]{Лемма}\n \\newtheorem{prop}[thm]{Утверждение}\n \\theoremstyle{definition}\n \\newtheorem{defn}[thm]{Определение}\n \\theoremstyle{remark}\n \\newtheorem{rem}[thm]{Замечание}\n \\newtheorem*{ex}{Пример}\n \\numberwithin{equation}{section}\n \n \\usepackage{subfigure}\n \n \\graphicspath{{figs/}}",
+  "input_tokens": 394,
+  "output_tokens": 1201,
+  "cost_usd": 0.0007796999999999999,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 143,
+      "total_input_tokens_est": 360,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 394,
+      "actual_output_tokens": 1201,
+      "actual_cost_usd": 0.0007796999999999999
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n<<COMMENT_0>>\n<<COMMENT_1>>\n<<COMMENT_2>>\n<<COMMENT_3>>\n\n\\documentclass{birkjour}\n<<COMMENT_4>>\n<<COMMENT_5>>\n<<COMMENT_6>>\n<<COMMENT_7>>\n \\newtheorem{thm}{Theorem}[section]\n \\newtheorem{cor}[thm]{Corollary}\n \\newtheorem{lem}[thm]{Lemma}\n \\newtheorem{prop}[thm]{Proposition}\n \\theoremstyle{definition}\n \\newtheorem{defn}[thm]{Definition}\n \\theoremstyle{remark}\n \\newtheorem{rem}[thm]{Remark}\n \\newtheorem*{ex}{Example}\n \\numberwithin{equation}{section}\n \n \\usepackage{subfigure}\n \n \\graphicspath{{figs/}}\n\n\n"
+  },
+  "saved_at": "2025-12-25 22:05:23"
+}

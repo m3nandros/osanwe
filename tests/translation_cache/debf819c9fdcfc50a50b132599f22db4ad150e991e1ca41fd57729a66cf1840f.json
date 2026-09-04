@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\section{Дополнительные советы}\n\nПожалуйста, используйте ``мягкие'' (например, <<CODE_52>>) или <<CODE_53>> перекрёстные ссылки вместо ``жёстких'' ссылок (например, <<CODE_54>>). \n\nЭто позволит объединять разделы, добавлять уравнения или менять порядок рисунков или ссылок, не просматривая файл построчно.\n\nПожалуйста, обратите внимание, что окружение <<CODE_55>> в {\\LaTeX} будет увеличивать счётчик основных уравнений даже когда номера уравнений не отображаются. Если вы об этом забудете, вы можете написать статью, в которой номера уравнений перескочат с (17) на (20), что заставит корректоров задуматься, не открыли ли вы новый метод счёта.\n\n{\\BibTeX} не работает по мановению волшебной палочки. Он не берёт библиографические данные из воздуха, а из файлов .bib. Если вы используете {\\BibTeX} для создания библиографии, вы должны прислать файлы .bib. \n\n{\\LaTeX} не умеет читать ваши мысли. Если вы присвоите одну и ту же метку подподразделу и таблице, вы можете обнаружить, что Таблица I была перекрёстно обозначена как Таблица IV-B3. \n\n{\\LaTeX} не обладает предвидящими способностями. Если вы поместите команду <<CODE_56>> перед командой, которая обновляет тот счётчик, который она должна использовать, метка захватит последний счётчик, на который была выполнена перекрёстная ссылка. В частности, команда <<CODE_57>> не должна располагаться перед подписью рисунка или таблицы.\n\nПожалуйста, не используйте <<CODE_58>> или <<CODE_59>> внутри окружения <<CODE_60>>. Это не остановит нумерацию уравнений внутри <<CODE_61>> (всё равно там не будет номеров), и это может помешать появлению нужного номера уравнения в окружающем уравнении.\n\n\\balance",
+  "input_tokens": 608,
+  "output_tokens": 2266,
+  "cost_usd": 0.0014508,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 406,
+      "total_input_tokens_est": 623,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 608,
+      "actual_output_tokens": 2266,
+      "actual_cost_usd": 0.0014508
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\section{Additional Advice}\n\nPlease use ``soft'' (e.g., <<CODE_52>>) or <<CODE_53>>\ncross references instead of ``hard'' references (e.g., <<CODE_54>>).\nThat will make it possible to combine sections, add equations, or\nchange the order of figures or citations without having to go through\nthe file line by line.\n\nPlease note that the <<CODE_55>> environment in {\\LaTeX}\nwill increment the main equation counter even when there are no\nequation numbers displayed. If you forget that, you might write an\narticle in which the equation numbers skip from (17) to (20), causing\nthe copy editors to wonder if you've discovered a new method of\ncounting.\n\n{\\BibTeX} does not work by magic. It doesn't get the bibliographic\ndata from thin air but from .bib files. If you use {\\BibTeX} to produce a\nbibliography you must send the .bib files. \n\n{\\LaTeX} can't read your mind. If you assign the same label to a\nsubsubsection and a table, you might find that Table I has been cross\nreferenced as Table IV-B3. \n\n{\\LaTeX} does not have precognitive abilities. If you put a\n<<CODE_56>> command before the command that updates the counter it's\nsupposed to be using, the label will pick up the last counter to be\ncross referenced instead. In particular, a <<CODE_57>> command\nshould not go before the caption of a figure or a table.\n\nPlease do not use <<CODE_58>> or <<CODE_59>> inside the\n<<CODE_60>> environment. It will not stop equation numbers inside\n<<CODE_61>> (there won't be any anyway) and it might stop a wanted\nequation number in the surrounding equation.\n\n\\balance\n\n"
+  },
+  "saved_at": "2025-12-26 22:52:54"
+}

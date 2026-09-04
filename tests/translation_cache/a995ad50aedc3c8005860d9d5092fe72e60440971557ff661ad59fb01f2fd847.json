@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\section{Введение}\n\\IEEEPARstart{Д}{обро пожаловать} в обновлённую и упрощённую документацию по использованию файла класса IEEEtran \\LaTeX \\. IEEE изучил сотни присланных авторами материалов, использующих этот пакет, чтобы помочь составить это простое для следования руководство. Мы рассмотрим наиболее часто используемые элементы журнальной статьи. Для менее распространённых элементов мы будем обращаться к ``IEEEtran\\_HOWTO.pdf''.\n\nЭтот документ относится к версии 1.8b IEEEtran. \n\nПакет шаблонов IEEEtran содержит следующие примерные файлы: \n\\begin{list}{}{}\n\\item{bare\\_jrnl.tex}\n\\item{bare\\_conf.tex}\n\\item{bare\\_jrnl\\_compsoc.tex}\n\\item{bare\\_conf\\_compsoc.tex}\n\\item{bare\\_jrnl\\_comsoc.tex}\n\\end{list}\nЭто ``минималистичные'' шаблоны, позволяющие быстро понять структуру документа.  \n\nПредполагается, что читатель обладает базовыми практическими знаниями \\LaTeX. Тем, кто новичок в \\LaTeX \\, рекомендуется прочитать Тобиаса Оетикера ``Не такое уж короткое введение в \\LaTeX'', доступное по адресу: <<CMD_122>>, которое содержит обзор работы с \\LaTeX.",
+  "input_tokens": 490,
+  "output_tokens": 2874,
+  "cost_usd": 0.0017978999999999998,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 274,
+      "total_input_tokens_est": 491,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 490,
+      "actual_output_tokens": 2874,
+      "actual_cost_usd": 0.0017978999999999998
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\section{Introduction}\n\\IEEEPARstart{W}{elcome} to the updated and simplified documentation to using the IEEEtran \\LaTeX \\ class file. The IEEE has examined hundreds of author submissions using this package to help formulate this easy to follow guide. We will cover the most commonly used elements of a journal article. For less common elements we will refer back to the ``IEEEtran\\_HOWTO.pdf''.\n\nThis document applies to version 1.8b of IEEEtran. \n\nThe IEEEtran template package contains the following example files: \n\\begin{list}{}{}\n\\item{bare\\_jrnl.tex}\n\\item{bare\\_conf.tex}\n\\item{bare\\_jrnl\\_compsoc.tex}\n\\item{bare\\_conf\\_compsoc.tex}\n\\item{bare\\_jrnl\\_comsoc.tex}\n\\end{list}\nThese are ``bare bones\" templates to quickly understand the document structure.  \n\nIt is assumed that the reader has a basic working knowledge of \\LaTeX. Those who are new to \\LaTeX \\ are encouraged to read Tobias Oetiker's ``The Not So Short Introduction to \\LaTeX '', available at: <<CMD_122>> which provides an overview of working with \\LaTeX.   \n\n"
+  },
+  "saved_at": "2025-12-26 22:46:23"
+}

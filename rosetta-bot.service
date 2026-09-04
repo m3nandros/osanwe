@@ -1,0 +1,18 @@
+[Unit]
+Description=Rosetta Discord Bot
+After=network.target
+
+[Service]
+Type=simple
+User=YOUR_USERNAME
+WorkingDirectory=/home/YOUR_USERNAME/rosetta-bot
+Environment="PATH=/home/YOUR_USERNAME/rosetta-bot/venv/bin"
+ExecStart=/home/YOUR_USERNAME/rosetta-bot/venv/bin/python3 /home/YOUR_USERNAME/rosetta-bot/discord_bot.py
+Restart=always
+RestartSec=10
+StandardOutput=append:/home/YOUR_USERNAME/rosetta-bot/logs/discord_bot.log
+StandardError=append:/home/YOUR_USERNAME/rosetta-bot/logs/discord_bot_error.log
+
+[Install]
+WantedBy=multi-user.target
+

@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\section{Информация о заголовке}\n\nВ названии вашей работы следует правильно использовать заглавные буквы — <<CMD_234>> содержит полезные правила их употребления. Используйте команду {\\verb|title|} для определения названия вашей работы. Если у вашей работы есть подзаголовок, определите его с помощью команды {\\verb|subtitle|}. Не вставляйте переносы строк в названии.\n\nЕсли ваше название длинное, вы должны определить короткую версию, которая будет использоваться в верхних колонтитулах страниц, чтобы предотвратить наложение текста. Команда \\verb|title| имеет параметр ``короткий заголовок'':\n<<CODE_187>>",
+  "input_tokens": 343,
+  "output_tokens": 1501,
+  "cost_usd": 0.0009520499999999999,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 145,
+      "total_input_tokens_est": 362,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 343,
+      "actual_output_tokens": 1501,
+      "actual_cost_usd": 0.0009520499999999999
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\section{Title Information}\n\nThe title of your work should use capital letters appropriately -\n<<CMD_234>> has useful rules for\ncapitalization. Use the {\\verb|title|} command to define the title of\nyour work. If your work has a subtitle, define it with the\n{\\verb|subtitle|} command.  Do not insert line breaks in your title.\n\nIf your title is lengthy, you must define a short version to be used\nin the page headers, to prevent overlapping text. The \\verb|title|\ncommand has a ``short title'' parameter:\n<<CODE_187>>\n\n"
+  },
+  "saved_at": "2025-12-26 14:50:30"
+}

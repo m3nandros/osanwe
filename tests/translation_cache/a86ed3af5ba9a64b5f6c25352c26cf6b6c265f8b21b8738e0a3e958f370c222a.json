@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\section{Заключение} <<CMD_407>>\nВ этой статье мы разработали метод численного решения геми\\-вари\\-а\\-ционных неравенств. Проблема геми\\-вари\\-а\\-ционных неравенств сводится к минимизации так называемой энергетической функции. Эта функция одновременно негладкая и невыпуклая. Предложенный метод является гибридом субградиентного и си\\-му\\-ли\\-ро\\-ван\\-ного отжига. Субградиент применяется для поиска стационарных точек негладкой энергетической функции, а си\\-му\\-ли\\-ро\\-ван\\-ный отжиг используется для выхода из этих стационарных точек и поиска более удачных начальных приближений для субградиентного метода. Таким образом предложенный гибридный метод способен эффективно справляться как с негладкостью, так и с невыпуклостью рассматриваемой задачи.\n\n\\begin{credits}\n\\subsubsection{\\ackname} Этот проект получил финансирование в рамках Программы исследований и инноваций «Горизонт 2020» Европейского Союза по грантовому соглашению Марии Склодовской-Кюри № 823731 CONMECH. Первый и третий авторы получают поддержку Национального научного центра Польши в рамках проекта OPUS № 2021/41/B/ST1/01636.\n\n\\subsubsection{\\discintname}\nАвторы заявляют, что у них нет конкурирующих интересов, имеющих отношение к содержанию этой статьи.\n\\end{credits}\n\n\\bibliographystyle{splncs04}\n\\bibliography{Hemivarbib}\n\n\\end{document}",
+  "input_tokens": 509,
+  "output_tokens": 3953,
+  "cost_usd": 0.00244815,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 338,
+      "total_input_tokens_est": 555,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 509,
+      "actual_output_tokens": 3953,
+      "actual_cost_usd": 0.00244815
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\section{Conclusion} <<CMD_407>>\nIn this paper, we developed a method for the numerical solution of hemiva\\-ria\\-tional inequalities. The hemivarional inequalities problem is reduced to the minimization of the so-called energy function. This function is both nonsmooth and nonconvex. The proposed method is a hybrid of the subgradient and the si\\-mu\\-la\\-ted annealing methods. The subgradient is applied to find stationary points of nonsmooth energy function and the simulated annealing is used to escape from these stationary points and find better starting points for the subgradient method. In this way the proposed hybrid method can efficiently deal with both nonsmoothness and nonconvexity of the problem under consideration.\n\n\\begin{credits}\n\\subsubsection{\\ackname} This project has received funding from the European Union’s Horizon 2020 Research and Innovation Programme under the Marie Sklodowska-Curie\nGrant Agreement No 823731 CONMECH. The first and third authors are supported by National Science Center, Poland, under project OPUS no. 2021/41/B/ST1/01636.\n\n\\subsubsection{\\discintname}\nThe authors have no competing interests to declare that are relevant to the content of this article.\n\\end{credits}\n\n\\bibliographystyle{splncs04}\n\\bibliography{Hemivarbib}\n\n\\end{document}\n"
+  },
+  "saved_at": "2025-12-26 13:54:14"
+}

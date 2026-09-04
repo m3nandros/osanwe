@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\section{Рисунки}\n\nДля рисунков следует использовать окружение ``\\verb|figure|''. Внутри окружения ``\\verb|figure|'' можно разместить одно или несколько изображений. Если ваш рисунок содержит материал третьих сторон, вы должны явно указать это, как показано в примере ниже.\n\n\\begin{figure}[h]\n  \\centering\n    \\fbox{\\rule{0pt}{2.5in} \\rule{0.9\\linewidth}{0pt}}\n  <<COMMENT_143>>\n  \\caption{Пример подписи}\n\\end{figure}\n\n\nВаши рисунки должны содержать подпись, описывающую рисунок для читателя.\n\nПодписи к рисункам размещаются {\\itshape ниже} рисунка.\n\nКаждый рисунок также должен иметь описание рисунка, если он не является чисто декоративным. Эти описания передают содержание изображения человеку, который не может его увидеть. Они также используются поисковыми роботами для индексирования изображений и в тех случаях, когда изображения не могут быть загружены.\n\nОписание рисунка должно быть обычным текстом без форматирования и содержать менее 2000 символов (включая пробелы).  {\\bfseries Описания рисунков не должны повторять подпись — их задача зафиксировать важную информацию, которая не указана в подписи или основном тексте статьи.} Для рисунков, которые передают важную и сложную новую информацию, короткого текстового описания может быть недостаточно. Более сложные альтернативные описания можно поместить в приложение и сослаться на них в коротком описании рисунка. Например, приведите таблицу данных, охватывающую информацию на столбчатой диаграмме, или структурированный список, представляющий граф. Для дополнительной информации о том, как лучше писать описания рисунков и почему это так важно, см. <<CMD_239>>.\n\n\\subsection{``Тизер-фигура''}\n\n``Тизер-фигура'' — это изображение или набор изображений в одном рисунке, которые размещаются после всей информации об авторах и их принадлежностях и перед основной частью статьи, на всю ширину страницы. Если вы хотите включить такую фигуру в свою статью, поместите команду непосредственно перед командой \\verb|\\maketitle|:\n<<CODE_184>>",
+  "input_tokens": 663,
+  "output_tokens": 2874,
+  "cost_usd": 0.00182385,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 498,
+      "total_input_tokens_est": 715,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 663,
+      "actual_output_tokens": 2874,
+      "actual_cost_usd": 0.00182385
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\section{Figures}\n\nThe ``\\verb|figure|'' environment should be used for figures. One or\nmore images can be placed within a figure. If your figure contains\nthird-party material, you must clearly identify it as such, as shown\nin the example below.\n\n\\begin{figure}[h]\n  \\centering\n    \\fbox{\\rule{0pt}{2.5in} \\rule{0.9\\linewidth}{0pt}}\n  <<COMMENT_143>>\n  \\caption{Example of caption}\n\\end{figure}\n\n\nYour figures should contain a caption which describes the figure to\nthe reader.\n\nFigure captions are placed {\\itshape below} the figure.\n\nEvery figure should also have a figure description unless it is purely\ndecorative. These descriptions convey what’s in the image to someone\nwho cannot see it. They are also used by search engine crawlers for\nindexing images, and when images cannot be loaded.\n\nA figure description must be unformatted plain text less than 2000\ncharacters long (including spaces).  {\\bfseries Figure descriptions\n  should not repeat the figure caption – their purpose is to capture\n  important information that is not already provided in the caption or\n  the main text of the paper.} For figures that convey important and\ncomplex new information, a short text description may not be\nadequate. More complex alternative descriptions can be placed in an\nappendix and referenced in a short figure description. For example,\nprovide a data table capturing the information in a bar chart, or a\nstructured list representing a graph.  For additional information\nregarding how best to write figure descriptions and why doing this is\nso important, please see\n<<CMD_239>>.\n\n\\subsection{The ``Teaser Figure''}\n\nA ``teaser figure'' is an image, or set of images in one figure, that\nare placed after all author and affiliation information, and before\nthe body of the article, spanning the page. If you wish to have such a\nfigure in your article, place the command immediately before the\n\\verb|\\maketitle| command:\n<<CODE_184>>\n\n"
+  },
+  "saved_at": "2025-12-26 14:55:06"
+}

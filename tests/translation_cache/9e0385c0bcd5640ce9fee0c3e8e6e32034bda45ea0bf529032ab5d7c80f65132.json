@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\section{Параметры класса документа в IEEEtran}\n\\noindent В начале вашего \\LaTeX\\ файла необходимо определить, какой тип оформления публикации вы намерены использовать. Ниже приведён список подходящих опций documentclass для каждого типа, охваченного классом IEEEtran.\n\n\\begin{list}{}{}\n\\item{Обычная журнальная статья}\n\\item{{\\tt{<<MATH_INLINE_81>>documentclass[journal]{IEEEtran}}}}\\\\\n\\item{Доклад для конференции}\n\\item{{\\tt{<<MATH_INLINE_82>>documentclass[conference]{IEEEtran}}}}\\\\\n\\item{Журнальная статья Computer Society}\n\\item{{\\tt{<<MATH_INLINE_83>>documentclass[10pt,journal,compsoc]{IEEEtran}}}}\\\\\n\\item{Конференционная статья Computer Society}\n\\item{{\\tt{<<MATH_INLINE_84>>documentclass[conference,compsoc]{IEEEtran}}}}\\\\\n\\item{Журнальная статья Communications Society}\n\\item{{\\tt{<<MATH_INLINE_85>>documentclass[journal,comsoc]{IEEEtran}}}}\\\\\n\\item{Краткое сообщение, корреспонденция или техническая заметка}\n\\item{{\\tt{<<MATH_INLINE_86>>documentclass[9pt,technote]{IEEEtran}}}}\n\\end{list}\n\nДля каждой из этих опций при подаче рукописи на рецензирование или при других специальных требованиях доступны и другие варианты. IEEE рекомендует оформлять вашу статью в базовом двухколоночном формате, чтобы убедиться, что все ваши уравнения, таблицы и графики поместятся в итоговом двухколоночном формате. Обращайтесь к документу ``IEEEtran\\_HOWTO.pdf'' для получения дополнительной информации о настройках для подачи на рецензирование, если этого требует ваш главный редактор (EIC).",
+  "input_tokens": 578,
+  "output_tokens": 2157,
+  "cost_usd": 0.0013808999999999998,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 361,
+      "total_input_tokens_est": 578,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 578,
+      "actual_output_tokens": 2157,
+      "actual_cost_usd": 0.0013808999999999998
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\section{Document Class Options in IEEEtran}\n\\noindent At the beginning of your \\LaTeX\\ file you will need to establish what type of publication style you intend to use. The following list shows appropriate documentclass options for each of the types covered by IEEEtran.\n\n\\begin{list}{}{}\n\\item{Regular Journal Article}\n\\item{{\\tt{<<MATH_INLINE_81>>documentclass[journal]{IEEEtran}}}}\\\\\n\\item{{Conference Paper}}\n\\item{{\\tt{<<MATH_INLINE_82>>documentclass[conference]{IEEEtran}}}}\\\\\n\\item{Computer Society Journal Article}\n\\item{{\\tt{<<MATH_INLINE_83>>documentclass[10pt,journal,compsoc]{IEEEtran}}}}\\\\\n\\item{Computer Society Conference Paper}\n\\item{{\\tt{<<MATH_INLINE_84>>documentclass[conference,compsoc]{IEEEtran}}}}\\\\\n\\item{{Communications Society Journal Article}}\n\\item{{\\tt{<<MATH_INLINE_85>>documentclass[journal,comsoc]{IEEEtran}}}}\\\\\n\\item{{Brief, Correspondence or Technote}}\n\\item{{\\tt{<<MATH_INLINE_86>>documentclass[9pt,technote]{IEEEtran}}}}\n\\end{list}\n\nThere are other options available for each of these when submitting for peer review or other special requirements. IEEE recommends to compose your article in the base 2-column format to make sure all your equations, tables and graphics will fit the final 2-column format. Please refer to the document ``IEEEtran\\_HOWTO.pdf'' for more information on settings for peer review submission if required by your EIC.\n\n"
+  },
+  "saved_at": "2025-12-26 22:48:16"
+}

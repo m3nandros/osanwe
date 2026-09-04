@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\section{Расширенные тезисы SIGCHI}\n\nШаблонный стиль ``\\verb|sigchi-a|'' (доступен только в \\LaTeX\\ и не в Word) создаёт форматированную статью альбомной ориентации с широким левым полем. Три окружения доступны для использования со стилем шаблона ``\\verb|sigchi-a|'', и размещают форматированный вывод в поле:\n\\begin{itemize}\n\\item {\\verb|sidebar|}:  Размещает форматированный текст в поле.\n\\item {\\verb|marginfigure|}: Размещает рисунок в поле.\n\\item {\\verb|margintable|}: Размещает таблицу в поле.\n\\end{itemize}\n\n<<COMMENT_144>>\n<<COMMENT_145>>\n<<COMMENT_146>>\n<<COMMENT_147>>\n<<COMMENT_148>>\n\\begin{acks}\nРоберту — за бублики и объяснение CMYK и цветовых пространств.\n\\end{acks}\n\n<<COMMENT_149>>\n<<COMMENT_150>>\n<<COMMENT_151>>\n\\bibliographystyle{ACM-Reference-Format}\n\\bibliography{sample-base}\n\n<<COMMENT_152>>\n<<COMMENT_153>>\n<<COMMENT_154>>\n\n<<COMMENT_155>>\n\n<<COMMENT_156>>\n\n<<COMMENT_157>>\n<<COMMENT_158>>\n<<COMMENT_159>>\n<<COMMENT_160>>\n<<COMMENT_161>>\n\n<<COMMENT_162>>\n\n<<COMMENT_163>>\n<<COMMENT_164>>\n<<COMMENT_165>>\n<<COMMENT_166>>\n<<COMMENT_167>>\n\n<<COMMENT_168>>\n\n<<COMMENT_169>>\n<<COMMENT_170>>\n<<COMMENT_171>>\n<<COMMENT_172>>\n<<COMMENT_173>>\n\n<<COMMENT_174>>\n<<COMMENT_175>>\n<<COMMENT_176>>\n\n\\end{document}\n\\endinput\n<<COMMENT_177>>\n<<COMMENT_178>>",
+  "input_tokens": 591,
+  "output_tokens": 2194,
+  "cost_usd": 0.00140505,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 338,
+      "total_input_tokens_est": 555,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 591,
+      "actual_output_tokens": 2194,
+      "actual_cost_usd": 0.00140505
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\section{SIGCHI Extended Abstracts}\n\nThe ``\\verb|sigchi-a|'' template style (available only in \\LaTeX\\ and\nnot in Word) produces a landscape-orientation formatted article, with\na wide left margin. Three environments are available for use with the\n``\\verb|sigchi-a|'' template style, and produce formatted output in\nthe margin:\n\\begin{itemize}\n\\item {\\verb|sidebar|}:  Place formatted text in the margin.\n\\item {\\verb|marginfigure|}: Place a figure in the margin.\n\\item {\\verb|margintable|}: Place a table in the margin.\n\\end{itemize}\n\n<<COMMENT_144>>\n<<COMMENT_145>>\n<<COMMENT_146>>\n<<COMMENT_147>>\n<<COMMENT_148>>\n\\begin{acks}\nTo Robert, for the bagels and explaining CMYK and color spaces.\n\\end{acks}\n\n<<COMMENT_149>>\n<<COMMENT_150>>\n<<COMMENT_151>>\n\\bibliographystyle{ACM-Reference-Format}\n\\bibliography{sample-base}\n\n<<COMMENT_152>>\n<<COMMENT_153>>\n<<COMMENT_154>>\n\n<<COMMENT_155>>\n\n<<COMMENT_156>>\n\n<<COMMENT_157>>\n<<COMMENT_158>>\n<<COMMENT_159>>\n<<COMMENT_160>>\n<<COMMENT_161>>\n\n<<COMMENT_162>>\n\n<<COMMENT_163>>\n<<COMMENT_164>>\n<<COMMENT_165>>\n<<COMMENT_166>>\n<<COMMENT_167>>\n\n<<COMMENT_168>>\n\n<<COMMENT_169>>\n<<COMMENT_170>>\n<<COMMENT_171>>\n<<COMMENT_172>>\n<<COMMENT_173>>\n\n<<COMMENT_174>>\n<<COMMENT_175>>\n<<COMMENT_176>>\n\n\\end{document}\n\\endinput\n<<COMMENT_177>>\n<<COMMENT_178>>\n"
+  },
+  "saved_at": "2025-12-26 14:57:58"
+}

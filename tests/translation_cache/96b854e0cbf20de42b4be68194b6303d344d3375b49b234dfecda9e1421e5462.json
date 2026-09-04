@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\section{Заключение}<<CMD_856>>\n\n\\acresetall\nМы предложили реализацию алгоритма \\ac{spa} для \\ac{mpslam} с низкой вычислительной сложностью. Используя unscented- или \\ac{sp}-преобразование для аппроксимации \\acp{pdf} гауссовскими, интегралы, возникающие в \\ac{spa}, можно эффективно вычислять, а апостериорные \\acp{pdf} — точно представлять. Это особенно пригодно для \\ac{mimo}-систем, где совместная доступность измерений \\ac{toa}, \\ac{aoa} и \\ac{aod} приводит к однозначным преобразованиям, что позволяет точно аппроксимировать получающуюся совместную апостериорную \\ac{pdf} гауссовскими плотностями.\n<<COMMENT_272>>\nПутем численной оценки в двух различных \\ac{mimo}-настройках мы продемонстрировали, что предложенный алгоритм обеспечивает точную и устойчивую локализацию с временем выполнения порядка десятков миллисекунд. Для сравнения, алгоритму \\ac{mpslam} на основе частиц требовалось большое количество частиц для достижения сопоставимой точности локализации, что приводило к существенно увеличенному времени выполнения.\n\n\\vspace{-1mm}\n\\appendix",
+  "input_tokens": 453,
+  "output_tokens": 2228,
+  "cost_usd": 0.00140475,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 273,
+      "total_input_tokens_est": 490,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 453,
+      "actual_output_tokens": 2228,
+      "actual_cost_usd": 0.00140475
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\section{Conclusion}<<CMD_856>>\n\n\\acresetall\nWe proposed a low complexity implementation of the \\ac{spa} algorithm for \\ac{mpslam}. By using the uncented or \\ac{sp} transform to approximate \\acp{pdf} as Gaussian, integrals involved in the \\ac{spa} can be efficiently evaluated and posterior \\acp{pdf} accurately represented. This is particularly suitable for \\ac{mimo} systems, where the joint availability of \\ac{toa}, \\ac{aoa} and \\ac{aod} measurements leads to unambiguous transformations, allowing the resulting joint posterior \\ac{pdf} to be approximated accurately by Gaussian densities.\n<<COMMENT_272>>\nThrough numerical evaluation in two different \\ac{mimo} settings, we demonstrated that the proposed algorithm achieves accurate and robust localization results with runtimes in the order of tens of milliseconds. In comparison, a particle-based \\ac{mpslam} algorithm required a high number of particles to achieve similar localization performance, resulting in significantly increased runtimes.\n\n\\vspace{-1mm}\n\\appendix\n"
+  },
+  "saved_at": "2025-12-26 16:04:49"
+}

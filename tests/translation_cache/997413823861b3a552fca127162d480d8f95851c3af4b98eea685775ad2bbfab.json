@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\section{Заключение}<<CMD_628>>\nВ этой статье мы представляем {\\method}, инновационный фреймворк, использующий мощные диффузионные модели для решения задач виртуальной примерки на видео. \n<<COMMENT_229>>\nВсесторонние эксперименты показывают, что {\\method} может генерировать результаты примерки на видео с высоким визуальным качеством и временной согласованностью. \n<<COMMENT_230>>\nМы также собрали новый датасет, который является крупнейшим для этой задачи, содержащим одежду нескольких категорий и пары изображений и видео высокого разрешения. \n<<COMMENT_231>>\nМы считаем, что наша методология и датасет могут служить ценным ориентиром для исследователей в области виртуальной примерки на видео.\n\n\n\n\n{\\small\n\\bibliographystyle{plainnat}\n\\bibliography{ref}\n}\n\n\\newpage\n\\appendix",
+  "input_tokens": 373,
+  "output_tokens": 1293,
+  "cost_usd": 0.0008317499999999999,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 200,
+      "total_input_tokens_est": 417,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 373,
+      "actual_output_tokens": 1293,
+      "actual_cost_usd": 0.0008317499999999999
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\section{Conclusions}<<CMD_628>>\nIn this paper, we present {\\method}, an innovative framework that utilizes powerful diffusion models for solving video virtual try-on challenges. \n<<COMMENT_229>>\nComprehensive experiments demonstrate that {\\method} can produce video try-on results with high visual quality and temporal consistency. \n<<COMMENT_230>>\nWe also collect a new dataset, which is the largest dataset for this task, featuring garments of multiple categories and high-resolution image-video pairs. \n<<COMMENT_231>>\nWe believe that our methodology and dataset can serve as valuable references for researchers in the field of video virtual try-on.\n\n\n\n\n{\\small\n\\bibliographystyle{plainnat}\n\\bibliography{ref}\n}\n\n\\newpage\n\\appendix\n"
+  },
+  "saved_at": "2025-12-25 22:25:29"
+}

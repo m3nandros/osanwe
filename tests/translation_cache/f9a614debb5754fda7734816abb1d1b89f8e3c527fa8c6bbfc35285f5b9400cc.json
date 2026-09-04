@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\section{Шрифты}\n\nКласс документа ``<<CODE_208>>'' требует использования семейства шрифтов\n``Libertine''. Ваша установка \\TeX\\ должна включать этот набор пакетов.\nПожалуйста, не заменяйте его другими семействами шрифтов. Пакеты\n``<<CODE_209>>'' и ``<<CODE_210>>'' не следует использовать,\nтак как они переопределят встроенные семейства шрифтов.",
+  "input_tokens": 306,
+  "output_tokens": 940,
+  "cost_usd": 0.0006098999999999999,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 101,
+      "total_input_tokens_est": 318,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 306,
+      "actual_output_tokens": 940,
+      "actual_cost_usd": 0.0006098999999999999
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\section{Typefaces}\n\nThe ``<<CODE_208>>'' document class requires the use of the\n``Libertine'' typeface family. Your \\TeX\\ installation should include\nthis set of packages. Please do not substitute other typefaces. The\n``<<CODE_209>>'' and ``<<CODE_210>>'' packages should not be used,\nas they will override the built-in typeface families.\n\n"
+  },
+  "saved_at": "2025-12-27 00:13:07"
+}

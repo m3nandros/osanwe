@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\section{Заключение}\nВ этой статье представлены пять методов бэкдор-атак для текстовых данных веб-запросов и предложены два метода защиты для снижения токсичности модели. Результаты экспериментов показывают средний ASR равный 86.90\\%, 86.81\\% и 81.46\\% для моделей CNN, RNN и BERT соответственно, что указывает на широко распространённую проблему бэкдор-атак в обнаружении веб-атак с использованием моделей глубокого обучения. Предложенный многозадачный метод дообучения (fine-tuning), основанный на кросс-энтропии и признаках, эффективно снижает ASR на 70.00\\%, 73.17\\% и 8.49\\% для моделей CNN, RNN и BERT соответственно. Эти результаты подчёркивают как уязвимость моделей глубокого обучения при обработке веб-запросов, так и эффективность предложенных стратегий защиты в укреплении безопасности моделей. Ожидается, что это исследование стимулирует дальнейшие работы по обнаружению веб-атак и в более широкой области безопасности ИИ, способствуя развитию технологий безопасности ИИ.\n\n\n\n<<КОММЕНТАРИЙ_134>>\n<<КОММЕНТАРИЙ_135>>\n\\appendix",
+  "input_tokens": 421,
+  "output_tokens": 1767,
+  "cost_usd": 0.00112335,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 250,
+      "total_input_tokens_est": 467,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 421,
+      "actual_output_tokens": 1767,
+      "actual_cost_usd": 0.00112335
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\section{Conclusion}\nThis paper introduces five backdoor attack methods for web request text data and proposes two defense methods to mitigate model toxicity. Experiment results reveal an average ASR of 86.90\\%, 86.81\\%, and 81.46\\% on CNN, RNN, and BERT models, indicating a prevalent backdoor attack issue in web attack detection using deep learning models. The proposed multi-task fine-tuning method based on cross-entropy and features effectively reduces ASR by 70.00\\%, 73.17\\%, and 8.49\\% on CNN, RNN, and BERT models, respectively. These findings underscore both the vulnerability of deep learning models in handling web requests and the efficacy of the proposed defense strategies in bolstering model security. This research is expected to stimulate further investigations in web attack detection and broader AI security domains, fostering advancements in AI security technologies.\n\n\n\n<<COMMENT_134>>\n<<COMMENT_135>>\n\\appendix\n"
+  },
+  "saved_at": "2025-12-26 17:21:05"
+}

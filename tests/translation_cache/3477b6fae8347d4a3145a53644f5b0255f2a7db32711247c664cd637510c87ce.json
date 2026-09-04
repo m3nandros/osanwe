@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\section{Дополнительные советы}\n\nПожалуйста, используйте ``мягкие'' (например, \\verb|<<CMD_120>>|) или \\verb|(<<CMD_109>>)| перекрёстные ссылки вместо ``жёстких'' ссылок (например, \\verb|(1)|). Это позволит объединять разделы, добавлять уравнения или менять порядок рисунков или цитат без необходимости просматривать файл построчно.\n\nОбратите внимание, что среда \\verb|{subequations}| в {\\LaTeX} увеличит основной счётчик уравнений, даже когда номера уравнений не отображаются. Если вы это забудете, вы можете написать статью, в которой номера уравнений перепрыгивают с (17) на (20), заставив корректоров задуматься, не открыли ли вы новый метод счёта.\n\n{\\BibTeX} не работает по волшебству. Он не берёт библиографические данные из воздуха, а из файлов .bib. Если вы используете {\\BibTeX} для составления библиографии, вы должны прислать файлы .bib. \n\n{\\LaTeX} не умеет читать ваши мысли. Если вы присвоите одну и ту же метку подразделу третьего уровня и таблице, вы можете обнаружить, что Таблица I была перекрёстно ссылана как Таблица IV-B3. \n\n{\\LaTeX} не обладает предвидением. Если вы поместите команду \\verb|\\label| перед командой, которая обновляет счётчик, который она должна использовать, метка возьмёт последний счётчик для перекрёстной ссылки вместо нужного. В частности, команда \\verb|\\label| не должна находиться перед подписью рисунка или таблицы.\n\nПожалуйста, не используйте \\verb|\\nonumber| или \\verb|\\notag| внутри среды \\verb|{array}|. Это не остановит нумерацию уравнений внутри \\verb|{array}| (всё равно её там не будет) и может помешать появлению нужного номера уравнения во внешнем уравнении.\n\n\\balance",
+  "input_tokens": 624,
+  "output_tokens": 1618,
+  "cost_usd": 0.0010644,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 416,
+      "total_input_tokens_est": 633,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 624,
+      "actual_output_tokens": 1618,
+      "actual_cost_usd": 0.0010644
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\section{Additional Advice}\n\nPlease use ``soft'' (e.g., \\verb|<<CMD_120>>|) or \\verb|(<<CMD_109>>)|\ncross references instead of ``hard'' references (e.g., \\verb|(1)|).\nThat will make it possible to combine sections, add equations, or\nchange the order of figures or citations without having to go through\nthe file line by line.\n\nPlease note that the \\verb|{subequations}| environment in {\\LaTeX}\nwill increment the main equation counter even when there are no\nequation numbers displayed. If you forget that, you might write an\narticle in which the equation numbers skip from (17) to (20), causing\nthe copy editors to wonder if you've discovered a new method of\ncounting.\n\n{\\BibTeX} does not work by magic. It doesn't get the bibliographic\ndata from thin air but from .bib files. If you use {\\BibTeX} to produce a\nbibliography you must send the .bib files. \n\n{\\LaTeX} can't read your mind. If you assign the same label to a\nsubsubsection and a table, you might find that Table I has been cross\nreferenced as Table IV-B3. \n\n{\\LaTeX} does not have precognitive abilities. If you put a\n\\verb|\\label| command before the command that updates the counter it's\nsupposed to be using, the label will pick up the last counter to be\ncross referenced instead. In particular, a \\verb|\\label| command\nshould not go before the caption of a figure or a table.\n\nPlease do not use \\verb|\\nonumber| or \\verb|\\notag| inside the\n\\verb|{array}| environment. It will not stop equation numbers inside\n\\verb|{array}| (there won't be any anyway) and it might stop a wanted\nequation number in the surrounding equation.\n\n\\balance\n\n"
+  },
+  "saved_at": "2025-12-26 12:38:42"
+}

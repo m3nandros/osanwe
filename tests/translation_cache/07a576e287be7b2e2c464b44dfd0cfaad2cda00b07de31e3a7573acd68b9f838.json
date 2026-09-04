@@ -1,0 +1,30 @@
+{
+  "translated_content": "}\n\t\\subfloat{<<IMG_3148>>}\n\t\\hspace{-1.1em}\n<<COMMENT_1209>>\n<<COMMENT_1210>>\n<<TIKZ_3130>>}\n\t\\subfloat{<<IMG_3149>>}\n\t\\hspace{-1.5em}\n\t\\caption{Достижимые множества во времени, вычисленные тремя различными методами при начальных условиях <<MATH_INLINE_3388>> и <<MATH_INLINE_3389>> в системе руления. \n\t\tЦвета \\textcolor{black!70}{черный}, \\textcolor{teal!70}{бирюзовый}, \n\t\t\\textcolor{blue!70}{синий}, и \\textcolor{brown!70}{коричневый}\n\t\tобозначают соответственно моделирование, базовый метод, метод с <<MATH_INLINE_3390>> шагами и метод с <<MATH_INLINE_3391>> шагами.}\n\t<<CMD_3786>>\n\\end{figure*}\n<<COMMENT_1223>>\n<<COMMENT_1224>>\n<<COMMENT_1225>>\n<<COMMENT_1226>>\n<<COMMENT_1227>>\n<<COMMENT_1228>>\n<<COMMENT_1229>>\n<<COMMENT_1230>>\n<<COMMENT_1231>>\n<<COMMENT_1232>>\n<<COMMENT_1233>>\n<<COMMENT_1234>>\n<<COMMENT_1235>>\n<<COMMENT_1236>>\n<<COMMENT_1237>>\n<<COMMENT_1238>>\n<<COMMENT_1239>>\n<<COMMENT_1240>>\n<<COMMENT_1241>>\n<<COMMENT_1242>>\n<<COMMENT_1243>>\n<<COMMENT_1244>>\n<<COMMENT_1245>>\n<<COMMENT_1246>>\n<<COMMENT_1247>>\n<<COMMENT_1248>>\n<<COMMENT_1249>>\n<<COMMENT_1250>>\n<<COMMENT_1251>>\n<<COMMENT_1252>>\n<<COMMENT_1253>>\n<<COMMENT_1254>>\n<<COMMENT_1255>>\n<<COMMENT_1256>>\n<<COMMENT_1257>>\n<<COMMENT_1258>>\n<<COMMENT_1259>>\n<<COMMENT_1260>>\n<<COMMENT_1261>>\n<<COMMENT_1262>>\n<<COMMENT_1263>>\n<<COMMENT_1264>>\n<<COMMENT_1265>>\n\n<<COMMENT_1266>>\n<<COMMENT_1267>>\n<<COMMENT_1268>>\n<<COMMENT_1269>>\n<<COMMENT_1270>>\n<<COMMENT_1271>>\n<<COMMENT_1272>>\n<<COMMENT_1273>>\n<<COMMENT_1274>>\n<<COMMENT_1275>>\n<<COMMENT_1276>>\n<<COMMENT_1277>>\n\\definecolor{cornflowerblue}{RGB}{100,149,237}\n\\definecolor{darkgray176}{RGB}{176,176,176}\n\\definecolor{lightgray}{RGB}{211,211,211}\n\\definecolor{lightpink}{RGB}{255,182,193}\n<<TIKZ_3129>>\n\n<<COMMENT_1551>>\n<<COMMENT_1552>>\n<<COMMENT_1553>>\n<<COMMENT_1554>>\n\n<<COMMENT_1555>>\n<<COMMENT_1556>>\n<<COMMENT_1557>>\n<<COMMENT_1558>>\n<<COMMENT_1559>>",
+  "input_tokens": 874,
+  "output_tokens": 2226,
+  "cost_usd": 0.0014667,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 476,
+      "total_input_tokens_est": 693,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 874,
+      "actual_output_tokens": 2226,
+      "actual_cost_usd": 0.0014667
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n}\n\t\\subfloat{<<IMG_3148>>}\n\t\\hspace{-1.1em}\n<<COMMENT_1209>>\n<<COMMENT_1210>>\n<<TIKZ_3130>>}\n\t\\subfloat{<<IMG_3149>>}\n\t\\hspace{-1.5em}\n\t\\caption{Reachable sets over time using three different methods when starting from <<MATH_INLINE_3388>> and <<MATH_INLINE_3389>> in taxiing system. \n\t\tThe colors \\textcolor{black!70}{black}, \\textcolor{teal!70}{teal}, \n\t\t\\textcolor{blue!70}{blue}, and \\textcolor{brown!70}{brown}\n\t\trepresent simulations, baseline, <<MATH_INLINE_3390>>-step, and <<MATH_INLINE_3391>>-step methods, respectively.}\n\t<<CMD_3786>>\n\\end{figure*}\n<<COMMENT_1223>>\n<<COMMENT_1224>>\n<<COMMENT_1225>>\n<<COMMENT_1226>>\n<<COMMENT_1227>>\n<<COMMENT_1228>>\n<<COMMENT_1229>>\n<<COMMENT_1230>>\n<<COMMENT_1231>>\n<<COMMENT_1232>>\n<<COMMENT_1233>>\n<<COMMENT_1234>>\n<<COMMENT_1235>>\n<<COMMENT_1236>>\n<<COMMENT_1237>>\n<<COMMENT_1238>>\n<<COMMENT_1239>>\n<<COMMENT_1240>>\n<<COMMENT_1241>>\n<<COMMENT_1242>>\n<<COMMENT_1243>>\n<<COMMENT_1244>>\n<<COMMENT_1245>>\n<<COMMENT_1246>>\n<<COMMENT_1247>>\n<<COMMENT_1248>>\n<<COMMENT_1249>>\n<<COMMENT_1250>>\n<<COMMENT_1251>>\n<<COMMENT_1252>>\n<<COMMENT_1253>>\n<<COMMENT_1254>>\n<<COMMENT_1255>>\n<<COMMENT_1256>>\n<<COMMENT_1257>>\n<<COMMENT_1258>>\n<<COMMENT_1259>>\n<<COMMENT_1260>>\n<<COMMENT_1261>>\n<<COMMENT_1262>>\n<<COMMENT_1263>>\n<<COMMENT_1264>>\n<<COMMENT_1265>>\n\n<<COMMENT_1266>>\n<<COMMENT_1267>>\n<<COMMENT_1268>>\n<<COMMENT_1269>>\n<<COMMENT_1270>>\n<<COMMENT_1271>>\n<<COMMENT_1272>>\n<<COMMENT_1273>>\n<<COMMENT_1274>>\n<<COMMENT_1275>>\n<<COMMENT_1276>>\n<<COMMENT_1277>>\n\\definecolor{cornflowerblue}{RGB}{100,149,237}\n\\definecolor{darkgray176}{RGB}{176,176,176}\n\\definecolor{lightgray}{RGB}{211,211,211}\n\\definecolor{lightpink}{RGB}{255,182,193}\n<<TIKZ_3129>>\n\n<<COMMENT_1551>>\n<<COMMENT_1552>>\n<<COMMENT_1553>>\n<<COMMENT_1554>>\n\n<<COMMENT_1555>>\n<<COMMENT_1556>>\n<<COMMENT_1557>>\n<<COMMENT_1558>>\n<<COMMENT_1559>>\n\n"
+  },
+  "saved_at": "2025-12-26 12:59:53"
+}

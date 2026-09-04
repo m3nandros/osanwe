@@ -1,0 +1,30 @@
+{
+  "translated_content": "Моделирование зависимости между сетью и ответами на элементы с использованием скоррелированных скрытых переменных в рамках совместного многомерного нормального распределения имеет свои преимущества. Если существует зависимость между сетью и атрибутами, и каждый компонент модели достаточно адекватен, то при использовании совместной модели по сравнению с раздельными моделями можно ожидать улучшения оценки параметров. Это происходит потому, что оценивание каждого из компонентов влияет на другой и предоставляет ему информацию. Совместная структура также является улучшением по сравнению с существующими подходами, в которых взаимосвязь между сетью и атрибутами оценивается в два этапа, например сначала извлекается скрытый фактор, а затем взаимосвязь оценивается как корреляция между скрытым фактором и атрибутами или скрытый фактор используется в качестве предиктора в регрессионной модели на втором этапе. За исключением \\textcite{paul2022causal}, неопределённость, связанная с оценкой скрытых факторов на первом этапе, как правило, игнорируется при оценке взаимосвязи на втором этапе. Наконец, моделирование зависимости через корреляции является гибким и интуитивно понятным вариантом. Не требуется предварительных знаний о направлении зависимости. \n\nПовторяя, мы предлагаем новую совместную статистическую модель для сетевых данных и ответов на элементы (JNIRM---совместная модель сети и ответов на элементы). В следующих разделах мы сначала опишем мотивирующее приложение, затем модель. Мы предлагаем алгоритм MCMC для оценки предложенной модели, а затем приводим результаты по приложениям. Наконец, мы обсуждаем и делаем выводы.",
+  "input_tokens": 496,
+  "output_tokens": 1905,
+  "cost_usd": 0.0012174,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 410,
+      "total_input_tokens_est": 627,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 496,
+      "actual_output_tokens": 1905,
+      "actual_cost_usd": 0.0012174
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\nModeling the dependence between the network and item responses using correlated latent variables with a joint multivariate normal distribution has its advantages. If there is dependence between the network and attributes, and each modeling component is reasonably valid, we can expect an improvement in parameter estimation using the joint model compared with using the separate models. This is because estimation of each component influences and informs the other. The joint framework is also an improvement over existing approaches where the relationship between the network and attributes is quantified in two steps, e.g., first extracting the latent factor and then estimating the relationship as the correlation between the latent factor and attributes or using the latent factor as the predictor of a regression model in the second step. With the exception of \\textcite{paul2022causal}, the uncertainty associated with estimating the latent factors in the first step is typically ignored when estimating the relationship in the second step. Lastly, modeling dependence as correlations is a flexible and intuitive option. No prior knowledge about the direction of the dependence is needed. \n\nTo reiterate, we propose a novel joint statistical model for the network data and item responses (JNIRM---joint network and item response model). In the following sections, we first describe the motivating application, then the model. We propose a MCMC algorithm to estimate the proposed model, and then we report results for the applications. Lastly, we discuss and conclude. \n\n\n\n"
+  },
+  "saved_at": "2025-12-26 15:37:39"
+}

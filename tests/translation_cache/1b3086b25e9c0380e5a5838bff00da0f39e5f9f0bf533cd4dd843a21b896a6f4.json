@@ -1,0 +1,30 @@
+{
+  "translated_content": "Учитывая дискретный характер точек рассеяния самолёта, применение центральной разностной свёртки к мелкоуровневым картам признаков может привести к тому, что модель будет чрезмерно фокусироваться на текстуре и отдельных точках рассеяния, что в свою очередь вызывает пропуски обнаружений и ложные срабатывания. Чтобы решить эту проблему, мы применяем центральную пиксельную разностную свёртку к слою семантических признаков высокого уровня.\n\nКроме того, для повышения заметности целей мы разработали модуль слияния признаков, который сочетает исходные признаки с картами признаков с подавленными помехами для усиления интенсивности рассеяния цели. Этот модуль выделяет цель, снижает фоновое вмешательство и повышает точность обнаружения.\n\n<<COMMENT_43>>",
+  "input_tokens": 335,
+  "output_tokens": 966,
+  "cost_usd": 0.0006298499999999999,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 190,
+      "total_input_tokens_est": 407,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 335,
+      "actual_output_tokens": 966,
+      "actual_cost_usd": 0.0006298499999999999
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\nConsidering the discrete characteristics of aircraft scattering points, applying central difference convolution to shallow feature maps may cause the model to focus too much on texture and independent scattering points, leading to missed detections and false alarms. To address this issue, we apply central pixel difference convolution to the high-level semantic feature layer. Furthermore, to enhance target saliency, we design a feature fusion module that combines the original features with the clutter-suppressed feature maps to improve the target scattering intensity. This module highlights the target, reduces background interference, and improves detection accuracy. \n\n<<COMMENT_43>>\n\n\n\n"
+  },
+  "saved_at": "2025-12-26 16:45:54"
+}

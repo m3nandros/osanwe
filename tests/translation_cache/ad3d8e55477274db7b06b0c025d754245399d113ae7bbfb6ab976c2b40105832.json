@@ -1,0 +1,30 @@
+{
+  "translated_content": "<<MATH_DISP_82>>\nгде <<MATH_INLINE_190>> — это абсолютное значение SDF для выбранной точки, <<MATH_INLINE_191>> — гиперпараметр для масштабирования значения SDF. Этот член будет поощрять значения SDF точек, находящихся позади видимых поверхностей, быть далёкими от 0. При извлечении 0-уровневого множества SDF для генерации сетки этот член может предотвратить неконтролируемые свободные поверхности. Потеря разреженности <<MATH_INLINE_192>> предотвращает дублирующиеся представления на переднем плане и дополнительно поощряет многие-к-одному отображение точек сцены на выборочные точки. \n\nМы дополнительно вводим опциональную масочную потерю <<MATH_INLINE_193>> в начальной фазе обучения. Мы стремимся к тому, чтобы предсказанные значения альфа соответствовали грубой входной маске, которая определяет, какие области следует разделить между передним планом и фоном сцены. Отмечаем, что мы не требуем от входных масок высокой точности, так как они используются только для инициализации отображения альфа. Большая часть обучения проходит без этой потери, что позволяет сети исправлять ошибки. Потеря альфа <<MATH_INLINE_194>> определяется как:\n\n<<MATH_DISP_81>>\nгде <<MATH_INLINE_195>> — это бинарная кросс-энтропийная потеря.",
+  "input_tokens": 468,
+  "output_tokens": 1171,
+  "cost_usd": 0.0007727999999999999,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 300,
+      "total_input_tokens_est": 517,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 468,
+      "actual_output_tokens": 1171,
+      "actual_cost_usd": 0.0007727999999999999
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n<<MATH_DISP_82>>\nwhere <<MATH_INLINE_190>> is the absolute SDF value of sampled point, <<MATH_INLINE_191>> is a hyperparameter to re-scale the SDF value. This term will encourage the SDF values of the points behind the visible surfaces to be far from 0. When extracting 0-level set SDF to generate mesh, this term can avoid uncontrollable free surfaces. The sparsity loss <<MATH_INLINE_192>> prevents duplicate representations in the foreground, and further encourages the many-to-one mapping of scene points to the sample points. \n\nWe additionally introduce an optional mask loss <<MATH_INLINE_193>> during the initial train phase. We encourage the predicted alpha values to match a coarse input mask that identifies which regions should decouple the foreground and background scenes. We note that we do not require input masks to be precise, as they are used only for initializing the alpha mapping.  And the majority of training happens without this loss, allowing the network to correct for errors. The alpha loss <<MATH_INLINE_194>> is defined as:\n\n<<MATH_DISP_81>>\nwhere <<MATH_INLINE_195>> is the binary cross entropy loss. \n\n\n\n"
+  },
+  "saved_at": "2025-12-26 17:06:00"
+}

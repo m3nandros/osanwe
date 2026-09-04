@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\section{Благодарности}\n\nУказание источников финансирования и другой поддержки, а также благодарности лицам и группам, которые помогали в проведении исследований и подготовке работы, должны быть включены в раздел благодарностей, который помещается непосредственно перед разделом со списком литературы в вашем документе.\n\nЭтот раздел имеет специальную среду:\n<<CODE_181>>\nчтобы информация, содержащаяся в ней, могла быть легче собрана на этапе извлечения метаданных статьи, а также для обеспечения единообразия написания заголовка раздела.\n\nАвторам не следует оформлять этот раздел как нумерованный или ненумерованный {<<CODE_229>>}; пожалуйста, используйте среду ``{<<CODE_230>>}''.",
+  "input_tokens": 355,
+  "output_tokens": 747,
+  "cost_usd": 0.00050145,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 182,
+      "total_input_tokens_est": 399,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 355,
+      "actual_output_tokens": 747,
+      "actual_cost_usd": 0.00050145
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\section{Acknowledgments}\n\nIdentification of funding sources and other support, and thanks to\nindividuals and groups that assisted in the research and the\npreparation of the work should be included in an acknowledgment\nsection, which is placed just before the reference section in your\ndocument.\n\nThis section has a special environment:\n<<CODE_181>>\nso that the information contained therein can be more easily collected\nduring the article metadata extraction phase, and to ensure\nconsistency in the spelling of the section heading.\n\nAuthors should not prepare this section as a numbered or unnumbered {<<CODE_229>>}; please use the ``{<<CODE_230>>}'' environment.\n\n"
+  },
+  "saved_at": "2025-12-27 00:17:55"
+}

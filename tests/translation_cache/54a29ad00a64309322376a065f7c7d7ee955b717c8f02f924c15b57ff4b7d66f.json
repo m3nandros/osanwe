@@ -1,0 +1,30 @@
+{
+  "translated_content": "Наши основные вклады можно резюмировать следующим образом: 1). Мы предлагаем новую архитектуру для решения задачи виртуальной примерки на видео, которая использует мощные диффузионные модели для синтеза высококачественных видео примерки.\n<<COMMENT_47>>\n2). Мы используем Pose Encoder и Temporal Modules для улучшения временной согласованности. Чтобы обеспечить генерацию высококачественных, естественных и реалистичных видео примерки, мы вводим механизм объединения признаков на основе внимания для лучшего использования семантической информации об элементах одежды.\n<<COMMENT_48>>\n3). Мы формируем многокатегорийный датасет, содержащий 9,700 пар высококачественных образцов «одежда–видео», что делает его крупнейшим датасетом для задачи виртуальной примерки в видео на сегодняшний день.\n<<COMMENT_49>>\n4). Как количественные, так и качественные эксперименты подтверждают превосходство нашего подхода.\n\n<<COMMENT_50>>",
+  "input_tokens": 377,
+  "output_tokens": 1246,
+  "cost_usd": 0.00080415,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 219,
+      "total_input_tokens_est": 436,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 377,
+      "actual_output_tokens": 1246,
+      "actual_cost_usd": 0.00080415
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\nOur contributions can be summarized as follows: 1). We propose a novel architecture to address the video virtual try-on task, which leverages the powerful diffusion models to synthesize high-quality try-on videos.\n<<COMMENT_47>>\n2). We employ Pose Encoder and Temporal Modules to improve temporal consistency. To ensure the generation of high-quality, natural, and realistic try-on videos, we introduce an attention feature fusion mechanism to better exploit the semantic information of garments.\n<<COMMENT_48>>\n3). We curate a multi-category dataset containing 9,700 pairs of high-quality garment-video samples, making it the largest dataset for the video virtual try-on task to date.\n<<COMMENT_49>>\n4). Both quantitative and qualitative experiments validate the superiority of our approach.\n\n<<COMMENT_50>>\n\n\n"
+  },
+  "saved_at": "2025-12-25 22:15:58"
+}

@@ -1,0 +1,1032 @@
+\documentclass{article}
+\usepackage{cmap}
+\usepackage[T2A]{fontenc}
+\usepackage[russian]{babel}
+\usepackage{sectsty}
+\allsectionsfont{\bfseries}
+
+% if you need to pass options to natbib, use, e.g.:
+ \PassOptionsToPackage{numbers, compress}{natbib}
+% before loading nips_2017
+%
+% to avoid loading the natbib package, add option nonatbib:
+% \usepackage[nonatbib]{nips_2017}
+
+% Keep final for now to remove annoying line numbers.
+%\usepackage[final]{nips_2017}
+% Keep final for now to remove annoying line numbers.
+
+% to compile a camera-ready version, add the [final] option, e.g.:
+\usepackage[final]{nips_2017}
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{amsmath}
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{subfiles}
+\usepackage{xcolor}
+\usepackage{multirow}
+\usepackage{enumerate}
+\usepackage{graphicx}
+
+% % Custom Commands:
+% \newcommand\blfootnote[1]{%
+%   \begingroup
+%   \renewcommand\thefootnote{}\footnote{#1}%
+%   \addtocounter{footnote}{-1}%
+%   \endgroup
+% }
+
+\newcommand\todo[1]{\textcolor{red}{[[#1]]}}
+\newcommand\mc[1]{\mathcal{#1}}
+\newcommand*\samethanks[1][\value{footnote}]{\footnotemark[#1]}
+%keys for memory and values. Can be changed if needed
+\newcommand{\kq}{q}
+\newcommand{\km}{k}
+\newcommand{\vq}{o}
+\newcommand{\vm}{m}
+\newcommand{\Wkq}{W_q}
+\newcommand{\Wkm}{W_k}
+\newcommand{\Wvq}{W_o}
+\newcommand{\Wvm}{W_m}
+\newcommand{\dmodel}{d_{\text{model}}}
+\newcommand{\dffn}{d_{\text{ffn}}}
+\newcommand{\dff}{d_{\text{ff}}}
+\newcommand{\mbf}[1]{\mathbf{#1}}
+%\newcommand{\kq}{{q}_k}
+%\newcommand{\km}{{m}_k}
+%\newcommand{\vq}{{q}_v}
+%\newcommand{\vm}{{m}_v}
+%\newcommand{\Wkq}{{W_q}_k}
+%\newcommand{\Wkm}{{W_m}_k}
+%\newcommand{\Wvq}{{W_q}_v}
+%\newcommand{\Wvm}{{W_m}_v}
+\newcommand\concat[3]{\left[#1 \parallel_#3 #2\right]}
+
+\title{Внимание — всё, что нужно}
+
+% The \author macro works with any number of authors. There are two
+% commands used to separate the names and addresses of multiple
+% authors: \And and \AND.
+%
+% Using \And between authors leaves it to LaTeX to determine where to
+% break the lines. Using \AND forces a line break at that point. So,
+% if LaTeX puts 3 of 4 authors names on the first line, and the last
+% on the second line, try using \AND instead of \And before the third
+% author name.
+\author{
+  \AND
+  Ashish Vaswani\thanks{Одинаковый вклад. Порядок перечисления — случайный. Jakob предложил заменить RNN самовниманием и инициировал работу по оценке этой идеи.
+Ashish вместе с Illia спроектировали и реализовали первые модели Transformer и играли решающую роль во всех аспектах этой работы. Noam предложил масштабированное внимание по скалярному произведению (scaled dot-product attention), многоголовое внимание (multi-head attention) и безпараметрное позиционное представление (parameter-free position representation) и стал вторым человеком, вовлечённым практически во все детали. Niki спроектировала, реализовала, настроила и оценивала бесчисленные варианты моделей в нашей исходной кодовой базе и в tensor2tensor. Llion также экспериментировал с новыми вариантами моделей, отвечал за нашу первоначальную кодовую базу, эффективный вывод и визуализации. Łukasz и Aidan провели бесчисленные долгие дни, проектируя различные части и реализуя tensor2tensor, заменив нашу прежнюю кодовую базу, существенно улучшив результаты и значительно ускорив наши исследования.}\\
+  Google Brain\\
+  \texttt{avaswani@google.com}\\
+  \And
+  Noam Shazeer\footnotemark[1]\\
+  Google Brain\\
+  \texttt{noam@google.com}\\
+  \And
+  Niki Parmar\footnotemark[1]\\
+  Google Research\\
+  \texttt{nikip@google.com}\\  
+  \And
+  Jakob Uszkoreit\footnotemark[1]\\
+  Google Research\\
+  \texttt{usz@google.com}\\
+  \And  
+  Llion Jones\footnotemark[1]\\
+  Google Research\\
+  \texttt{llion@google.com}\\   
+  \And
+  Aidan N. Gomez\footnotemark[1] \hspace{1.7mm}\thanks{Работа выполнена во время работы в Google Brain.}\\
+  University of Toronto\\
+  \texttt{aidan@cs.toronto.edu}
+  \And
+  {\L}ukasz Kaiser\footnotemark[1]\\
+  Google Brain\\
+  \texttt{lukaszkaiser@google.com}\\
+  \And
+  Illia Polosukhin\footnotemark[1]\hspace{1.7mm} \thanks{Работа выполнена во время работы в Google Research.}\\
+  \texttt{illia.polosukhin@gmail.com}\\  
+}
+
+\usepackage{eso-pic}
+\newcommand{\ArxivStamp}[1]{%
+  \AddToShipoutPictureBG*{%
+    \AtPageLowerLeft{%
+      \put(20,150){%
+        \rotatebox{90}{\sffamily\LARGE\color{gray} #1}%
+      }%
+    }%
+  }%
+}
+
+\ArxivStamp{arXiv:1706.03762v7 [cs.CL] 2 Aug 2023}
+\renewcommand{\abstractname}{Аннотация}
+\usepackage{tabularx}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\begin{document}
+\begin{center}
+    \color{red}
+    \large При условии надлежащего указания источника, Google настоящим предоставляет разрешение воспроизводить таблицы и рисунки из этой статьи исключительно для использования в журналистских или научных работах.
+\end{center}
+
+\maketitle
+
+\begin{abstract}
+Доминирующие модели трансдукции последовательностей основаны на сложных рекуррентных или свёрточных нейронных сетях, которые включают кодировщик и декодировщик. Наиболее эффективные модели также связывают кодировщик и декодировщик посредством механизма внимания. Мы предлагаем новую простую архитектуру сети, Transformer, основанную исключительно на механизмах внимания, полностью отказываясь от рекуррентных и свёрточных компонентов. Эксперименты на двух задачах машинного перевода показывают, что эти модели превосходят по качеству при том, что они лучше распараллеливаются и требуют значительно меньше времени на обучение. Наша модель достигает 28.4 BLEU на задаче перевода WMT 2014 с английского на немецкий, улучшая существующие лучшие результаты, включая ансамбли, более чем на 2 BLEU. В задаче перевода WMT 2014 с английского на французский наша модель устанавливает новый рекорд для одиночной модели — BLEU 41.8 после 3.5 дней обучения на восьми GPU, что составляет лишь небольшую долю затрат на обучение по сравнению с лучшими моделями из литературы. Мы показываем, что Transformer хорошо обобщается на другие задачи, успешно применяя его к синтаксическому разбору предложений (constituency parsing) на английском как при большом, так и при ограниченном объёме обучающих данных.
+% \blfootnote{Code available at \url{https://github.com/tensorflow/tensor2tensor}}
+
+%TODO(noam): update results for new models.
+
+%llion@: FAIR's paper seems to concentrate solely on the convolutional aspect of their model and have the attention as an after thought almost, this gives us a good opportunity to differentiate ourselves from their paper.
+
+%We are simpler in a number of ways and should have the simplicity as a big selling point:
+%\begin{itemize}
+%\item No convolutions
+%\item No need for such careful initializations and %normalization.
+%\item Simpler non-lineararities, they use the gated linear %units.
+%\item Less layers?
+%\end{itemize}
+%One thing we do more is that we have self attention.
+%Another selling point is the increased interpretability as %shown with the visualizations. Which comes from the %simplicity and use of only attentions.
+\end{abstract}
+
+\section{Introduction}
+
+Рекуррентные нейронные сети, в частности Long Short-Term Memory \citep{hochreiter1997} и gated recurrent \citep{gruEval14} нейронные сети, прочно утвердились как передовые подходы в моделировании последовательностей и задачах трансдукции, таких как моделирование языка и машинный перевод \citep{sutskever14, bahdanau2014neural, cho2014learning}. С тех пор многочисленные усилия продолжают расширять границы рекуррентных языковых моделей и архитектур кодер-декодер \citep{wu2016google,luong2015effective,jozefowicz2016exploring}.
+
+Рекуррентные модели обычно разбивают вычисления по позициям символов во входной и выходной последовательностях. Сопоставляя позиции шагам во времени вычислений, они генерируют последовательность скрытых состояний $h_t$, как функцию от предыдущего скрытого состояния $h_{t-1}$ и входа для позиции $t$. Эта по своей сути последовательная природа исключает параллелизацию внутри обучающего примера, что становится критичным при больших длинах последовательности, поскольку ограничения по памяти ограничивают формирование батчей по примерам.
+%\marginpar{not sure if the memory constraints are understandable here}
+Недавние работы добились существенных улучшений в вычислительной эффективности за счёт приёмов факторизации \citep{Kuchaiev2017Factorization} и условных вычислений \citep{shazeer2017outrageously}, при этом в случае последних также наблюдается улучшение качества моделей. Тем не менее фундаментальное ограничение последовательных вычислений остаётся.
+
+%\marginpar{@all: there is work on analyzing what attention really does in seq2seq models, couldn't find it right away} 
+
+Механизмы внимания стали неотъемлемой частью убедительных моделей для задач моделирования последовательностей и трансдукции в различных задачах, позволяя моделировать зависимости независимо от их расстояния во входной или выходной последовательностях \citep{bahdanau2014neural, structuredAttentionNetworks}. Однако во всех, кроме нескольких случаев \citep{decomposableAttnModel}, такие механизмы внимания используются совместно с рекуррентной сетью.
+
+%\marginpar{not sure if "cross-positional communication" is understandable without explanation}
+%\marginpar{insert exact training times and stats for the model that reaches sota earliest, maybe even a single GPU model?}
+
+В этой работе мы предлагаем Transformer — архитектуру модели, отказавшуюся от рекуррентности и полностью полагающуюся на механизм внимания для установления глобальных зависимостей между входом и выходом. Transformer позволяет значительно большую параллелизацию и может достигать нового уровня качества перевода после обучения всего за двенадцать часов на восьми GPU P100. 
+%\marginpar{you removed the constant number of repetitions part. I wrote it because I wanted to make it clear that the model does not only perform attention once, while it's also not recurrent. I thought that might be important to get across early.}
+
+% Just a standard paragraph with citations, rewrite.
+%After the seminal papers of \citep{sutskever14}, \citep{bahdanau2014neural}, and \citep{cho2014learning}, recurrent models have become the dominant solution for both sequence modeling and sequence-to-sequence transduction. Many efforts such as \citep{wu2016google,luong2015effective,jozefowicz2016exploring} have pushed the boundaries of machine translation and language modeling with recurrent sequence models. Recent effort \citep{shazeer2017outrageously} has combined the power of conditional computation with sequence models to train very large models for machine translation, pushing SOTA at lower computational cost. Recurrent models compute a vector of hidden states $h_t$, for each time step $t$ of computation. $h_t$ is a function of both the input at time $t$ and the previous hidden state $h_t$. This dependence on the previous hidden state encumbers recurrnet models to process multiple inputs at once, and their time complexity is a linear function of the length of the input and output, both during training and inference. [What I want to say here is that although this is fine during decoding, at training time, we are given both input and output and this linear nature does not allow the RNN to process all inputs and outputs simultaneously and haven't been used on datasets that are the of the scale of the web. What's the largest dataset we have ? . Talk about Nividia and possibly other's effors to speed up things, and possibly other efforts that alleviate this, but are still limited by it's comptuational nature]. Rest of the intro: What if you could construct the state based on the actual inputs and outputs, then you could construct them all at once. This has been the foundation of many promising recent efforts, bytenet,facenet (Also talk about quasi rnn here). Now we talk about attention!! Along with cell architectures such as long short-term meory (LSTM) \citep{hochreiter1997}, and gated recurrent units (GRUs) \citep{cho2014learning}, attention has emerged as an essential ingredient in successful sequence models, in particular for machine translation. In recent years, many, if not all, state-of-the-art (SOTA) results in machine translation have been achieved with attention-based sequence models \citep{wu2016google,luong2015effective,jozefowicz2016exploring}. Talk about the neon work on how it played with attention to do self attention! Then talk about what we do.
+
+\section{Предпосылки}
+
+Цель уменьшения последовательных вычислений также лежит в основе Extended Neural GPU \citep{extendedngpu}, ByteNet \citep{NalBytenet2017} и ConvS2S \citep{JonasFaceNet2017}, все из которых используют сверточные нейронные сети в качестве базового строительного блока, вычисляя скрытые представления параллельно для всех входных и выходных позиций. В этих моделях число операций, необходимых для связи сигналов между двумя произвольными входными или выходными позициями, растет с расстоянием между позициями — линейно для ConvS2S и логарифмически для ByteNet. Это затрудняет обучение зависимостей между удаленными позициями \citep{hochreiter2001gradient}. В Transformer это сведено к постоянному числу операций, хотя и за счет уменьшения эффективного разрешения из‑за усреднения позиций с вниманием (attention-weighted positions), что мы компенсируем с помощью Multi-Head Attention, как описано в разделе~\ref{sec:attention}. 
+
+Самовнимание (self-attention), иногда называемое intra-attention, — это механизм внимания, который связывает различные позиции одной последовательности с целью вычисления представления этой последовательности. Самовнимание успешно использовалось в различных задачах, включая понимание прочитанного, абстрактное суммирование, распознавание логических выводов в тексте и обучение независимых от задачи представлений предложений \citep{cheng2016long, decomposableAttnModel, paulus2017deep, lin2017structured}.
+
+End-to-end memory networks основаны на рекуррентном механизме внимания вместо выровненной по последовательности рекуррентности и показали хорошую работоспособность в задачах простых вопросов на естественном языке и моделирования языка \citep{sukhbaatar2015}.
+
+Насколько нам известно, однако, Transformer является первой моделью трансдукции, полностью опирающейся на самовнимание для вычисления представлений своего входа и выхода без использования выровненных по последовательности RNN или сверток.
+В последующих разделах мы опишем Transformer, обоснуем использование самовнимания и обсудим его преимущества по сравнению с моделями такими как \citep{neural_gpu, NalBytenet2017} и \citep{JonasFaceNet2017}.
+
+%\citep{JonasFaceNet2017} report new SOTA on machine translation for English-to-German (EnDe), Enlish-to-French (EnFr) and English-to-Romanian language pairs. 
+
+%For example,! in MT, we must draw information from both input and previous output words to translate an output word accurately. An attention layer \citep{bahdanau2014neural} can connect a very large number of positions at low computation cost, making it an essential ingredient in competitive recurrent models for machine translation.
+
+%A natural question to ask then is, "Could we replace recurrence with attention?". \marginpar{Don't know if it's the most natural question to ask given the previous statements. Also, need to say that the complexity table summarizes these statements} Such a model would be blessed with the computational efficiency of attention and the power of cross-positional communication. In this work, show that pure attention models work remarkably well for MT, achieving new SOTA results on EnDe and EnFr, and can be trained in under $2$ days on xyz architecture. 
+
+%After the seminal models introduced in \citep{sutskever14, bahdanau2014neural, cho2014learning}, recurrent models have become the dominant solution for both sequence modeling and sequence-to-sequence transduction. Many efforts such as \citep{wu2016google,luong2015effective,jozefowicz2016exploring} have pushed the boundaries of machine translation (MT) and language modeling with recurrent endoder-decoder and recurrent language models. Recent effort \citep{shazeer2017outrageously} has successfully combined the power of conditional computation with sequence models to train very large models for MT, pushing SOTA at lower computational cost.
+
+%Recurrent models compute a vector of hidden states $h_t$, for each time step $t$ of computation. $h_t$ is a function of both the input at time $t$ and the previous hidden state $h_t$. This dependence on the previous hidden state precludes processing all timesteps at once, instead requiring long sequences of sequential operations.  In practice, this results in greatly reduced computational efficiency, as on modern computing hardware, a single operation on a large batch is much faster than a large number of operations on small batches.  The problem gets worse at longer sequence lengths. Although sequential computation is not a severe bottleneck at inference time, as autoregressively generating each output requires all previous outputs, the inability to compute scores at all output positions at once hinders us from rapidly training our models over large datasets. Although impressive work such as \citep{Kuchaiev2017Factorization} is able to significantly accelerate the training of LSTMs with factorization tricks, we are still bound by the linear dependence on sequence length.
+
+%If the model could compute hidden states at each time step using only the inputs and outputs,  it would be liberated from the dependence on results from previous time steps during training. This line of thought is the foundation of recent efforts such as the Markovian neural GPU \citep{neural_gpu}, ByteNet \citep{NalBytenet2017} and ConvS2S \citep{JonasFaceNet2017}, all of which use convolutional neural networks as a building block to compute hidden representations simultaneously for all timesteps, resulting in $O(1)$ sequential time complexity. \citep{JonasFaceNet2017} report new SOTA on machine translation for English-to-German (EnDe), Enlish-to-French (EnFr) and English-to-Romanian language pairs. 
+
+%A crucial component for accurate sequence prediction is modeling cross-positional communication. For example, in MT, we must draw information from both input and previous output words to translate an output word accurately. An attention layer \citep{bahdanau2014neural} can connect a very large number of positions at a low computation cost, also $O(1)$ sequential time complexity, making it an essential ingredient in recurrent encoder-decoder architectures for MT. A natural question to ask then is, "Could we replace recurrence with attention?". \marginpar{Don't know if it's the most natural question to ask given the previous statements. Also, need to say that the complexity table summarizes these statements} Such a model would be blessed with the computational efficiency of attention and the power of cross-positional communication. In this work, show that pure attention models work remarkably well for MT, achieving new SOTA results on EnDe and EnFr, and can be trained in under $2$ days on xyz architecture. 
+
+%Note: Facebook model is no better than RNNs in this regard, since it requires a number of layers proportional to the distance you want to communicate.  Bytenet is more promising, since it requires a logarithmnic number of layers (does bytenet have SOTA results)?   
+
+%Note: An attention  layer can connect a very large number of positions at a low computation cost in O(1) sequential operations.  This is why encoder-decoder attention has been so successful in seq-to-seq models so far.  It is only natural, then, to also use attention to connect the timesteps of the same sequence.
+
+%Note: I wouldn't say that long sequences are not a problem during inference.  It would be great if we could infer with no long sequences.  We could just say later on that, while our training graph is constant-depth, our model still requires sequential operations in the decoder part during inference due to the autoregressive nature of the model.   
+
+%\begin{table}[h!]
+%\caption{Attention models are quite efficient for cross-positional communications when sequence length is smaller than channel depth. $n$ represents the sequence length and $d$ represents the channel depth.}
+%\label{tab:op_complexities}
+%\begin{center}
+%\vspace{-5pt}
+%\scalebox{0.75}{
+
+%\begin{tabular}{l|c|c|c}
+%\hline \hline
+%Layer Type & Receptive & Complexity & Sequential  \\
+%           & Field     &            & Operations  \\
+%\hline
+%Pointwise Feed-Forward & $1$ & $O(n \cdot d^2)$ & $O(1)$ \\
+%\hline
+%Recurrent & $n$ & $O(n \cdot d^2)$ & $O(n)$ \\
+%\hline
+%Convolutional & $r$ & $O(r \cdot n \cdot d^2)$ & $O(1)$ \\
+%\hline
+%Convolutional (separable) & $r$ & $O(r \cdot n \cdot d + n %\cdot d^2)$ & $O(1)$ \\
+%\hline
+%Attention & $r$ & $O(r \cdot n \cdot d)$ & $O(1)$ \\
+%\hline \hline
+%\end{tabular}
+%}
+%\end{center}
+%\end{table}
+
+\section{Архитектура модели}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[scale=0.6]{Figures/ModalNet-21}
+  \caption{Transformer — архитектура модели.}
+  \label{fig:model-arch}
+\end{figure}
+
+% Although the primary workhorse of our model is attention, 
+%Our model maintains the encoder-decoder structure that is common to many so-called sequence-to-sequence models \citep{bahdanau2014neural,sutskever14}.  As in all such architectures, the encoder computes a representation of the input sequence, and the decoder consumes these representations along with the output tokens to autoregressively produce the output sequence.  Where, traditionally, the encoder and decoder contain stacks of recurrent or convolutional layers, our encoder and decoder stacks are composed of attention layers and position-wise feed-forward layers (Figure~\ref{fig:model-arch}).  The following sections describe the gross architecture and these particular components in detail.
+
+Большинство конкурентоспособных нейронных моделей трансдукции последовательностей имеют структуру энкодер-декодер \citep{cho2014learning,bahdanau2014neural,sutskever14}. Здесь энкодер отображает входную последовательность представлений символов $(x_1, ..., x_n)$ в последовательность непрерывных представлений $\mathbf{z} = (z_1, ..., z_n)$. Учитывая $\mathbf{z}$, декодер затем генерирует выходную последовательность $(y_1,...,y_m)$ символов по одному элементу за раз. На каждом шаге модель является авторегрессионной \citep{graves2013generating}, используя ранее сгенерированные символы в качестве дополнительного входа при генерации следующего.
+
+Transformer следует этой общей архитектуре, используя многослойное самовнимание и точечные, полностью-связанные слои как для энкодера, так и для декодера, показанные на левой и правой половинах рисунка~\ref{fig:model-arch}, соответственно.
+
+\subsection{Стэки энкодера и декодера}
+
+\paragraph{Энкодер:}Энкодер состоит из стека из $N=6$ одинаковых слоёв. Каждый слой имеет два подслоя. Первый — механизм многоголового самовнимания, а второй — простой позиционно-независимый полностью-связанный feed-forward сеть. Мы используем остаточное соединение \citep{he2016deep} вокруг каждого из двух подслоёв, за которым следует нормализация слоя \cite{layernorm2016}. То есть выход каждого подслоя равен $\mathrm{LayerNorm}(x + \mathrm{Sublayer}(x))$, где $\mathrm{Sublayer}(x)$ — функция, реализуемая самим подслоем. Чтобы облегчить эти остаточные соединения, все подслои в модели, а также слои вложений, дают выходы размерности $\dmodel=512$.
+
+\paragraph{Декодер:}Декодер также состоит из стека из $N=6$ одинаковых слоёв. В дополнение к двум подслоям в каждом слое энкодера, декодер вставляет третий подслой, который выполняет многоголовое внимание по выходу стека энкодера. Аналогично энкодеру, мы используем остаточные соединения вокруг каждого из подслоев, за которыми следует нормализация слоя. Мы также модифицируем подслой самовнимания в стеке декодера, чтобы предотвратить обращение позиций к последующим позициям. Это маскирование, в сочетании с тем фактом, что выходные эмбеддинги сдвинуты на одну позицию, гарантирует, что предсказания для позиции $i$ могут зависеть только от известных выходов на позициях, меньших, чем $i$.
+
+% In our model (Figure~\ref{fig:model-arch}), the encoder and decoder are composed of stacks of alternating self-attention layers (for cross-positional communication) and position-wise feed-forward layers (for in-place computation).  In addition, the decoder stack contains encoder-decoder attention layers.  Since attention is agnostic to the distances between words, our model requires a "positional encoding" to be added to the encoder and decoder input. The following sections describe all of these components in detail.
+
+\subsection{Внимание} \label{sec:attention}
+Функцию внимания можно описать как отображение запроса и набора пар ключ-значение в выход, где запрос, ключи, значения и выход — все векторы. Выход вычисляется как взвешенная сумма значений, где вес, присвоенный каждому значению, вычисляется функцией совместимости между запросом и соответствующим ключом.
+
+\subsubsection{Масштабированное внимание на основе скалярного произведения} \label{sec:scaled-dot-prod}
+
+% \begin{figure}[ht]
+%   \centering
+%   \includegraphics[scale=0.6]{Figures/ModalNet-19}
+%   \caption{Scaled Dot-Product Attention.}
+%   \label{fig:multi-head-att}
+% \end{figure}
+
+Мы называем нашу конкретную реализацию внимания «Масштабированное внимание на основе скалярного произведения» (см. рисунок~\ref{fig:multi-head-att}). Вход состоит из запросов и ключей размерности $d_k$ и значений размерности $d_v$. Мы вычисляем скалярные произведения запроса со всеми ключами, делим каждое на $\sqrt{d_k}$ и применяем функцию softmax, чтобы получить веса для значений.
+
+На практике мы вычисляем функцию внимания для набора запросов одновременно, упакованных в матрицу $Q$. Ключи и значения также упакованы в матрицы $K$ и $V$. Мы вычисляем матрицу выходов как:
+
+\begin{equation}
+   \mathrm{Attention}(Q, K, V) = \mathrm{softmax}(\frac{QK^T}{\sqrt{d_k}})V
+\end{equation}
+
+Две наиболее часто используемые функции внимания — аддитивное внимание \citep{bahdanau2014neural} и внимание на основе скалярного произведения (мультипликативное). Внимание на основе скалярного произведения идентично нашему алгоритму, за исключением масштабирующего множителя $\frac{1}{\sqrt{d_k}}$. Аддитивное внимание вычисляет функцию совместимости с помощью feed-forward сети с одним скрытым слоем. Хотя по теоретической сложности оба похожи, внимание на основе скалярного произведения значительно быстрее и более экономно по памяти на практике, поскольку оно может быть реализовано с использованием высоко оптимизированных операций умножения матриц. 
+
+%We scale the dot products by $1/\sqrt{d_k}$ to limit the magnitude of the dot products, which works well in practice. Otherwise, we found applying the softmax to often result in weights very close to 0 or 1, and hence minuscule gradients.
+
+% Already described in the subsequent section
+%When used as part of decoder self-attention, an optional mask function is applied just before the softmax to prevent positions from attending to subsequent positions.   This mask simply sets the logits corresponding to all illegal connections (those outside of the lower triangle) to $-\infty$.
+
+%\paragraph{Comparison to Additive Attention: } We choose dot product attention over additive attention \citep{bahdanau2014neural} since it can be computed using highly optimized matrix multiplication code.  This optimization is particularly important to us, as we employ many attention layers in our model.
+
+Хотя для малых значений $d_k$ оба механизма работают схожим образом, аддитивное внимание превосходит внимание на основе скалярного произведения без масштабирования для больших значений $d_k$ \citep{DBLP:journals/corr/BritzGLL17}. Мы предполагаем, что для больших значений $d_k$ скалярные произведения растут по величине, вытесняя функцию softmax в области, где у неё крайне малые градиенты\footnote{Чтобы проиллюстрировать, почему скалярные произведения становятся большими, предположим, что компоненты $q$ и $k$ являются независимыми случайными величинами с математическим ожиданием $0$ и дисперсией $1$. Тогда их скалярное произведение, $q \cdot k = \sum_{i=1}^{d_k} q_ik_i$, имеет математическое ожидание $0$ и дисперсию $d_k$.}. Чтобы противодействовать этому эффекту, мы масштабируем скалярные произведения на $\frac{1}{\sqrt{d_k}}$.
+
+%We suspect this to be caused by the dot products growing too large in magnitude to result in useful gradients after applying the softmax function.  To counteract this, we scale the dot product by $1/\sqrt{d_k}$.
+
+\subsubsection{Многоголовочное внимание} \label{sec:multihead}
+
+\begin{figure}[ht]
+\begin{minipage}[t]{0.5\textwidth}
+  \centering
+  Масштабированное внимание на основе скалярного произведения \\
+  \vspace{0.5cm}
+  \includegraphics[scale=0.6]{Figures/ModalNet-19}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+  \centering 
+  Многоголовочное внимание \\
+  \vspace{0.1cm}
+  \includegraphics[scale=0.6]{Figures/ModalNet-20}  
+\end{minipage}
+
+  % \centering
+
+  \caption{(слева) Масштабированное внимание на основе скалярного произведения. (справа) Многоголовочное внимание состоит из нескольких слоёв внимания, работающих параллельно.}
+  \label{fig:multi-head-att}
+\end{figure}
+
+Вместо выполнения единственной функции внимания с ключами, значениями и запросами размерности $\dmodel$ мы обнаружили, что полезно линейно проецировать запросы, ключи и значения $h$ раз с различными обучаемыми линейными проекциями до размерностей $d_k$, $d_k$ и $d_v$ соответственно.
+На каждой из этих проецированных версий запросов, ключей и значений мы затем выполняем функцию внимания параллельно, получая выходные значения размерности $d_v$. Они конкатенируются и снова проецируются, в результате чего получаются окончательные значения, как показано на рисунке~\ref{fig:multi-head-att}.
+
+Многоголовое внимание позволяет модели одновременно учитывать информацию из разных подпространств представлений в разных позициях. При единственной голове внимания усреднение этому препятствует.
+
+\begin{align*}
+    \mathrm{MultiHead}(Q, K, V) &= \mathrm{Concat}(\mathrm{head_1}, ..., \mathrm{head_h})W^O\\
+%    \mathrm{where} \mathrm{head_i} &= \mathrm{Attention}(QW_Q_i^{\dmodel \times d_q}, KW_K_i^{\dmodel \times d_k}, VW^V_i^{\dmodel \times d_v})\\
+    \text{where}~\mathrm{head_i} &= \mathrm{Attention}(QW^Q_i, KW^K_i, VW^V_i)\\
+\end{align*}
+
+Где проекции задаются параметрическими матрицами $W^Q_i \in \mathbb{R}^{\dmodel \times d_k}$, $W^K_i \in \mathbb{R}^{\dmodel \times d_k}$, $W^V_i \in \mathbb{R}^{\dmodel \times d_v}$ и $W^O \in \mathbb{R}^{hd_v \times \dmodel}$.
+
+%find it better (and no more expensive) to have multiple parallel attention layers (each over the full set of positions) with proportionally lower-dimensional keys, values and queries.  We call this "Multi-Head Attention" (Figure~\ref{fig:multi-head-att}).  The keys, values, and queries for each of these parallel attention layers are computed by learned linear transformations of the inputs to the multi-head attention.  We use different linear transformations across different parallel attention layers.  The output of the parallel attention layers are concatenated, and then passed through a final learned linear transformation. 
+
+В этой работе мы используем $h=8$ параллельных слоёв внимания, или голов. Для каждой из них мы используем $d_k=d_v=\dmodel/h=64$.
+Из-за уменьшенной размерности каждой головы общая вычислительная стоимость сопоставима с затратами одно-голового внимания полной размерности.
+
+\subsubsection{Применение внимания в нашей модели}
+
+Трансформер использует многоголовое внимание тремя различными способами: 
+\begin{itemize}
+ \item В слоях «внимания кодировщик–декодер» запросы поступают из предыдущего слоя декодера, а ключи и значения памяти — из выхода кодировщика. Это позволяет каждой позиции в декодере обращаться ко всем позициям входной последовательности. Это имитирует типичные механизмы внимания кодировщик–декодер в моделях sequence-to-sequence, таких как \citep{wu2016google, bahdanau2014neural,JonasFaceNet2017}.
+
+ \item В кодировщике содержатся слои self-attention. В слое self-attention все ключи, значения и запросы поступают из одного и того же источника, в данном случае — из выхода предыдущего слоя кодировщика. Каждая позиция в кодировщике может обращать внимание на все позиции в предыдущем слое кодировщика.
+
+ \item Аналогично, слои self-attention в декодере позволяют каждой позиции в декодере обращаться ко всем позициям декодера вплоть до и включая эту позицию. Нам нужно предотвращать передачу информации влево в декодере, чтобы сохранить авторегрессивное свойство. Мы реализуем это внутри масштабированного скалярного произведения внимания путём маскирования (установки в $-\infty$) всех значений на входе softmax, которые соответствуют запрещённым соединениям. См. рисунок~\ref{fig:multi-head-att}.
+
+\end{itemize}
+
+\subsection{Позиционно-применяемые полносвязные сети}\label{sec:ffn}
+
+В дополнение к подслаям внимания каждый слой нашего кодировщика и декодера содержит полностью связную сеть прямого распространения, которая применяется к каждой позиции отдельно и одинаково. Она состоит из двух линейных преобразований с активацией ReLU между ними.
+
+\begin{equation}
+   \mathrm{FFN}(x)=\max(0, xW_1 + b_1) W_2 + b_2
+\end{equation}
+
+Хотя линейные преобразования одинаковы для разных позиций, они используют разные параметры от слоя к слою. Другой способ описания этого — как два сверточных слоя с ядром размера 1. Размерность входа и выхода равна $\dmodel=512$, а внутренний слой имеет размерность $d_{ff}=2048$.
+
+%In the appendix, we describe how the position-wise feed-forward network can also be seen as a form of attention.
+
+%from Jakob: The number of operations required for the model to relate signals from two arbitrary input or output positions grows in the distance between positions in input or output, linearly for ConvS2S and logarithmically for ByteNet, making it harder to learn dependencies between these positions \citep{hochreiter2001gradient}. In the transformer this is reduced to a constant number of operations, albeit at the cost of effective resolution caused by averaging attention-weighted positions, an effect we aim to counteract with multi-headed attention.
+
+%Figure~\ref{fig:simple-att} presents a simple attention function, $A$, with a single head, that forms the basis of our multi-head attention. $A$ takes a query key vector $\kq$, matrices of memory keys $\km$ and memory values $\vm$ ,and produces a query value vector $\vq$ as 
+%\begin{equation*} \label{eq:attention}
+%    A(\kq, \km, \vm) = {\vm}^T (Softmax(\km \kq).
+%\end{equation*}
+%We linearly transform $\kq,\,\km$, and $\vm$ with learned matrices ${\Wkq \text{,} \, \Wkm}$, and ${\Wvm}$ before calling the attention function, and transform the output query with $\Wvq$ before handing it to the feed forward layer. Each attention layer has it's own set of transformation matrices, which are shared across all query positions. $A$ is applied in parallel for each query position, and is implemented very efficiently as a batch of matrix multiplies. The self-attention and encoder-decoder attention layers use $A$, but with different arguments. For example, in encdoder self-attention, queries in encoder layer $i$ attention to memories in encoder layer $i-1$. To ensure that decoder self-attention layers do not look at future words, we add $- \inf$ to the softmax logits in positions $j+1$ to query length for query position $l$.  
+
+%In simple attention, the query value is a weighted combination of the memory values where the attention weights sum to one. Although this function performs well in practice, the constraint on attention weights can restrict the amount of information that flows from memories to queries because the query cannot focus on multiple memory positions at once, which might be desirable when translating long sequences. \marginpar{@usz, could you think of an example of this ?} We remedy this by maintaining multiple attention heads at each query position that attend to all memory positions in parallel, with a different set of parameters  per attention head $h$. 
+%\marginpar{}
+
+\subsection{Эмбеддинги и softmax}
+Аналогично другим моделям преобразования последовательностей, мы используем обучаемые эмбеддинги для преобразования входных и выходных токенов в векторы размерности $\dmodel$. Мы также используем обычное обучаемое линейное преобразование и функцию softmax для преобразования выхода декодера в предсказанные вероятности следующего токена. В нашей модели мы разделяем одну и ту же матрицу весов между двумя слоями эмбеддингов и пред-softmax линейным преобразованием, аналогично \citep{press2016using}. В слоях эмбеддингов мы умножаем эти веса на $\sqrt{\dmodel}$.
+
+\subsection{Позиционное кодирование}
+Поскольку наша модель не содержит рекуррентности и свёрток, чтобы модель могла учитывать порядок элементов последовательности, нам необходимо ввести информацию о относительном или абсолютном положении токенов в последовательности. С этой целью мы добавляем «позиционные кодировки» к входным эмбеддингам в основаниях стеков кодировщика и декодера. Позиционные кодировки имеют ту же размерность $\dmodel$, что и эмбеддинги, чтобы их можно было суммировать. Существует множество вариантов позиционных кодировок, обучаемых и фиксированных \citep{JonasFaceNet2017}.
+
+В этой работе мы используем синусоиды и косинусоиды разных частот:
+
+\begin{align*}
+    PE_{(pos,2i)} = sin(pos / 10000^{2i/\dmodel}) \\
+    PE_{(pos,2i+1)} = cos(pos / 10000^{2i/\dmodel})
+\end{align*}
+
+где $pos$ — это позиция, а $i$ — это размерность. То есть каждая размерность позиционной кодировки соответствует синусоиде. Длины волн образуют геометрическую прогрессию от $2\pi$ до $10000 \cdot 2\pi$. Мы выбрали эту функцию, потому что предположили, что она позволит модели легко научиться учитывать относительные позиции, поскольку для любого фиксированного смещения $k$$PE_{pos+k}$ может быть представлено как линейная функция от $PE_{pos}$.
+
+Мы также экспериментировали с использованием обучаемых позиционных эмбеддингов \citep{JonasFaceNet2017} и обнаружили, что обе версии дают почти идентичные результаты (см. таблицу~\ref{tab:variations}, строка (E)). Мы выбрали синусоидальную версию, поскольку она может позволить модели экстраполировать на последовательности длинее тех, что встречались в процессе обучения.
+
+\section{Почему самовнимание}
+%We focus on the general task of mapping one variable-length sequence of symbol representations ${x_1, ..., x_n} \in \mathbb{R}^d$ to another sequence of the same length ${y_1, ..., y_n} \in \mathbb{R}^d$. \marginpar{should we use this notation? alternatively we can just say "d-dimensional vectors"}
+
+В этом разделе мы сравниваем различные аспекты слоёв самовнимания с рекуррентными и свёрточными слоями, обычно используемыми для отображения одной последовательности представлений символов переменной длины $(x_1, ..., x_n)$ в другую последовательность одинаковой длины $(z_1, ..., z_n)$, с $x_i, z_i \in \mathbb{R}^d$, например скрытый слой в типичном энкодере или декодере задач последовательного преобразования. Чтобы обосновать использование самовнимания, мы рассматриваем три требования.
+
+Одно — общая вычислительная сложность на слой.
+Другое — объём вычислений, который можно распараллелить, измеряемый минимальным числом последовательных операций.
+
+Третье — длина пути между дальнодействующими зависимостями в сети. Обучение дальнодействующих зависимостей является ключевой задачей во многих задачах последовательного преобразования. Одним из ключевых факторов, влияющих на способность изучать такие зависимости, является длина путей, которые должны пройти сигналы вперёд и назад в сети. Чем короче эти пути между любой комбинацией позиций во входной и выходной последовательностях, тем легче изучать дальнодействующие зависимости \citep{hochreiter2001gradient}. Следовательно, мы также сравниваем максимальную длину пути между любыми двумя входными и выходными позициями в сетях, составленных из разных типов слоёв.
+
+%\subsection{Computational Performance and Path Lengths}
+
+\begin{table}[t]
+\caption{
+  Максимальная длина путей, сложность на слой и минимальное число последовательных операций для разных типов слоёв. $n$ — длина последовательности, $d$ — размерность представления, $k$ — ширина ядра свёрток и $r$ — размер окрестности в ограниченном самовнимании.}
+  %Attention models are quite efficient for cross-positional communications when sequence length is smaller than channel depth.
+\label{tab:op_complexities}
+\begin{center}
+\vspace{-1mm}
+%\scalebox{0.75}{
+
+\begin{tabularx}{\textwidth}{YYcY}
+\toprule
+Тип слоя & Вычислительная сложность на слой & Последовательных & Максимальная длина пути  \\
+           &             & операций &   \\
+\hline
+\rule{0pt}{2.0ex}Самовнимание & $O(n^2 \cdot d)$ & $O(1)$ & $O(1)$ \\
+Рекуррентный & $O(n \cdot d^2)$ & $O(n)$ & $O(n)$ \\
+
+Свёрточный & $O(k \cdot n \cdot d^2)$ & $O(1)$ & $O(log_k(n))$ \\
+%\cmidrule
+Самовнимание (ограниченное)& $O(r \cdot n \cdot d)$ & $O(1)$ & $O(n/r)$ \\
+
+%Convolutional (separable) & $O(k \cdot n \cdot d + n \cdot d^2)$ & $O(1)$ & $O(log_k(n))$ \\
+
+%Position-wise Feed-Forward & $O(n \cdot d^2)$ & $O(1)$ & $\infty$ \\
+
+%Fully Connected & $O(n^2 \cdot d^2)$ & $O(1)$ & $O(1)$ \\
+%Convolutional (separable) & $O(k \cdot n \cdot d + n \cdot d^2)$ & $O(1)$ & $O(log_k(n))$ \\
+
+%Position-wise Feed-Forward & $O(n \cdot d^2)$ & $O(1)$ & $\infty$ \\
+
+%Fully Connected & $O(n^2 \cdot d^2)$ & $O(1)$ & $O(1)$ \\
+\bottomrule
+\end{tabularx}
+%}
+\end{center}
+\end{table}
+
+%\begin{table}[b]
+%\caption{
+%  Maximum path lengths, per-layer complexity and minimum number of sequential operations for different layer types. $n$ is the sequence length, $d$ is the representation dimensionality, $k$ is the kernel size of convolutions and $r$ the size of the neighborhood in localized self-attention.}
+  %Attention models are quite efficient for cross-positional communications when sequence length is smaller than channel depth.
+%\label{tab:op_complexities}
+%\begin{center}
+%\vspace{-1mm}
+%%\scalebox{0.75}{
+%
+%\begin{tabular}{lccc}
+%\hline
+%Layer Type & Receptive & Complexity per Layer & Sequential  %\\
+%           & Field Size     &            & Operations  \\
+%\hline
+%Self-Attention & $n$ & $O(n^2 \cdot d)$ & $O(1)$ \\
+%Recurrent & $n$ & $O(n \cdot d^2)$ & $O(n)$ \\
+
+%Convolutional & $k$ & $O(k \cdot n \cdot d^2)$ & %$O(log_k(n))$ \\
+%\hline 
+%Self-Attention (localized)& $r$ & $O(r \cdot n \cdot d)$ & %$O(1)$ \\
+
+%Convolutional (separable) & $k$ & $O(k \cdot n \cdot d + n %\cdot d^2)$ & $O(log_k(n))$ \\
+
+%Position-wise Feed-Forward & $1$ & $O(n \cdot d^2)$ & $O(1)$ %\\
+
+%Fully Connected & $n$ & $O(n^2 \cdot d^2)$ & $O(1)$ \\
+
+%\end{tabular}
+%%}
+%\end{center}
+%\end{table}
+
+%The receptive field size of a layer is the number of different input representations that can influence any particular output representation. Recurrent layers and self-attention layers have a full receptive field equal to the sequence length $n$. Convolutional layers have a limited receptive field equal to their kernel width $k$, which is generally chosen to be small in order to limit computational cost.
+
+Как отмечено в Таблице \ref{tab:op_complexities}, слой самовнимания соединяет все позиции с постоянным числом последовательно выполняемых операций, тогда как рекуррентный слой требует $O(n)$ последовательных операций.
+С точки зрения вычислительной сложности, слои самовнимания быстрее рекуррентных слоёв, когда длина последовательности $n$ меньше размерности представлений $d$, что чаще всего имеет место для представлений предложений, используемых современными моделями машинного перевода, такими как представления word-piece \citep{wu2016google} и byte-pair \citep{sennrich2015neural}.
+Чтобы улучшить вычислительную производительность для задач, связанных с очень длинными последовательностями, самовнимание может быть ограничено рассмотрением только окрестности размера $r$ во входной последовательности, центрированной вокруг соответствующей выходной позиции. Это увеличило бы максимальную длину пути до $O(n/r)$. Мы планируем далее исследовать этот подход в будущей работе.
+
+Один свёрточный слой с шириной ядра $k < n$ не соединяет все пары входных и выходных позиций. Для этого требуется стек из $O(n/k)$ свёрточных слоёв в случае смежных ядер, или $O(log_k(n))$ в случае дилатированных свёрток \citep{NalBytenet2017}, что увеличивает длину самых длинных путей между любыми двумя позициями в сети.
+Как правило, свёрточные слои дороже рекуррентных по вычислениям, в $k$ раз. Однако сепарабельные свёртки \citep{xception2016} значительно уменьшают сложность до $O(k \cdot n \cdot d + n \cdot d^2)$. Даже при $k=n$, однако, сложность сепарабельной свёртки равна суммарной сложности слоя самовнимания и точечного (point-wise) полносвязного (feed-forward) слоя, подходу, который мы используем в нашей модели.
+
+%\subsection{Unfiltered Bottleneck Argument}
+
+%An orthogonal argument can be made for self-attention layers based on when the layer imposes the bottleneck of mapping all of the information used to compute a given output position into a single, fixed-length vector. ...
+
+%There is a second argument for self-attention layers which we call the unfiltered bottleneck argument.   In both recurrent and the convolutional layers, the information that position $i$ receives from the other positions is compressed to a vector of dimension $d$ before it ever can be filtered by the content $x_i$.  More precisely, we can express $y_i = F(i, x_i, G(i, \{x_{j \neq i}\}))$, where $G(i, \{x_{j \neq i}\})$ is a vector of dimension $d$.  Intuitively, we would expect that this would cause a large amount of irrelevant information to crowd out the relevant information.  Self-attention does not suffer from the unfiltered bottleneck problem, since the aggregation happens after filtering, and so, intuitively, we have the chance of transmitting lots of relevant information.
+
+В качестве побочного преимущества самовнимание может приводить к более интерпретируемым моделям. Мы исследуем распределения внимания в наших моделях и приводим и обсуждаем примеры в приложении. Не только отдельные головки внимания явно учатся выполнять разные задачи, многие из них, по-видимому, демонстрируют поведение, связанное с синтаксической и семантической структурой предложений.
+
+\section{Обучение}
+В этом разделе описывается режим обучения наших моделей. 
+
+%In order to speed up experimentation, our ablations are performed relative to a smaller base model described in detail in Section \ref{sec:results}.
+
+\subsection{Данные для обучения и батчинг}
+Мы обучались на стандартном наборе WMT 2014 English-German, состоящем примерно из 4.5 миллиона пар предложений. Предложения кодировались с помощью byte-pair encoding \citep{DBLP:journals/corr/BritzGLL17}, который использует общий словарь для исходного и целевого языков примерно из 37000 токенов. Для English-French мы использовали значительно больший набор WMT 2014 English-French, состоящий из 36M предложений, и разбивали токены на словарь из 32000 word-piece \citep{wu2016google}. Пары предложений группировались в батчи по приблизительной длине последовательности. Каждый обучающий батч содержал набор пар предложений с примерно 25000 исходных токенов и 25000 целевых токенов.  
+
+\subsection{Оборудование и расписание}
+
+Мы обучали наши модели на одной машине с 8 NVIDIA P100 GPU. Для наших базовых моделей с гиперпараметрами, описанными в статье, каждый шаг обучения занимал около 0.4 секунды. Мы обучали базовые модели в общей сложности 100000 шагов или 12 часов. Для наших больших моделей (описанных в нижней строке таблицы \ref{tab:variations}) время шага составляло 1.0 секунду. Большие модели обучались 300000 шагов (3.5 дня).
+
+\subsection{Оптимизатор} Мы использовали оптимизатор Adam~\citep{kingma2014adam} с $\beta_1=0.9$, $\beta_2=0.98$ и $\epsilon=10^{-9}$. Мы варьировали скорость обучения в ходе обучения согласно формуле:
+
+\begin{equation}
+lrate = \dmodel^{-0.5} \cdot
+  \min({step\_num}^{-0.5},
+    {step\_num} \cdot {warmup\_steps}^{-1.5})
+\end{equation}
+
+Это соответствует линейному увеличению скорости обучения в течение первых $warmup\_steps$ шагов обучения, а затем её уменьшению пропорционально обратному квадратному корню номера шага. Мы использовали $warmup\_steps=4000$.
+
+\subsection{Регуляризация} \label{sec:reg}
+
+Во время обучения мы применяем три типа регуляризации: 
+\paragraph{Дропаут в остаточных соединениях} Мы применяем дропаут \citep{srivastava2014dropout} к выходу каждого подслоя до того, как он добавляется к входу подслоя и нормируется. В дополнение мы применяем дропаут к суммам эмбеддингов и позиционных кодировок в стеках энкодера и декодера. Для базовой модели мы используем вероятность $P_{drop}=0.1$.
+
+% \paragraph{Attention Dropout} Query to key attentions are structurally similar to hidden-to-hidden weights in a feed-forward network, albeit across positions. The softmax activations yielding attention weights can then be seen as the analogue of hidden layer activations. A natural possibility is to extend dropout \citep{srivastava2014dropout} to attention. We implement attention dropout by dropping out attention weights as,
+% \begin{equation*}
+%   \mathrm{Attention}(Q, K, V) = \mathrm{dropout}(\mathrm{softmax}(\frac{QK^T}{\sqrt{d}}))V
+% \end{equation*}
+% In addition to residual dropout, we found attention dropout to be beneficial for our parsing experiments.  
+
+%\paragraph{Symbol Dropout} In the source and target embedding layers, we replace a random subset of the token ids with a sentinel id.  For the base model, we use a rate of $symbol\_dropout\_rate=0.1$.  Note that this applies only to the auto-regressive use of the target ids - not their use in the cross-entropy loss. 
+
+%\paragraph{Attention Dropout} Query to memory attentions are structurally similar to hidden-to-hidden weights in a feed-forward network, albeit across positions. The softmax activations yielding attention weights can then be seen as the analogue of hidden layer activations. A natural possibility is to extend dropout \citep{srivastava2014dropout} to attentions. We implement attention dropout by dropping out attention weights as,
+%\begin{equation*}
+%   A(Q, K, V) = \mathrm{dropout}(\mathrm{softmax}(\frac{QK^T}{\sqrt{d}}))V
+%\end{equation*}
+%As a result, the query will not be able to access the memory values at the dropped out position. In our experiments, we tried attention dropout rates of 0.2, and 0.3, and found it to work favorably for English-to-German translation.
+%$attention\_dropout\_rate=0.2$.
+
+\paragraph{Сглаживание меток} Во время обучения мы применяли сглаживание меток со значением $\epsilon_{ls}=0.1$ \citep{DBLP:journals/corr/SzegedyVISW15}. Это ухудшает перплексию, так как модель становится менее уверенной, но улучшает точность и метрику BLEU.
+
+\section{Результаты} \label{sec:results}
+\subsection{Машинный перевод}
+\begin{table}[t]
+\begin{center}
+\caption{Transformer достигает лучших значений BLEU по сравнению с ранее лучшими моделями для тестов newstest2014 по направлению с английского на немецкий и с английского на французский при существенно меньших затратах на обучение.  }
+\label{tab:wmt-results}
+\vspace{-2mm}
+%\scalebox{1.0}{
+\begin{tabularx}{\textwidth}{YccYcc}
+\toprule
+\multirow{2}{*}{\vspace{-2mm}Модель} & \multicolumn{2}{c}{BLEU} & & \multicolumn{2}{c}{Стоимость обучения (FLOPs)} \\
+\cmidrule{2-3} \cmidrule{5-6} 
+& EN-DE & EN-FR & & EN-DE & EN-FR \\ 
+\hline
+ByteNet \citep{NalBytenet2017} & 23.75 & & & &\\
+Deep-Att + PosUnk \citep{DBLP:journals/corr/ZhouCWLX16} & & 39.2 & & & $1.0\cdot10^{20}$ \\
+GNMT + RL \citep{wu2016google} & 24.6 & 39.92 & & $2.3\cdot10^{19}$  & $1.4\cdot10^{20}$\\
+ConvS2S \citep{JonasFaceNet2017} & 25.16 & 40.46 & & $9.6\cdot10^{18}$ & $1.5\cdot10^{20}$\\
+MoE \citep{shazeer2017outrageously} & 26.03 & 40.56 & & $2.0\cdot10^{19}$ & $1.2\cdot10^{20}$ \\
+\hline
+\rule{0pt}{2.0ex}Deep-Att + PosUnk Ensemble \citep{DBLP:journals/corr/ZhouCWLX16} & & 40.4 & & &
+ $8.0\cdot10^{20}$ \\
+GNMT + RL Ensemble \citep{wu2016google} & 26.30 & 41.16 & & $1.8\cdot10^{20}$  & $1.1\cdot10^{21}$\\
+ConvS2S Ensemble \citep{JonasFaceNet2017} & 26.36 & \textbf{41.29} & & $7.7\cdot10^{19}$ & $1.2\cdot10^{21}$\\
+\specialrule{1pt}{-1pt}{0pt}
+\rule{0pt}{2.2ex}Transformer (base model) & 27.3 & 38.1 & & \multicolumn{2}{c}{\boldmath$3.3\cdot10^{18}$}\\
+Transformer (big) & \textbf{28.4} & \textbf{41.8} & & \multicolumn{2}{c}{$2.3\cdot10^{19}$} \\
+%\hline
+%\specialrule{1pt}{-1pt}{0pt}
+%\rule{0pt}{2.0ex}
+\bottomrule
+\end{tabularx}
+%}
+\end{center}
+\end{table}
+
+В задаче перевода WMT 2014 с английского на немецкий большая модель Transformer (Transformer (big) в Таблице~\ref{tab:wmt-results}) превосходит ранее лучшие опубликованные модели (включая ансамбли) более чем на $2.0$ по BLEU, установив новый рекорд BLEU в размере $28.4$. Конфигурация этой модели приведена в нижней строке Таблицы~\ref{tab:variations}. Обучение заняло $3.5$ дней на $8$ GPU P100. Даже наша базовая модель превосходит все ранее опубликованные модели и ансамбли при существенно меньших затратах на обучение по сравнению с любыми конкурентными моделями.
+
+В задаче перевода WMT 2014 с английского на французский наша большая модель достигает BLEU $41.0$, превосходя все ранее опубликованные одиночные модели при стоимости обучения менее чем $1/4$ от стоимости предыдущей лучшей модели. Модель Transformer (big), обученная для перевода с английского на французский, использовала вероятность dropout равную $P_{drop}=0.1$ вместо $0.3$.
+
+Для базовых моделей мы использовали одну модель, полученную усреднением последних 5 чекпоинтов, сохранённых через каждые 10 минут. Для больших моделей мы усреднили последние 20 чекпоинтов. Мы использовали beam search с шириной луча $4$ и штрафом за длину $\alpha=0.6$ \citep{wu2016google}. Эти гиперпараметры были выбраны после экспериментов на валидационном наборе. Мы задали максимальную длину вывода во время инференса как длина входа + $50$, но завершали раньше, когда это было возможно \citep{wu2016google}.
+
+Таблица \ref{tab:wmt-results} суммирует наши результаты и сравнивает качество перевода и затраты на обучение с другими архитектурами моделей из литературы. Мы оцениваем количество операций с плавающей точкой, использованных при обучении модели, умножая время обучения, число использованных GPU и оценку устойчивой производительности в вычислениях одинарной точности для каждого GPU \footnote{Мы использовали значения 2.8, 3.7, 6.0 и 9.5 TFLOPS для K80, K40, M40 и P100 соответственно.}.
+%where we compare against the leading machine translation results in the literature. Even our smaller model, with number of parameters comparable to ConvS2S, outperforms all existing single models, and achieves results close to the best ensemble model.
+
+\subsection{Вариации модели}
+
+\begin{table}[t]
+\caption{Вариации архитектуры Transformer. Неназванные значения совпадают со значениями базовой модели. Все метрики вычислены на валидационном наборе перевода с английского на немецкий, newstest2013. Приведённые перплексии относятся к единицам wordpiece в соответствии с нашим методом слияния байтов, и не подлежат сравнению с перплексиями на уровне слов.}
+\label{tab:variations}
+\begin{center}
+\vspace{-2mm}
+%\scalebox{1.0}{
+\begin{tabular}{c|ccccccccc|ccc}
+\hline\rule{0pt}{2.0ex}
+ & \multirow{2}{*}{$N$} & \multirow{2}{*}{$\dmodel$} &
+\multirow{2}{*}{$\dff$} & \multirow{2}{*}{$h$} & 
+\multirow{2}{*}{$d_k$} & \multirow{2}{*}{$d_v$} & 
+\multirow{2}{*}{$P_{drop}$} & \multirow{2}{*}{$\epsilon_{ls}$} &
+train & PPL & BLEU & params \\
+ & & & & & & & & & steps & (dev) & (dev) & $\times10^6$ \\
+% & & & & & & & & & & & & \\
+\hline\rule{0pt}{2.0ex}
+base & 6 & 512 & 2048 & 8 & 64 & 64 & 0.1 & 0.1 & 100K & 4.92 & 25.8 & 65 \\
+\hline\rule{0pt}{2.0ex}
+\multirow{4}{*}{(A)}
+& & & & 1 & 512 & 512 & & & & 5.29 & 24.9 &  \\
+& & & & 4 & 128 & 128 & & & & 5.00 & 25.5 &  \\
+& & & & 16 & 32 & 32 & & & & 4.91 & 25.8 &  \\
+& & & & 32 & 16 & 16 & & & & 5.01 & 25.4 &  \\
+\hline\rule{0pt}{2.0ex}
+\multirow{2}{*}{(B)}
+& & & & & 16 & & & & & 5.16 & 25.1 & 58 \\
+& & & & & 32 & & & & & 5.01 & 25.4 & 60 \\
+\hline\rule{0pt}{2.0ex}
+\multirow{7}{*}{(C)}
+& 2 & & & & & & & &            & 6.11 & 23.7 & 36 \\
+& 4 & & & & & & & &            & 5.19 & 25.3 & 50 \\
+& 8 & & & & & & & &            & 4.88 & 25.5 & 80 \\
+& & 256 & & & 32 & 32 & & &    & 5.75 & 24.5 & 28 \\
+& & 1024 & & & 128 & 128 & & & & 4.66 & 26.0 & 168 \\
+& & & 1024 & & & & & &         & 5.12 & 25.4 & 53 \\
+& & & 4096 & & & & & &         & 4.75 & 26.2 & 90 \\
+\hline\rule{0pt}{2.0ex}
+\multirow{4}{*}{(D)}
+& & & & & & & 0.0 & & & 5.77 & 24.6 &  \\
+& & & & & & & 0.2 & & & 4.95 & 25.5 &  \\
+& & & & & & & & 0.0 & & 4.67 & 25.3 &  \\
+& & & & & & & & 0.2 & & 5.47 & 25.7 &  \\
+\hline\rule{0pt}{2.0ex}
+(E) & & \multicolumn{7}{c}{позиционное встраивание вместо синусоид} & & 4.92 & 25.7 & \\
+\hline\rule{0pt}{2.0ex}
+big & 6 & 1024 & 4096 & 16 & & & 0.3 & & 300K & \textbf{4.33} & \textbf{26.4} & 213 \\
+\hline
+\end{tabular}
+%}
+\end{center}
+\end{table}
+
+%Table \ref{tab:ende-results}. Our base model for this task uses 6 attention layers, 512 hidden dim, 2048 filter dim, 8 attention heads with both attention and symbol dropout of 0.2 and 0.1 respectively. Increasing the filter size of our feed forward component to 8192 increases the BLEU score on En $\to$ De by $?$. For both the models, we use beam search decoding of size $?$ and length penalty with an alpha of $?$ \cite? \todo{Update results}
+
+Чтобы оценить важность различных компонентов Transformer, мы изменяли нашу базовую модель разными способами, измеряя изменение качества на задаче перевода с английского на немецкий на валидационном наборе newstest2013. Мы использовали поиск по лучам, как описано в предыдущем разделе, но без усреднения чекпоинтов. Мы представляем эти результаты в Table~\ref{tab:variations}.  
+
+В Table~\ref{tab:variations} в строках (A) мы варьируем число голов внимания и размерности ключей и значений внимания, сохраняя постоянный объём вычислений, как описано в разделе \ref{sec:multihead}. Хотя внимание с одной головой хуже на 0.9 BLEU по сравнению с лучшей настройкой, качество также падает при слишком большом количестве голов.
+
+В Table~\ref{tab:variations} в строках (B) мы наблюдаем, что уменьшение размера ключей внимания $d_k$ вредит качеству модели. Это говорит о том, что определение совместимости не простая задача и что более сложная функция совместимости, чем скалярное произведение, могла бы быть полезна. Мы далее наблюдаем в строках (C) и (D), что, как ожидалось, большие модели лучше, и дропаут (dropout) очень полезен для предотвращения переобучения. В строке (E) мы заменяем наши синусоидальные позиционные кодировки на обучаемые позиционные эмбеддинги \citep{JonasFaceNet2017} и наблюдаем почти идентичные результаты с базовой моделью.
+
+%To evaluate the importance of different components of the Transformer, we use our base model to ablate on a single hyperparameter at each time and measure the change in performance on English$\to$German translation. Our variations in Table~\ref{tab:variations} show that the number of attention layers and attention heads is the most important architecture hyperparamter However, the we do not see performance gains beyond 6 layers, suggesting that we either don't have enough data to train a large model or we need to turn up regularization. We leave this exploration for future work. Among our regularizers, attention dropout has the most significant impact on performance.
+
+%Increasing the width of our feed forward component helps both on log ppl and Accuracy \marginpar{Intuition?}
+%Using dropout to regularize our models helps to prevent overfitting
+
+\subsection{Английский синтаксический парсинг (constituency parsing)}
+
+\begin{table}[t]
+\begin{center}
+\caption{Transformer хорошо обобщается для английского constituency-парсинга (Результаты на разделе 23 WSJ)}
+\label{tab:parsing-results}
+\vspace{-2mm}
+%\scalebox{1.0}{
+\begin{tabularx}{\textwidth}{Y|Y|c}
+\hline
+{\bf Parser}  & {\bf Training} & {\bf WSJ 23 F1} \\ \hline
+Vinyals \& Kaiser el al. (2014) \cite{KVparse15}
+  & WSJ only, discriminative & 88.3 \\
+Petrov et al. (2006) \cite{petrov-EtAl:2006:ACL}
+  & WSJ only, discriminative & 90.4 \\
+Zhu et al. (2013) \cite{zhu-EtAl:2013:ACL}
+  & WSJ only, discriminative & 90.4   \\
+Dyer et al. (2016) \cite{dyer-rnng:16}
+  & WSJ only, discriminative & 91.7   \\
+\specialrule{1pt}{-1pt}{0pt}
+Transformer (4 layers)  &  WSJ only, discriminative & 91.3 \\
+\specialrule{1pt}{-1pt}{0pt}   
+Zhu et al. (2013) \cite{zhu-EtAl:2013:ACL}
+  & semi-supervised & 91.3 \\
+Huang \& Harper (2009) \cite{huang-harper:2009:EMNLP}
+  & semi-supervised & 91.3 \\
+McClosky et al. (2006) \cite{mcclosky-etAl:2006:NAACL}
+  & semi-supervised & 92.1 \\
+Vinyals \& Kaiser el al. (2014) \cite{KVparse15}
+  & semi-supervised & 92.1 \\
+\specialrule{1pt}{-1pt}{0pt}
+Transformer (4 layers)  & semi-supervised & 92.7 \\
+\specialrule{1pt}{-1pt}{0pt}   
+Luong et al. (2015) \cite{multiseq2seq}
+  & multi-task & 93.0   \\
+Dyer et al. (2016) \cite{dyer-rnng:16}
+  & generative & 93.3   \\
+\hline
+\end{tabularx}
+\end{center}
+\end{table}
+
+Чтобы проверить, может ли Transformer обобщаться на другие задачи, мы провели эксперименты по английскому constituency-парсингу. Эта задача представляет собой специфические сложности: выход подчинён сильным структурным ограничениям и заметно длиннее входа. Более того, RNN sequence-to-sequence модели не смогли достичь передовых результатов в режимах с небольшим объёмом данных \cite{KVparse15}.
+
+Мы обучали 4-слойный transformer с $d_{model} = 1024$ на части Penn Treebank, соответствующей Wall Street Journal (WSJ) \citep{marcus1993building}, примерно на 40K обучающих предложениях. Мы также обучали модель в полу-супервизированной конфигурации, используя более крупные корпуса high-confidence и BerkleyParser с примерно 17M предложений \citep{KVparse15}. Мы использовали словарь из 16K токенов для настройки «только WSJ» и словарь из 32K токенов для полу-супервизированной настройки.
+
+Мы провели лишь небольшое число экспериментов для подбора дропаутов, как для внимания, так и для остаточных связей (section~\ref{sec:reg}), скоростей обучения и размера луча на валидационном наборе Section 22; все остальные параметры остались без изменений по сравнению с базовой моделью перевода с английского на немецкий. Во время вывода мы увеличили максимальную длину выхода до длины входа + $300$. Мы использовали размер луча $21$ и $\alpha=0.3$ как для настройки «только WSJ», так и для полу-супервизированной настройки.
+
+Наши результаты в Table~\ref{tab:parsing-results} показывают, что несмотря на отсутствие настройки под конкретную задачу, наша модель демонстрирует удивительно хорошие результаты, превосходя все ранее опубликованные модели за исключением Recurrent Neural Network Grammar \cite{dyer-rnng:16}.
+
+В отличие от RNN sequence-to-sequence моделей \citep{KVparse15}, Transformer превосходит BerkeleyParser \cite{petrov-EtAl:2006:ACL} даже при обучении только на тренировочном наборе WSJ из 40K предложений.
+
+\section{Заключение}
+В этой работе мы представили Transformer, первую модель преобразования последовательностей, полностью основанную на механизме внимания, заменяющую рекуррентные слои, наиболее часто используемые в архитектурах энкодер-декодер, на многоголовое самовнимание.
+
+Для задач перевода Transformer можно обучать значительно быстрее, чем архитектуры, основанные на рекуррентных или сверточных слоях. На задачах перевода WMT 2014 по переводу с английского на немецкий и WMT 2014 по переводу с английского на французский мы устанавливаем новый рекорд. В первой задаче наша лучшая модель превосходит даже все ранее опубликованные ансамбли. %We also provide an indication of the broader applicability of our models through experiments on English constituency parsing.
+
+Мы с воодушевлением смотрим в будущее моделей на основе внимания и планируем применять их к другим задачам. Мы планируем расширить Transformer на задачи, включающие входные и выходные модальности, отличные от текста, а также исследовать локальные, ограниченные механизмы внимания для эффективной обработки больших входов и выходов, таких как изображения, аудио и видео.
+Сделать генерацию менее последовательной — ещё одна наша исследовательская цель.
+
+Код, который мы использовали для обучения и оценки наших моделей, доступен по адресу \url{https://github.com/tensorflow/tensor2tensor}.
+
+\paragraph{Благодарности} Мы благодарны Nal Kalchbrenner и Stephan Gouws за их плодотворные комментарии, исправления и вдохновение.
+
+\bibliographystyle{plain}
+%\bibliography{deeplearn}
+
+\begin{thebibliography}{10}
+
+\bibitem{layernorm2016}
+Jimmy~Lei Ba, Jamie~Ryan Kiros, and Geoffrey~E Hinton.
+\newblock Layer normalization.
+\newblock {\em arXiv preprint arXiv:1607.06450}, 2016.
+
+\bibitem{bahdanau2014neural}
+Dzmitry Bahdanau, Kyunghyun Cho, and Yoshua Bengio.
+\newblock Neural machine translation by jointly learning to align and
+  translate.
+\newblock {\em CoRR}, abs/1409.0473, 2014.
+
+\bibitem{DBLP:journals/corr/BritzGLL17}
+Denny Britz, Anna Goldie, Minh{-}Thang Luong, and Quoc~V. Le.
+\newblock Massive exploration of neural machine translation architectures.
+\newblock {\em CoRR}, abs/1703.03906, 2017.
+
+\bibitem{cheng2016long}
+Jianpeng Cheng, Li~Dong, and Mirella Lapata.
+\newblock Long short-term memory-networks for machine reading.
+\newblock {\em arXiv preprint arXiv:1601.06733}, 2016.
+
+\bibitem{cho2014learning}
+Kyunghyun Cho, Bart van Merrienboer, Caglar Gulcehre, Fethi Bougares, Holger
+  Schwenk, and Yoshua Bengio.
+\newblock Learning phrase representations using rnn encoder-decoder for
+  statistical machine translation.
+\newblock {\em CoRR}, abs/1406.1078, 2014.
+
+\bibitem{xception2016}
+Francois Chollet.
+\newblock Xception: Deep learning with depthwise separable convolutions.
+\newblock {\em arXiv preprint arXiv:1610.02357}, 2016.
+
+\bibitem{gruEval14}
+Junyoung Chung, {\c{C}}aglar G{\"{u}}l{\c{c}}ehre, Kyunghyun Cho, and Yoshua
+  Bengio.
+\newblock Empirical evaluation of gated recurrent neural networks on sequence
+  modeling.
+\newblock {\em CoRR}, abs/1412.3555, 2014.
+
+\bibitem{dyer-rnng:16}
+Chris Dyer, Adhiguna Kuncoro, Miguel Ballesteros, and Noah~A. Smith.
+\newblock Recurrent neural network grammars.
+\newblock In {\em Proc. of NAACL}, 2016.
+
+\bibitem{JonasFaceNet2017}
+Jonas Gehring, Michael Auli, David Grangier, Denis Yarats, and Yann~N. Dauphin.
+\newblock Convolutional sequence to sequence learning.
+\newblock {\em arXiv preprint arXiv:1705.03122v2}, 2017.
+
+\bibitem{graves2013generating}
+Alex Graves.
+\newblock Generating sequences with recurrent neural networks.
+\newblock {\em arXiv preprint arXiv:1308.0850}, 2013.
+
+\bibitem{he2016deep}
+Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun.
+\newblock Deep residual learning for image recognition.
+\newblock In {\em Proceedings of the IEEE Conference on Computer Vision and
+  Pattern Recognition}, pages 770--778, 2016.
+
+\bibitem{hochreiter2001gradient}
+Sepp Hochreiter, Yoshua Bengio, Paolo Frasconi, and J{\"u}rgen Schmidhuber.
+\newblock Gradient flow in recurrent nets: the difficulty of learning long-term
+  dependencies, 2001.
+
+\bibitem{hochreiter1997}
+Sepp Hochreiter and J{\"u}rgen Schmidhuber.
+\newblock Long short-term memory.
+\newblock {\em Neural computation}, 9(8):1735--1780, 1997.
+
+\bibitem{huang-harper:2009:EMNLP}
+Zhongqiang Huang and Mary Harper.
+\newblock Self-training {PCFG} grammars with latent annotations across
+  languages.
+\newblock In {\em Proceedings of the 2009 Conference on Empirical Methods in
+  Natural Language Processing}, pages 832--841. ACL, August 2009.
+
+\bibitem{jozefowicz2016exploring}
+Rafal Jozefowicz, Oriol Vinyals, Mike Schuster, Noam Shazeer, and Yonghui Wu.
+\newblock Exploring the limits of language modeling.
+\newblock {\em arXiv preprint arXiv:1602.02410}, 2016.
+
+\bibitem{extendedngpu}
+{\L}ukasz Kaiser and Samy Bengio.
+\newblock Can active memory replace attention?
+\newblock In {\em Advances in Neural Information Processing Systems, ({NIPS})},
+  2016.
+
+\bibitem{neural_gpu}
+\L{}ukasz Kaiser and Ilya Sutskever.
+\newblock Neural {GPU}s learn algorithms.
+\newblock In {\em International Conference on Learning Representations
+  ({ICLR})}, 2016.
+
+\bibitem{NalBytenet2017}
+Nal Kalchbrenner, Lasse Espeholt, Karen Simonyan, Aaron van~den Oord, Alex
+  Graves, and Koray Kavukcuoglu.
+\newblock Neural machine translation in linear time.
+\newblock {\em arXiv preprint arXiv:1610.10099v2}, 2017.
+
+\bibitem{structuredAttentionNetworks}
+Yoon Kim, Carl Denton, Luong Hoang, and Alexander~M. Rush.
+\newblock Structured attention networks.
+\newblock In {\em International Conference on Learning Representations}, 2017.
+
+\bibitem{kingma2014adam}
+Diederik Kingma and Jimmy Ba.
+\newblock Adam: A method for stochastic optimization.
+\newblock In {\em ICLR}, 2015.
+
+\bibitem{Kuchaiev2017Factorization}
+Oleksii Kuchaiev and Boris Ginsburg.
+\newblock Factorization tricks for {LSTM} networks.
+\newblock {\em arXiv preprint arXiv:1703.10722}, 2017.
+
+\bibitem{lin2017structured}
+Zhouhan Lin, Minwei Feng, Cicero Nogueira~dos Santos, Mo~Yu, Bing Xiang, Bowen
+  Zhou, and Yoshua Bengio.
+\newblock A structured self-attentive sentence embedding.
+\newblock {\em arXiv preprint arXiv:1703.03130}, 2017.
+
+\bibitem{multiseq2seq}
+Minh-Thang Luong, Quoc~V. Le, Ilya Sutskever, Oriol Vinyals, and Lukasz Kaiser.
+\newblock Multi-task sequence to sequence learning.
+\newblock {\em arXiv preprint arXiv:1511.06114}, 2015.
+
+\bibitem{luong2015effective}
+Minh-Thang Luong, Hieu Pham, and Christopher~D Manning.
+\newblock Effective approaches to attention-based neural machine translation.
+\newblock {\em arXiv preprint arXiv:1508.04025}, 2015.
+
+\bibitem{marcus1993building}
+Mitchell~P Marcus, Mary~Ann Marcinkiewicz, and Beatrice Santorini.
+\newblock Building a large annotated corpus of english: The penn treebank.
+\newblock {\em Computational linguistics}, 19(2):313--330, 1993.
+
+\bibitem{mcclosky-etAl:2006:NAACL}
+David McClosky, Eugene Charniak, and Mark Johnson.
+\newblock Effective self-training for parsing.
+\newblock In {\em Proceedings of the Human Language Technology Conference of
+  the NAACL, Main Conference}, pages 152--159. ACL, June 2006.
+
+\bibitem{decomposableAttnModel}
+Ankur Parikh, Oscar Täckström, Dipanjan Das, and Jakob Uszkoreit.
+\newblock A decomposable attention model.
+\newblock In {\em Empirical Methods in Natural Language Processing}, 2016.
+
+\bibitem{paulus2017deep}
+Romain Paulus, Caiming Xiong, and Richard Socher.
+\newblock A deep reinforced model for abstractive summarization.
+\newblock {\em arXiv preprint arXiv:1705.04304}, 2017.
+
+\bibitem{petrov-EtAl:2006:ACL}
+Slav Petrov, Leon Barrett, Romain Thibaux, and Dan Klein.
+\newblock Learning accurate, compact, and interpretable tree annotation.
+\newblock In {\em Proceedings of the 21st International Conference on
+  Computational Linguistics and 44th Annual Meeting of the ACL}, pages
+  433--440. ACL, July 2006.
+
+\bibitem{press2016using}
+Ofir Press and Lior Wolf.
+\newblock Using the output embedding to improve language models.
+\newblock {\em arXiv preprint arXiv:1608.05859}, 2016.
+
+\bibitem{sennrich2015neural}
+Rico Sennrich, Barry Haddow, and Alexandra Birch.
+\newblock Neural machine translation of rare words with subword units.
+\newblock {\em arXiv preprint arXiv:1508.07909}, 2015.
+
+\bibitem{shazeer2017outrageously}
+Noam Shazeer, Azalia Mirhoseini, Krzysztof Maziarz, Andy Davis, Quoc Le,
+  Geoffrey Hinton, and Jeff Dean.
+\newblock Outrageously large neural networks: The sparsely-gated
+  mixture-of-experts layer.
+\newblock {\em arXiv preprint arXiv:1701.06538}, 2017.
+
+\bibitem{srivastava2014dropout}
+Nitish Srivastava, Geoffrey~E Hinton, Alex Krizhevsky, Ilya Sutskever, and
+  Ruslan Salakhutdinov.
+\newblock Dropout: a simple way to prevent neural networks from overfitting.
+\newblock {\em Journal of Machine Learning Research}, 15(1):1929--1958, 2014.
+
+\bibitem{sukhbaatar2015}
+Sainbayar Sukhbaatar, Arthur Szlam, Jason Weston, and Rob Fergus.
+\newblock End-to-end memory networks.
+\newblock In C.~Cortes, N.~D. Lawrence, D.~D. Lee, M.~Sugiyama, and R.~Garnett,
+  editors, {\em Advances in Neural Information Processing Systems 28}, pages
+  2440--2448. Curran Associates, Inc., 2015.
+
+\bibitem{sutskever14}
+Ilya Sutskever, Oriol Vinyals, and Quoc~VV Le.
+\newblock Sequence to sequence learning with neural networks.
+\newblock In {\em Advances in Neural Information Processing Systems}, pages
+  3104--3112, 2014.
+
+\bibitem{DBLP:journals/corr/SzegedyVISW15}
+Christian Szegedy, Vincent Vanhoucke, Sergey Ioffe, Jonathon Shlens, and
+  Zbigniew Wojna.
+\newblock Rethinking the inception architecture for computer vision.
+\newblock {\em CoRR}, abs/1512.00567, 2015.
+
+\bibitem{KVparse15}
+{Vinyals {\&} Kaiser}, Koo, Petrov, Sutskever, and Hinton.
+\newblock Grammar as a foreign language.
+\newblock In {\em Advances in Neural Information Processing Systems}, 2015.
+
+\bibitem{wu2016google}
+Yonghui Wu, Mike Schuster, Zhifeng Chen, Quoc~V Le, Mohammad Norouzi, Wolfgang
+  Macherey, Maxim Krikun, Yuan Cao, Qin Gao, Klaus Macherey, et~al.
+\newblock Google's neural machine translation system: Bridging the gap between
+  human and machine translation.
+\newblock {\em arXiv preprint arXiv:1609.08144}, 2016.
+
+\bibitem{DBLP:journals/corr/ZhouCWLX16}
+Jie Zhou, Ying Cao, Xuguang Wang, Peng Li, and Wei Xu.
+\newblock Deep recurrent models with fast-forward connections for neural
+  machine translation.
+\newblock {\em CoRR}, abs/1606.04199, 2016.
+
+\bibitem{zhu-EtAl:2013:ACL}
+Muhua Zhu, Yue Zhang, Wenliang Chen, Min Zhang, and Jingbo Zhu.
+\newblock Fast and accurate shift-reduce constituent parsing.
+\newblock In {\em Proceedings of the 51st Annual Meeting of the ACL (Volume 1:
+  Long Papers)}, pages 434--443. ACL, August 2013.
+
+\end{thebibliography}
+
+\pagebreak
+
+\section*{Визуализации внимания}\label{sec:viz-att}
+\begin{figure}[h]
+\includegraphics[width=\textwidth, trim=0 0 0 36, clip]{./vis/making_more_difficult5_new.pdf}
+\caption{Пример механизма внимания, отслеживающего дальние зависимости в механизме self-attention энкодера на слое 5 из 6. Многие головы внимания фокусируются на отдалённой зависимости глагола `making', завершая фразу `making...more difficult'. Внимания здесь показаны только для слова `making'. Разные цвета представляют разные головы. Лучше просматривать в цвете.}
+\end{figure}
+
+\begin{figure}[ht]
+\includegraphics[width=\textwidth, trim=0 0 0 45, clip]{./vis/anaphora_resolution_new.pdf}
+\includegraphics[width=\textwidth, trim=0 0 0 37, clip]{./vis/anaphora_resolution2_new.pdf}
+\caption{Две головы внимания, также на слое 5 из 6, по-видимому, участвуют в разрешении анафоры. Вверху: полные матрицы внимания для головы 5. Внизу: выделенные внимания только от слова `its' для голов внимания 5 и 6. Обратите внимание, что распределения внимания для этого слова очень резкие.}
+\end{figure}
+
+\begin{figure}[ht]
+\includegraphics[width=\textwidth, trim=0 0 0 36, clip]{./vis/attending_to_head_new.pdf}
+\includegraphics[width=\textwidth, trim=0 0 0 36, clip]{./vis/attending_to_head2_new.pdf}
+\caption{Многие головы внимания демонстрируют поведение, которое, по-видимому, связано со структурой предложения. Выше приведены два таких примера от двух различных голов self-attention энкодера на слое 5 из 6. Головы явно научились выполнять разные задачи.}
+\end{figure}
+
+%\appendix
+%\newpage
+%\pagebreak
+
+\section*{Два позиционно-применяемых слоя feed-forward = внимание над параметрами}\label{sec:parameter_attention}
+
+В дополнение к слоям внимания, наша модель содержит позиционно-применяемые сети feed-forward (Section \ref{sec:ffn}), которые состоят из двух линейных преобразований с функцией активации ReLU между ними. Фактически, эти сети тоже можно рассматривать как разновидность внимания. Сравните формулу для такой сети с формулой простого внимания на основе скалярного произведения (смещения и коэффициенты масштабирования опущены):
+
+\begin{align*}
+    FFN(x, W_1, W_2) = ReLU(xW_1)W_2 \\
+    A(q, K, V) = Softmax(qK^T)V
+\end{align*}
+
+Исходя из сходства этих формул, двухслойная сеть feed-forward может рассматриваться как своего рода внимание, где ключи и значения — это строки обучаемых матриц параметров $W_1$ и $W_2$, а в функции совместимости мы используем ReLU вместо Softmax.
+
+%the compatablity function is $compat(q, k_i) = ReLU(q \cdot k_i)$ instead of $Softmax(qK_T)_i$.
+
+Учитывая это сходство, мы провели эксперименты по замене позиционно-применяемых сетей feed-forward на слои внимания, аналогичные тем, которые мы используем в остальных частях модели. Подслой многоголового внимания над параметрами идентичен многоголовому вниманию, описанному в \ref{sec:multihead}, за тем исключением, что входы «ключи» и «значения» для каждой головы внимания являются обучаемыми параметрами модели, а не линейными проекциями предыдущего слоя. Эти параметры масштабируются вверх на множитель $\sqrt{d_{model}}$, чтобы быть более похожими на активации.
+
+В первом эксперименте мы заменили каждую позиционно-применяемую сеть feed-forward подслоем многоголового внимания над параметрами с $h_p=8$ головами, размерностью ключа $d_{pk}=64$ и размерностью значения $d_{pv}=64$, используя по $n_p=1536$ пар ключ-значение для каждой головы внимания. Подслой имеет в сумме $2097152$ параметров, включая параметры проекции запросов и проекции выхода. Это соответствует числу параметров в заменённой позициионо-применяемой сети feed-forward. Хотя теоретически объём вычислений также одинаков, на практике версия с вниманием увеличивала время шага примерно на 30\%.
+
+Во втором эксперименте мы использовали $h_p=8$ голов и по $n_p=512$ пар ключ-значение на каждую голову внимания, вновь обеспечивая совпадение общего числа параметров с базовой моделью.
+
+Результаты первого эксперимента были немного хуже, чем у базовой модели, а результаты второго эксперимента — немного лучше, см. таблицу~\ref{tab:parameter_attention}.
+
+\begin{table}[h]
+\caption{Замена позиционно-применяемых сетей feed-forward на многоголовое внимание над параметрами даёт схожие результаты с базовой моделью. Все метрики вычислены на наборе для разработки перевода с английского на немецкий, newstest2013.}
+\label{tab:parameter_attention}
+\begin{center}
+\vspace{-2mm}
+%\scalebox{1.0}{
+\begin{tabular}{c|cccccc|cccc}
+\hline\rule{0pt}{2.0ex}
+ & \multirow{2}{*}{$\dmodel$} & \multirow{2}{*}{$\dff$} &
+\multirow{2}{*}{$h_p$} & \multirow{2}{*}{$d_{pk}$} & \multirow{2}{*}{$d_{pv}$} &
+ \multirow{2}{*}{$n_p$} &
+ PPL & BLEU & params & training\\
+ & & & & & &  & (dev) & (dev) & $\times10^6$ & time \\
+\hline\rule{0pt}{2.0ex}
+базовая & 512 & 2048 & & & & & 4.92 & 25.8 & 65 & 12 часов\\
+\hline\rule{0pt}{2.0ex}
+AOP$_1$ & 512 & & 8 & 64 & 64 & 1536 & 4.92& 25.5  & 65 & 16 часов\\
+AOP$_2$ & 512 & & 16 & 64 & 64 & 512 & \textbf{4.86} & \textbf{25.9}  & 65 & 16 часов \\
+\hline
+\end{tabular}
+%}
+\end{center}
+\end{table}
+
+%\section*{Justfication of the Scaling Factor in Dot-product Attention}
+
+В разделе~\ref{sec:scaled-dot-prod} мы ввели масштабированное внимание на основе скалярного произведения (Scaled dot-product attention), где мы делим скалярные произведения на $\sqrt{d_k}$. В этом разделе мы приведём грубое обоснование этого фактора масштабирования. Если предположить, что $q$ и $k$ — это $d_k$-мерные векторы, компоненты которых являются независимыми случайными величинами с математическим ожиданием $0$ и дисперсией $1$, то их скалярное произведение, $q \cdot k = \sum_{i=1}^{d_k} u_iv_i$, имеет математическое ожидание $0$ и дисперсию $d_k$. Поскольку мы предпочли бы, чтобы эти величины имели дисперсию $1$, мы делим на $\sqrt{d_k}$.  
+
+%For any two $d_k$-dimension vectors $\vec{u}$ and $\vec{v}$, whose dimensions are independent, the mean and variance of the dot product will be the summation of the product of means and variances over the dimensions, that is, $E[<\vec{u},\vec{v}>] = \sum_{i=1}^{d_k} E[u_i]E[v_i]$, and $E[(<\vec{u},\vec{v}>-E[<\vec{u},\vec{v}>])^2] = \sum_{i=1}^{d_k} E[({u_i}-E[u_i])^2] E[({v_i}-E[v_i])^2]$. Layer norm encourages the mean and variance of each dimension to be $0$ and $1$ respectively, resultig in the dot product having mean $0$ and $d_k$ respectively. Therefore, scaling by $\sqrt{d_k}$ encourages the logits to be normalized as well. 
+
+\iffalse
+
+В этом разделе мы приведём грубое обоснование этого фактора масштабирования, то есть покажем, что для любых двух векторов, $\vec{u}$ и $\vec{v}$, чья дисперсия и математическое ожидание равны $1$ и $0$ соответственно, дисперсия и математическое ожидание их скалярного произведения равны $d_k$ и $0$ соответственно. Следовательно, деление на $\sqrt{d_k}$ гарантирует нормализацию каждой компоненты логитов внимания. Повторяющиеся нормализации слоя на каждом уровне трансформера поощряют нормализацию $\vec{u}$ и $\vec{v}$. 
+
+\begin{align*}
+    E[<\vec{u},\vec{v}>] & =  \sum_k E[u_i v_i] &\text{By linearity of expectation} \\
+    & =\sum_k E[u_i]E[v_i] & \text{Assuming independence} \\
+    & = 0
+\end{align*}
+
+\begin{align*}
+    E[(<\vec{u},\vec{v}>-E[<\vec{u},\vec{v}>])^2]  & = E[(<\vec{u},\vec{v}>)^2] - E[<\vec{u},\vec{v}>]^2 \\
+    & = E[(<\vec{u},\vec{v}>)^2] \\
+    & =  \sum_k E[{u_i}^2] E[{v_i}^2] &\text{By linearity of expectation and indepedence} \\
+    & = d_k
+\end{align*}
+
+\fi
+
+\end{document}

@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\section{Заключение}\nВ этом письме мы предлагаем сеть обнаружения воздушных целей на основе диффузии для изображений SAR под названием DiffDet4SAR, представляя первое исследование, вводящее модели диффузии в задачу обнаружения целей на SAR. Мы сформулировали обнаружение воздушных целей как задачу пространственной генерации положения и размеров ограничивающих рамок. Кроме того, чтобы учесть дискретную природу разбросанных точек от воздушных целей и сильные помехи фона, мы разработали модуль SFE для захвата текстурных деталей и семантической информации в качестве средства повышения заметности целей и подавления фоновых помех. Представленные здесь экспериментальные результаты продемонстрировали эффективность предложенного метода DiffDet4SAR. \n\n<<COMMENT_54>>\n\n\n\n<<COMMENT_55>>\n\n<<COMMENT_56>>\n\n\n\n\n\n\\bibliographystyle{ieeetr}\n\\bibliography{./ref}\n\n\\end{document}",
+  "input_tokens": 383,
+  "output_tokens": 1625,
+  "cost_usd": 0.0010324499999999999,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 227,
+      "total_input_tokens_est": 444,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 383,
+      "actual_output_tokens": 1625,
+      "actual_cost_usd": 0.0010324499999999999
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\section{Conclusion}\nIn this letter, we propose a diffusion-based aircraft target detection\nnetwork for SAR images named DiffDet4SAR, presentING a first study that introduces diffusion models to SAR target detection. We formulated aircraft target detection as a spatial generation task of the position and size of bounding boxes. Furthermore, to address the discrete nature of scattered points from aircraft targets and strong background interference, we designed the SFE module to capture texture details and semantic information as a means of enhancing target saliency and suppressing background clutter. The experimental results presented herein have demonstrated the effectiveness of the proposed DiffDet4SAR method. \n\n<<COMMENT_54>>\n\n\n\n<<COMMENT_55>>\n\n<<COMMENT_56>>\n\n\n\n\n\n\\bibliographystyle{ieeetr}\n\\bibliography{./ref}\n\n\\end{document}\n\n\n"
+  },
+  "saved_at": "2025-12-26 16:49:07"
+}

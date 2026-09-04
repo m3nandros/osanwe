@@ -1,0 +1,30 @@
+{
+  "translated_content": "Для измерений ответов на пункты обследования измерение учащихся оказалось менее чётко воспроизводимым, чем измерения политики и удовлетворённости, при этом медианные коэффициенты конгруэнтности (между вращёнными измерениями и теоретической структурой) составляли <<MATH_INLINE_515>>, <<MATH_INLINE_516>> и <<MATH_INLINE_517>> для измерений учащихся, политики и удовлетворённости соответственно. Чтобы оценить, какое(ие) измерение(я) вносят вклад в первые канонические корреляции, мы сравнили величины стандартизированных коэффициентов функций для каждого измерения по школам. Таблица <<CMD_645>> показывает стандартизированные коэффициенты функций для всех школ; для каждой школы наибольшие коэффициенты были выделены полужирным шрифтом, а вторые по величине коэффициенты также выделялись полужирным шрифтом, если их размеры были сопоставимы с наибольшими коэффициентами. Имейте в виду, что при интерпретации результатов ККА присутствует субъективность---стандартизированный коэффициент функции может показаться крупным одному человеку и недостаточно крупным другому. Результаты показывают, что в <<MATH_INLINE_518>> из <<MATH_INLINE_519>> школ измерение учащихся имело наибольшие коэффициенты функций; лишь в <<MATH_INLINE_520>> из <<MATH_INLINE_521>> школ измерение политики имело наибольший коэффициент функции; и в <<MATH_INLINE_522>> из <<MATH_INLINE_523>> школ измерение удовлетворённости имело наибольшие или вторые по величине коэффициенты. В целом результаты ККА показывают, что восприятие учащихся и удовлетворённость связаны с отношениями обращения за советом в большинстве школ, но того же нельзя сказать о воспринимаемом влиянии на школьную политику.",
+  "input_tokens": 538,
+  "output_tokens": 2089,
+  "cost_usd": 0.0013340999999999997,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 427,
+      "total_input_tokens_est": 644,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 538,
+      "actual_output_tokens": 2089,
+      "actual_cost_usd": 0.0013340999999999997
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\nFor the dimensions of the item responses, the student dimension was found to be less clearly replicated than the policy and the satisfaction dimensions with the median congruence coefficients (between the rotated dimensions and the theoretical structure) being <<MATH_INLINE_515>>, <<MATH_INLINE_516>> and <<MATH_INLINE_517>> for the student, policy and satisfaction dimensions, respectively. To assess which dimension(s) contribute to the first canonical correlations, we compared the size of the standardized function coefficients for each dimension across schools. Table <<CMD_645>> shows the standardized function coefficients for all schools; the largest coefficients were bolded for each school, and the second largest coefficients were also bolded if their sizes were comparable to the largest coefficients. Keep in mind that there is subjectivity associated with interpreting CCA results---a standardized function coefficient may seem large to one person and not large enough to the next. The results show that in <<MATH_INLINE_518>> out of the <<MATH_INLINE_519>> schools, the student dimension had the largest function coefficients; in only <<MATH_INLINE_520>> out of the <<MATH_INLINE_521>> schools, the policy dimension had the largest function coefficient; and in <<MATH_INLINE_522>> out of the <<MATH_INLINE_523>> schools, the satisfaction dimension had the largest or the second largest coefficients. Overall, the CCA results show that the perception of students and the satisfaction are related to the advice-seeking relationships in most schools, but the same cannot be said for the perceived influence over school policies. \n\n\n\n"
+  },
+  "saved_at": "2025-12-26 16:15:49"
+}

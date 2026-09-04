@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\documentclass[sigconf, screen]{acmart}\n\n<<COMMENT_0>>\n<<COMMENT_1>>\n<<COMMENT_2>>\n<<COMMENT_3>>\n<<COMMENT_4>>\n\\setcopyright{rightsretained}\n\\acmDOI{10.1145/3650212.3680370}\n\\acmYear{2024}\n\\copyrightyear{2024}\n\\acmISBN{979-8-4007-0612-7/24/09}\n\\acmConference[ISSTA '24]{Труды 33-го Международного симпозиума ACM SIGSOFT по тестированию и анализу программного обеспечения}{16--20 сентября 2024}{Вена, Австрия}\n\\acmBooktitle{Труды 33-го Международного симпозиума ACM SIGSOFT по тестированию и анализу программного обеспечения (ISSTA '24), 16--20 сентября 2024 г., Вена, Австрия}\n\\acmSubmissionID{issta24main-p1132-p}\n\\received{2024-04-12}\n\\received[accepted]{2024-07-03}\n<<COMMENT_5>>\n\n\\usepackage{calc}\n\\usepackage[inline]{enumitem}\n\\usepackage{booktabs}\n\\usepackage{multirow}\n\\usepackage{venndiagram}\n\\usepackage{balance}\n\n\\usepackage{tikz}\n\\usetikzlibrary{shapes.geometric, shapes.symbols, arrows, calc}\n\n\\usepackage{graphicx}\n\\graphicspath{ {./images/} }\n\\usepackage[skip=1pt]{caption}\n\\usepackage[skip=1pt]{subcaption}\n\n\\usepackage{metalogo}\n\\usepackage{xspace}\n\\newcommand{\\todo}{\\bf \\color{red} [НАДО]~}\n\\newcommand{\\tex}{\\TeX\\xspace}\n\\newcommand{\\latex}{\\LaTeX\\xspace}\n\\newcommand{\\xetex}{\\XeTeX\\xspace}\n\\newcommand{\\luatex}{\\LuaTeX\\xspace}\n\\newcommand{\\pdftex}{pdf\\TeX\\xspace}\n\\newcommand{\\pdflatex}{pdf\\LaTeX\\xspace}\n\\newcommand{\\xelatex}{\\XeLaTeX\\xspace}\n\\newcommand{\\lualatex}{\\LuaLaTeX\\xspace}\n\\newcommand{\\texlive}{\\TeX\\xspace Live\\xspace}\n\n\\usepackage{wasysym}\n\\newcommand{\\yes}{\\Circle}<<COMMENT_6>>\n\\newcommand{\\no}{\\CIRCLE}<<COMMENT_7>>",
+  "input_tokens": 757,
+  "output_tokens": 1718,
+  "cost_usd": 0.00114435,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 402,
+      "total_input_tokens_est": 619,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 757,
+      "actual_output_tokens": 1718,
+      "actual_cost_usd": 0.00114435
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\documentclass[sigconf, screen]{acmart}\n\n<<COMMENT_0>>\n<<COMMENT_1>>\n<<COMMENT_2>>\n<<COMMENT_3>>\n<<COMMENT_4>>\n\\setcopyright{rightsretained}\n\\acmDOI{10.1145/3650212.3680370}\n\\acmYear{2024}\n\\copyrightyear{2024}\n\\acmISBN{979-8-4007-0612-7/24/09}\n\\acmConference[ISSTA '24]{Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis}{September 16--20, 2024}{Vienna, Austria}\n\\acmBooktitle{Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis (ISSTA '24), September 16--20, 2024, Vienna, Austria}\n\\acmSubmissionID{issta24main-p1132-p}\n\\received{2024-04-12}\n\\received[accepted]{2024-07-03}\n<<COMMENT_5>>\n\n\\usepackage{calc}\n\\usepackage[inline]{enumitem}\n\\usepackage{booktabs}\n\\usepackage{multirow}\n\\usepackage{venndiagram}\n\\usepackage{balance}\n\n\\usepackage{tikz}\n\\usetikzlibrary{shapes.geometric, shapes.symbols, arrows, calc}\n\n\\usepackage{graphicx}\n\\graphicspath{ {./images/} }\n\\usepackage[skip=1pt]{caption}\n\\usepackage[skip=1pt]{subcaption}\n\n\\usepackage{metalogo}\n\\usepackage{xspace}\n\\newcommand{\\todo}{\\bf \\color{red} [TODO]~}\n\\newcommand{\\tex}{\\TeX\\xspace}\n\\newcommand{\\latex}{\\LaTeX\\xspace}\n\\newcommand{\\xetex}{\\XeTeX\\xspace}\n\\newcommand{\\luatex}{\\LuaTeX\\xspace}\n\\newcommand{\\pdftex}{pdf\\TeX\\xspace}\n\\newcommand{\\pdflatex}{pdf\\LaTeX\\xspace}\n\\newcommand{\\xelatex}{\\XeLaTeX\\xspace}\n\\newcommand{\\lualatex}{\\LuaLaTeX\\xspace}\n\\newcommand{\\texlive}{\\TeX\\xspace Live\\xspace}\n\n\\usepackage{wasysym}\n\\newcommand{\\yes}{\\Circle}<<COMMENT_6>>\n\\newcommand{\\no}{\\CIRCLE}<<COMMENT_7>>\n\n"
+  },
+  "saved_at": "2025-12-26 13:55:55"
+}

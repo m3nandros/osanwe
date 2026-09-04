@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\section{Введение} <<CMD_381>>\nГемивариационные неравенства являются обобщением вариационных неравенств. В большинстве случаев гемивариационные неравенства можно переписать как задачи субстанционарных точек соответствующих несглаженных невыпуклых энергетических функций. Теория и некоторые приложения гемивариационных неравенств изложены в <<CMD_326>>. На сегодняшний день разработаны различные методы для решения геми\\-вариа\\-цион\\-ных неравенств в различных приложениях, включая контактную механику <<CMD_327>>. Подход на~основе несглаженной оптимизации к таким задачам изучается в <<CMD_328>>.\n\nЦелью данной работы является разработка метода несглаженной невыпуклой оптимизации для численного решения гемивариационных неравенств. Предложенный метод представляет собой комбинацию метода субградиента для локального поиска и метода имитации отжига для глобального поиска. Применение метода субградиента позволяет учитывать несглаженность задачи, а использование метода имитации отжига — справляться с её невыпуклостью. Более конкретно, мы применяем метод субградиента для нахождения стационарных точек так называемой энергетической функции, а затем используем метод имитации отжига, чтобы выйти из этих стационарных точек и найти более хорошую начальную точку для метода локального поиска.\n\nСтатья организована следующим образом. В разделе <<CMD_338>> мы сначала вводим метод субградиента для решения гемивариационных неравенств и исследуем его сходимость. Затем мы описываем гибридный метод. Применение гибридного метода для решения задач контактной механики обсуждается в разделе <<CMD_339>>. Численные результаты приведены в разделе <<CMD_340>>. Раздел <<CMD_341>> содержит заключительные замечания.",
+  "input_tokens": 558,
+  "output_tokens": 4086,
+  "cost_usd": 0.0025353,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 450,
+      "total_input_tokens_est": 667,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 558,
+      "actual_output_tokens": 4086,
+      "actual_cost_usd": 0.0025353
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\section{Introduction} <<CMD_381>>\nHemivariational inequalities are generalizations of variational inequalities. In most cases hemivariational inequalities can be reformulated as substationary point problems of the corresponding nonsmooth nonconvex energy functions. The theory and some applications of hemivariational inequalities can be found in <<CMD_326>>. To date, various methods have been developed for solving hemi\\-va\\-ria\\-tio\\-nal inequalities in different applications including in contact mechanics <<CMD_327>>. A~nonsmooth optimization approach to such problems is studied in <<CMD_328>>.\n\nThe aim of this paper is to develop a nonsmooth nonconvex optimization method for the numerical solution of hemivariational inequalities. The proposed method is a combination of the local search subgradient method and a global search simulated annealing method. The use of the subgradient method allows to address nonsmoothness of the problem and the use of the simulated annealing method allows to deal with the nonconvexity of this problem. More specifically, we apply the subgradient method to find stationary points of the so-called energy function and then use the simulated annealing method to escape from these stationary points to find a better starting point for the local search method.\n\nThe paper is structured as follows. In Section <<CMD_338>>, first, we introduce the subgradient method for solving hemivariational inequalities and study its convergence. Then we describe the hybrid method. The application of the hybrid method for solving the contact mechanics problems is discussed in Section <<CMD_339>>. Numerical results are presented in Section <<CMD_340>>. Section <<CMD_341>> provides some concluding remarks.\n\n\n"
+  },
+  "saved_at": "2025-12-26 13:45:34"
+}

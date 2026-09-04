@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\section{Авторы и аффилиации}\n\nКаждый автор должен быть определён отдельно для точной идентификации метаданных. Несколько авторов могут иметь одну аффилиацию. Имена авторов не должны сокращаться; по возможности используйте полные имена. По возможности указывайте адреса электронной почты авторов.\n\nГруппировка имён авторов или адресов электронной почты, либо предоставление ``псевдонима электронной почты,'' как показано ниже, недопустимо:\n<<CODE_186>>\n\nКоманды <<CODE_214>> и <<CODE_215>> позволяют применить заметку к нескольким авторам --- например, если первые два автора статьи внесли одинаковый вклад в работу.\n\nЕсли список авторов длинный, вы должны определить сокращённую версию списка авторов для использования в заголовках страниц, чтобы избежать наложения текста. Следующая команда должна быть размещена сразу после последнего определения <<CODE_216>>:\n<<CODE_185>>\nОпущение этой команды приведёт к использованию объединённого списка всех имён авторов, что может привести к наложению текста в заголовках страниц.\n\nДокументация шаблона статьи, доступная по адресу <<CMD_288>>, содержит полное объяснение этих команд и советы по их эффективному использованию.\n\nОбратите внимание, что адреса авторов обязательны для журнальных статей.",
+  "input_tokens": 476,
+  "output_tokens": 1395,
+  "cost_usd": 0.0009084,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 318,
+      "total_input_tokens_est": 535,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 476,
+      "actual_output_tokens": 1395,
+      "actual_cost_usd": 0.0009084
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\section{Authors and Affiliations}\n\nEach author must be defined separately for accurate metadata\nidentification. Multiple authors may share one affiliation. Authors'\nnames should not be abbreviated; use full first names wherever\npossible. Include authors' e-mail addresses whenever possible.\n\nGrouping authors' names or e-mail addresses, or providing an ``e-mail\nalias,'' as shown below, is not acceptable:\n<<CODE_186>>\n\nThe <<CODE_214>> and <<CODE_215>> commands allow a note\nto apply to multiple authors --- for example, if the first two authors\nof an article contributed equally to the work.\n\nIf your author list is lengthy, you must define a shortened version of\nthe list of authors to be used in the page headers, to prevent\noverlapping text. The following command should be placed just after\nthe last <<CODE_216>> definition:\n<<CODE_185>>\nOmitting this command will force the use of a concatenated list of all\nof the authors' names, which may result in overlapping text in the\npage headers.\n\nThe article template's documentation, available at\n<<CMD_288>>, has a\ncomplete explanation of these commands and tips for their effective\nuse.\n\nNote that authors' addresses are mandatory for journal articles.\n\n"
+  },
+  "saved_at": "2025-12-27 00:14:01"
+}

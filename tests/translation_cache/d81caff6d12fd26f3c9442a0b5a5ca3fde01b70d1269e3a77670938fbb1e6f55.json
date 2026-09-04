@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\begin{document}\n\n\\title{Руководство по пакету Quantikz}\n\\date{\\today}\n\\author{Alastair \\surname{Kay}}\n\\affiliation{Royal Holloway University of London, Egham, Surrey, TW20 0EX, Великобритания}\n\\email{alastair.kay@rhul.ac.uk}\n\\begin{abstract}\n\\end{abstract}\n\\maketitle\nЯ всегда использовал \\href{https://arxiv.org/abs/quant-ph/0406003}{QCircuit} для набора диаграмм квантовых схем в \\LaTeX, но считал нотацию на основе Xy-pic довольно непроницаемой, и мне было трудно адаптировать её под свои нужды (вероятно, это моя ошибка, а не недостаток пакета). Поэтому мне был нужен пакет на основе tikz, который мог бы делать то же самое. Таким пакетом является Quantikz. Те, кто знаком с QCircuit, узнают большую часть нотации, хотя она немного эволюционировала (надеюсь, упрощена!).\n\nПоследний релиз (обозначаемый номерами версий 1.x) представляет собой существенный шаг вперёд с точки зрения внутреннего кода. К сожалению, это потребовало нарушения совместимости с предыдущими версиями. Ваши старые схемы всё ещё должны работать, но они могут выглядеть не совсем так, как ожидалось! В первую очередь была изменена концепция проводов в схеме, поскольку классические провода всегда были лишь второстепенным моментом, но теперь они подняты до эквивалентного статуса по отношению к квантовому проводу.\n\n\\tableofcontents",
+  "input_tokens": 517,
+  "output_tokens": 2619,
+  "cost_usd": 0.00164895,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 326,
+      "total_input_tokens_est": 543,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 517,
+      "actual_output_tokens": 2619,
+      "actual_cost_usd": 0.00164895
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\begin{document}\n\n\\title{Tutorial on the Quantikz Package}\n\\date{\\today}\n\\author{Alastair \\surname{Kay}}\n\\affiliation{Royal Holloway University of London, Egham, Surrey, TW20 0EX, UK}\n\\email{alastair.kay@rhul.ac.uk}\n\\begin{abstract}\n\\end{abstract}\n\\maketitle\nI've always used \\href{https://arxiv.org/abs/quant-ph/0406003}{QCircuit} for typesetting quantum circuit diagrams within \\LaTeX, but found the Xy-pic based notation rather impenetrable and I struggled to adapt it for my needs (this is probably my failing rather than the package's). Thus, I wanted a tikz package that could do the same. That package is Quantikz. Those familiar with QCircuit will recognise much of the notation, although it has evolved a bit (hopefully simplified!).\n\nThe latest release (denoted by version numbers 1.x) is a major step forward in terms of the behind-the-scenes code. Unfortunately, this has necessitated breaking some compatibility with previous versions. Your old circuits should still work, but they might not look exactly as expected! Primarily the concept of the wires in a circuit has been modified as classical wires were only ever an after-thought, but have now been elevated to an equivalent status to the quantum wire.\n\n\\tableofcontents\n\n\n\n"
+  },
+  "saved_at": "2025-12-26 14:59:27"
+}

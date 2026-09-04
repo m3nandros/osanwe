@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\section{Конструкция, назначение и \\\\ ограничения шаблонов}\n\\noindent Шаблоны предназначены {\\bf{для приближённого воспроизведения окончательного вида и объёма страниц статей/докладов}}. Поэтому, {\\bf{они НЕ предназначены для использования как окончательная версия работы, отображаемая в печати или на IEEEXplore\\textsuperscript{\\textregistered}}}. Они помогают авторам получить приблизительное представление о числе страниц в окончательной версии. Структура \\LaTeX файлов, как запроектирована, обеспечивает лёгкую конвертацию в XML для систем верстки, используемых внешними подрядчиками IEEE. XML-файлы используются для получения окончательного печатного/IEEEXplore\\textsuperscript{\\textregistered} pdf, а затем конвертируются в HTML для IEEEXplore\\textsuperscript{\\textregistered}. Вы просматривали свою статью/доклад в HTML-версии?",
+  "input_tokens": 405,
+  "output_tokens": 1376,
+  "cost_usd": 0.0008863499999999999,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 220,
+      "total_input_tokens_est": 437,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 405,
+      "actual_output_tokens": 1376,
+      "actual_cost_usd": 0.0008863499999999999
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\section{The Design, Intent and \\\\ Limitations of the Templates}\n\\noindent The templates are intended to {\\bf{approximate the final look and page length of the articles/papers}}. Therefore, {\\bf{they are NOT intended to be the final produced work that is displayed in print or on IEEEXplore\\textsuperscript{\\textregistered}}}. They will help to give the authors an approximation of the number of pages that will be in the final version. The structure of the \\LaTeX files, as designed, enable easy conversion to XML for the composition systems used by the IEEE's outsource vendors. The XML files are used to produce the final print/IEEEXplore\\textsuperscript{\\textregistered} pdf and then converted to HTML for IEEEXplore\\textsuperscript{\\textregistered}. Have you looked at your article/paper in the HTML version?\n\n"
+  },
+  "saved_at": "2025-12-26 12:15:47"
+}

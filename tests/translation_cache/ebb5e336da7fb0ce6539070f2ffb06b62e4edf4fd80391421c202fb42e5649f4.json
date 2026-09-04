@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\section{Приложения}\n\nЕсли вашей работе требуется приложение, добавьте его перед\n``\\verb|\\end{document}|'' командой в конце вашего исходного документа.\n\nНачните приложение с команды ``\\verb|appendix|'':\n<<CODE_180>>\nОбратите внимание, что в приложении разделы обозначаются буквами, а не цифрами. Этот документ имеет два приложения, демонстрирующие метод идентификации разделов и подразделов.",
+  "input_tokens": 309,
+  "output_tokens": 2025,
+  "cost_usd": 0.0012613499999999998,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 113,
+      "total_input_tokens_est": 330,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 309,
+      "actual_output_tokens": 2025,
+      "actual_cost_usd": 0.0012613499999999998
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\section{Appendices}\n\nIf your work needs an appendix, add it before the\n``\\verb|\\end{document}|'' command at the conclusion of your source\ndocument.\n\nStart the appendix with the ``\\verb|appendix|'' command:\n<<CODE_180>>\nand note that in the appendix, sections are lettered, not\nnumbered. This document has two appendices, demonstrating the section\nand subsection identification method.\n\n"
+  },
+  "saved_at": "2025-12-26 14:57:07"
+}

@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\section{Концепции CCS и пользовательские ключевые слова}\n\nДва элемента класса документа ``acmart'' предоставляют мощные таксономические инструменты, которые помогают читателям найти вашу работу при поиске в Интернете.\n\nThe ACM Computing Classification System --- <<CMD_289>> --- is a set of classifiers and concepts that describe the computing discipline. Authors can select entries from this classification system, via <<CMD_290>>, and generate the commands to be included in the \\LaTeX\\ source.\n\nПользовательские ключевые слова представляют собой список слов и фраз, разделённых запятыми, выбранных авторами, и обеспечивают более гибкий способ описания представляемого исследования.\n\nКонцепции CCS и пользовательские ключевые слова требуются для всех статей объёмом более двух страниц и являются необязательными для статей (или аннотаций) объёмом в одну или две страницы.",
+  "input_tokens": 390,
+  "output_tokens": 1033,
+  "cost_usd": 0.0006782999999999998,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 217,
+      "total_input_tokens_est": 434,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 390,
+      "actual_output_tokens": 1033,
+      "actual_cost_usd": 0.0006782999999999998
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\section{CCS Concepts and User-Defined Keywords}\n\nTwo elements of the ``acmart'' document class provide powerful\ntaxonomic tools for you to help readers find your work in an online\nsearch.\n\nThe ACM Computing Classification System ---\n<<CMD_289>> --- is a set of\nclassifiers and concepts that describe the computing\ndiscipline. Authors can select entries from this classification\nsystem, via <<CMD_290>>, and generate the\ncommands to be included in the \\LaTeX\\ source.\n\nUser-defined keywords are a comma-separated list of words and phrases\nof the authors' choosing, providing a more flexible way of describing\nthe research being presented.\n\nCCS concepts and user-defined keywords are required for for all\narticles over two pages in length, and are optional for one- and\ntwo-page articles (or abstracts).\n\n"
+  },
+  "saved_at": "2025-12-27 00:14:23"
+}

@@ -1,0 +1,70 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Testing & linters
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environments & credentials
+.env
+.openai_key
+api_key.txt
+.venv/
+venv/
+ENV/
+env/
+
+# Editor & OS artifacts
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Project outputs, caches & temporary directories
+output/
+out_dir/
+temp/
+logs/
+backups/
+*.log
+*.bak
+*.tmp
+
+# LaTeX auxiliary and generated files
+*.aux
+*.out
+*.pdf
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.toc
+*.bbl
+*.blg
+*.nav
+*.snm
+*.vrb

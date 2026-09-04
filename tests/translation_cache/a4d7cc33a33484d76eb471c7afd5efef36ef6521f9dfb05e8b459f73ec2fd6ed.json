@@ -1,0 +1,30 @@
+{
+  "translated_content": "\\section{Многоязычные статьи}\n\nСтатьи могут быть написаны на языках, отличных от английского, или включать заголовки, подзаголовки, ключевые слова и аннотации на разных языках (как правило, статья на языке, отличном от английского, должна содержать заголовок на английском языке и аннотацию на английском языке). Используйте \\verb|language=...| для каждого языка, используемого в статье. Последний указанный язык является основным языком статьи. Например, французская статья с дополнительными заголовками и аннотациями на английском и немецком языках может начинаться с следующей команды <<CODE_179>>\n\nЗаголовок, подзаголовок, ключевые слова и аннотация будут набраны на основном языке статьи. Команды \\verb|\\translatedXXX|, \\verb|XXX| (начинающие заголовок, подзаголовок и ключевые слова) могут использоваться для задания этих элементов на других языках. Для задания перевода аннотации используется окружение \\verb|translatedabstract|. У этих команд и окружения есть обязательный первый аргумент: язык второго аргумента. См. файл \\verb|sample-sigconf-i13n.tex| для примеров их использования.",
+  "input_tokens": 454,
+  "output_tokens": 1312,
+  "cost_usd": 0.0008552999999999999,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 276,
+      "total_input_tokens_est": 493,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 454,
+      "actual_output_tokens": 1312,
+      "actual_cost_usd": 0.0008552999999999999
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n\\section{Multi-language papers}\n\nPapers may be written in languages other than English or include\ntitles, subtitles, keywords and abstracts in different languages (as a\nrule, a paper in a language other than English should include an\nEnglish title and an English abstract).  Use \\verb|language=...| for\nevery language used in the paper.  The last language indicated is the\nmain language of the paper.  For example, a French paper with\nadditional titles and abstracts in English and German may start with\nthe following command\n<<CODE_179>>\n\nThe title, subtitle, keywords and abstract will be typeset in the main\nlanguage of the paper.  The commands \\verb|\\translatedXXX|, \\verb|XXX|\nbegin title, subtitle and keywords, can be used to set these elements\nin the other languages.  The environment \\verb|translatedabstract| is\nused to set the translation of the abstract.  These commands and\nenvironment have a mandatory first argument: the language of the\nsecond argument.  See \\verb|sample-sigconf-i13n.tex| file for examples\nof their usage.\n\n"
+  },
+  "saved_at": "2025-12-26 14:57:28"
+}

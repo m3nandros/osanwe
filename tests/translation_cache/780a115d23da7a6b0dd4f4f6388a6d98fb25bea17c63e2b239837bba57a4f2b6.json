@@ -1,0 +1,30 @@
+{
+  "translated_content": "}\\hspace{-1.5em}\n<<COMMENT_1597>>\n<<COMMENT_1598>>\n<<TIKZ_3125>>}\n<<COMMENT_1611>>\n<<COMMENT_1612>>\n<<COMMENT_1613>>\n<<COMMENT_1614>>\n<<COMMENT_1615>>\n<<COMMENT_1616>>\n\n<<COMMENT_1617>>\n<<COMMENT_1618>>\n<<COMMENT_1619>>\n<<COMMENT_1620>>",
+  "input_tokens": 309,
+  "output_tokens": 483,
+  "cost_usd": 0.00033614999999999996,
+  "model": "gpt-5-mini",
+  "metadata": {
+    "token_breakdown": {
+      "system_prompt_tokens_est": 217,
+      "glossary_tokens_est": 0,
+      "document_tokens_est": 75,
+      "total_input_tokens_est": 292,
+      "glossary_terms_count": 0,
+      "actual_input_tokens": 309,
+      "actual_output_tokens": 483,
+      "actual_cost_usd": 0.00033614999999999996
+    },
+    "glossary_terms": 0
+  },
+  "request": {
+    "model": "gpt-5-mini",
+    "temperature": 0.3,
+    "max_tokens": 16000
+  },
+  "messages": {
+    "system": "Translate scientific LaTeX from English to Russian. Preserve ALL formatting, structure, and technical elements.\n\nCRITICAL: TRANSLATE EVERY SINGLE SENTENCE. Do NOT skip any text, including:\n• Abstract content (even in custom environments like leapabstract, abstract, etc.)\n• Long paragraphs without LaTeX commands\n• Figure/table captions\n• All plain text between LaTeX commands\n\nRULES:\n• Keep ALL LaTeX commands unchanged (\\section, \\cite, \\ref, etc.)\n• Keep ALL formulas, images (\\includegraphics), bibliography unchanged\n• Translate: text, titles, captions, footnotes (\\footnote{}, \\marginpar{}, \\thanks{})\n• Do NOT skip paragraphs/sections/chapters - translate EVERYTHING\n• Specialized packages (tikz, xy-pic, qtree, pstricks, circuitikz): keep completely unchanged\n• Tables: translate text, keep structure\n\nReturn ONLY translated LaTeX, no explanations or markdown.",
+    "user": "Translate the following LaTeX document from English to Russian:\n\n}\\hspace{-1.5em}\n<<COMMENT_1597>>\n<<COMMENT_1598>>\n<<TIKZ_3125>>}\n<<COMMENT_1611>>\n<<COMMENT_1612>>\n<<COMMENT_1613>>\n<<COMMENT_1614>>\n<<COMMENT_1615>>\n<<COMMENT_1616>>\n\n<<COMMENT_1617>>\n<<COMMENT_1618>>\n<<COMMENT_1619>>\n<<COMMENT_1620>>\n\n"
+  },
+  "saved_at": "2025-12-26 13:04:33"
+}
