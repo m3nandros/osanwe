@@ -42,20 +42,20 @@ Translating scientific publications is an unsolved problem for standard AI tools
 
 ```mermaid
 flowchart TD
-    A[arXiv Tarball / ID] --> B[arXiv Fetcher & Flattening]
-    B --> C[Multi-Pass Content Masker]
-    C -->|Masked TeX + Token Map| D[AST-Aware Semantic Splitter]
-    D -->|Concurrent Chunks| E[LLM Translation Engine\n(OpenAI API + Checkpoints)]
-    E --> F[LaTeX Restorer\n(Reverse Token Unmasking)]
-    F --> G[Cyrillic & Preamble Injector]
-    G --> H[Linguistic Post-Processor\n(Quotes, Dashes, Prepositions)]
-    H --> I[XeLaTeX / pdfLaTeX Compiler]
-    I -->|Compilation Error| J{Error Diagnosis}
-    J -->|Table Syntax Error| K[Table Fallback Mechanism]
+    A["arXiv Tarball / ID"] --> B["arXiv Fetcher & Flattening"]
+    B --> C["Multi-Pass Content Masker"]
+    C -->|Masked TeX + Token Map| D["AST-Aware Semantic Splitter"]
+    D -->|Concurrent Chunks| E["LLM Translation Engine<br/>(OpenAI API + Checkpoints)"]
+    E --> F["LaTeX Restorer<br/>(Reverse Token Unmasking)"]
+    F --> G["Cyrillic & Preamble Injector"]
+    G --> H["Linguistic Post-Processor<br/>(Quotes, Dashes, Prepositions)"]
+    H --> I["XeLaTeX / pdfLaTeX Compiler"]
+    I -->|Compilation Error| J{"Error Diagnosis"}
+    J -->|Table Syntax Error| K["Table Fallback Mechanism"]
     K --> I
-    J -->|Log-Driven Surgical Fix| L[Auto-Repair Engine]
+    J -->|Log-Driven Surgical Fix| L["Auto-Repair Engine"]
     L --> I
-    I -->|Success| M[Publication-Ready PDF]
+    I -->|Success| M["Publication-Ready PDF"]
 ```
 
 ```
